@@ -10,13 +10,14 @@ deploy:
   provider: s3
   access_key_id: AKIAIH6ZAE5UVSWXTBHA
   secret_access_key:
-    secure: g3F0bdS2KrhwNbVrcxU7Hh7/3V0m4+fJ0U9oAgurlxMYEw6LDx2vctOThv3GELtk2N1miX8KWVPBDKnuoLBcqLrDHs28zl3QNu4/EBt9SvI2ezd5eQ+cBm+lwlsVO5yeE4nctFn+R/SfFtoVlUqFeIHVvdMVWwyrBzpfNsDCSR3A7Il0y5DLPDYEZZdem1oxwOJvIuzHGEs2mWb1gyMEtI/AwzZRhjx0ddVP+2oWt3KH+zFPyyqnyghnsmbyZsPZdqE5umU5r4kaUkdRiglmUZuJQnjarW23bQUyVpUz66Lj6lzl53/XPrCgxz4uv55hWZIEQC5j44MOUsHbtYzaa9tRWS9wcIiusuUjlltZ01ioGt9CdGTydektiWWR8YxvdHbld1lax64Rn1p0DQN6AhpQ0un3GU5k+3E/WC24pGu9lIRoJKg/ka7dWUl+k2jmEvqZ1SjWunuIkWfzeDIUi9y7eITusiZGLrjipoCmhgAuqnC5Qcl2XS/5wnxWIs+5myoXuzK49Rr09cA1AgxHQ9HjaK4q5gWXiE0Wi6ZRj5s3d9Uv8dCEDvpirTl1/atm84eSmuP8dXHdqTt4+iyC6+vyWn5hoeE2grrL+W36PpheQ19eHomfAr7muOf1Z4wRFmiDlNnSd9fFN8Qw6CFUBzGc4A4HgilulzKj4YfEwPk=
+    secure: aWwy5n7O3/cYxprcFzOYNM3tTGJIjPqIaBaA07aCrmNKqwLMi4KN7bn3UO15MLNpwv5UmOVwhA1sluQnD6pgQ0LpzUnwfa4R7XPZmGeqC7equ+xwHVb7sslPBycqwha/ji2Lg0sC7VfxgccOoM6eTYRk5JczNqyw8RWkygTzO3pAUK66uONuv7Zy687nqgB+OLpMSQfhK+x5tjueg8p7gIUlgoC0GEfMz/O0HmC7ei0KjBx2bzsdNuxpDexlMMC9M+hfz28GC8t128chQwPjYnkqP7CMmU5JmFtRhOHHlJLwg5xJwR+JKaomWPnxNMP7rFmdR9xfZXiZsKubgGeWsVGhqjETd35WFZ5sfhcm9/YRz4pFLAAoBkDKZsQjmgyTfeLrDm1IOYCNURwWx4Dg80n+Bkwvg6oLDN71O7TN/BAPtxqwmCZUy1tyVvlCBSYFv2julV+MfsQj92i3mR/p2Kebp4ysGxERwL2YPbRh9TMMOsYzPLtXtsZNE1ik2gKxXvppcpnz3SHEzHI16sh5rrwsRDig0S0/+Rc/crZEefuv+4WxUWwnJzHqqSjV+dwhiDq0lK86I+L4YaXkhNGtGvphgdavEvr8XWl8R4V+MgdRbhVASKJL/QaESA1d0N4CwE3Wux2LBoVBqgwqc27FIM55U/zAHXUBK4j7aXJkTz0=
   bucket: vvv.org
-  skip_cleanup: true
+  local-dir: _site
   acl: public_read
+  on:
+    repo: Varying-Vagrant-Vagrants/varyingvagrantvagrants.org
+    branch: master
+  skip_cleanup: true
   region: us-west-2
-  local_dir: _site
   detect_encoding: true
   default_text_charset: 'utf-8'
-  on:
-    branch: master
