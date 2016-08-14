@@ -1,0 +1,8 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.3.0
+script:
+- bundle exec jekyll --version
+- ls -lah
+- bundle exec jekyll build
