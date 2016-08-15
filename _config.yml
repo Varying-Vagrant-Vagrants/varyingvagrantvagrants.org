@@ -18,6 +18,7 @@ paginate_path: /blog/page:num
 exclude:
   - vendor
   - README.md
+  - Gemfile*
 navigation:
 - text: Blog
   url: /blog/
