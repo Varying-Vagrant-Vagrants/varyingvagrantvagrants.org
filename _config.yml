@@ -12,7 +12,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://varyingvagrantvagrants.org" # the base hostname & protocol for your site
 markdown: kramdown
 gems: [jekyll-paginate]
-permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title.html
 paginate: 10
 paginate_path: /blog/page:num
 exclude:
