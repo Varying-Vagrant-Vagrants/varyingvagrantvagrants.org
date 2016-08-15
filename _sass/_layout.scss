@@ -24,9 +24,15 @@
     }
 }
 
+.site-sub-head {
+	float: left;
+	clear: left;
+}
+
 .site-nav {
     float: right;
-    line-height: 56px;
+    line-height: 1;
+	padding-bottom: 1rem;
 
     .menu-icon {
         display: none;
