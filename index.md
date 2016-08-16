@@ -27,6 +27,7 @@ In addition to VirtualBox, provider support is also included for Parallels, Hype
 1. Clone or download and extract the Varying Vagrant Vagrants project from GitHub into a local directory, using either:
     * SSH: `git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git .`
     * HTTPS: `git clone https://github.com/Varying-Vagrant-Vagrants/VVV.git .`
+    * Download: https://github.com/Varying-Vagrant-Vagrants/VVV/archive/develop.zip
 1. In a command prompt, change into the new directory with `cd vagrant-local`
 1. Start the Vagrant environment with `vagrant up`
     * Be patient as the magic happens. This could take a while on the first run as your local machine downloads the required files.
