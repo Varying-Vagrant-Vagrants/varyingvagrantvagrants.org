@@ -4,4 +4,5 @@ title: Documentation
 permalink: /documentation/
 ---
 
-A bunch of documentation will go here.
+### References
+- [PHP Extensions](/documentation/references/php-extensions/) - A list of PHP Extensions bundled with VVV.
