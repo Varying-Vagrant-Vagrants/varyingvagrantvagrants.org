@@ -29,7 +29,7 @@ An ideal release schedule still looks to me like once a quarter, so I'm going to
 
 <h4>Documentation</h4>
 
-In August, the varyingvagrantvagrants.org site was converted to use Jekyll instead of WordPress. This felt slightly strange, because I love WordPress, but it does provide an easily managed GitHub based workflow to our documentation. Over the next year I'd like to see much more organized documentation via the <a href="https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org">VVV docs repository]. Contributions to that are very much more than welcome!
+In August, the varyingvagrantvagrants.org site was converted to use Jekyll instead of WordPress. This felt slightly strange, because I love WordPress, but it does provide an easily managed GitHub based workflow to our documentation. Over the next year I'd like to see much more organized documentation via the <a href="https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org">VVV docs repository</a>. Contributions to that are very much more than welcome!
 
 <h4>New features</h4>
 
