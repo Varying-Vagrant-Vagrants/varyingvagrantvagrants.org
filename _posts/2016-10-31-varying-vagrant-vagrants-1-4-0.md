@@ -23,7 +23,7 @@ How about the future?
 
 <blockquote>If I was going to phrase up the next year of VVV, I would say: Slow and steady with more minor releases.</blockquote>
 
-I wrote the above in the <a href="https://varyingvagrantvagrants.org/blog/2016/02/21/varying-vagrant-vagrants-1-3-0.html">VVV 1.3.0 release post</a> back in February. It looks like about half was right—it was slow and steady, but there were not more minor releases.
+I wrote the above in the <a href="https://varyingvagrantvagrants.org/blog/2016/02/21/varying-vagrant-vagrants-1-3-0.html">VVV 1.3.0 release post</a> back in February. It looks like about half was right—it was slow and steady, but there were no minor releases.
 
 An ideal release schedule still looks to me like once a quarter, so I'm going to try and make that happen in 2017. Let's target January 9th and April 10th for the next releases and see what happens.
 
