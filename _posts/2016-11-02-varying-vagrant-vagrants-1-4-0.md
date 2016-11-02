@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Varying Vagrant Vagrants 1.4.0"
-date:   2016-10-31 12:00:00 -0900
+date:   2016-11-02 8:00:00 -0900
 author: jeremyfelt
 ---
 
