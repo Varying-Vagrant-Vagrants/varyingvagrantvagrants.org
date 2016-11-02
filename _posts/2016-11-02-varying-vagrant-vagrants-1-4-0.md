@@ -9,7 +9,7 @@ Hi! Welcome to the release post for <a href="https://github.com/Varying-Vagrant-
 
 This release is packed with quite a bit of housekeeping. Let's get that out of the way and then do a preview of what's lined up for the future. You can also checkout the <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/blob/1.4.0/CHANGELOG.md">full changelog</a> for more details.
 
-First, VVV is now provisioned with PHP 7.0. PHP is on it's 12 minor release after the initial stable 7.0, so there's not much reason to keep waiting. This is a great way to test your code to make sure it is PHP 7 compatible.
+First, VVV is now provisioned with PHP 7.0. PHP is on it's 12th maintenance release after the initial stable 7.0, so there's not much reason to keep waiting. This is a great way to test your code to make sure it is PHP 7 compatible.
 
 NodeJS and NPM are a lot more organized and are positioned in a way to help clarify how we handle things in the future. First, we've decided to provide the latest LTS release of NodeJS. At this time, that's 6.9.x, so that's what VVV ships with. However, NVM is also installed during provisioning. This provides developers an easy way to switch between versions of NodeJS to work with the varying requirements of different libraries.
 
