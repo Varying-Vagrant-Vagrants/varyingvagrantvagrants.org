@@ -17,7 +17,7 @@ In addition to VirtualBox, provider support is also included for Parallels, Hype
 
 ## Quick Start
 
-1. Install [VirtualBox 5.0.x](https://www.virtualbox.org/wiki/Downloads)
+1. Install [VirtualBox 5.1.x](https://www.virtualbox.org/wiki/Downloads)
 1. Install [Vagrant 1.8.x](https://www.vagrantup.com/downloads.html)
 1. (Optional) Install the [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) plugin with `vagrant plugin install vagrant-hostsupdater`
 	* If you choose not to install this plugin, a manual entry should be added to your local `hosts` file that looks like this: `192.168.50.4  vvv.dev local.wordpress.dev local.wordpress-trunk.dev src.wordpress-develop.dev build.wordpress-develop.dev`
