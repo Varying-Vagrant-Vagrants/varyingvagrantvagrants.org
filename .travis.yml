@@ -2,6 +2,10 @@ language: ruby
 cache: bundler
 rvm:
 - 2.3.0
+before_script:
+  - wget "https://github.com/Varying-Vagrant-Vagrants/VVV/archive/$TRAVIS_BRANCH.zip" -P /tmp/vvv
+  - unzip /tmp/vvv/$TRAVIS_BRANCH.zip -d /tmp/vvv/
+  - mv /tmp/vvv/VVV-$TRAVIS_BRANCH/docs ./
 script:
 - bundle exec jekyll --version
 - ls -lah
