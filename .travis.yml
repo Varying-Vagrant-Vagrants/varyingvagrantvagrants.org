@@ -1,11 +1,20 @@
 language: ruby
+
 cache: bundler
+
 rvm:
-- 2.3.0
+  - 2.4.0
+
+before_script:
+  - wget "https://github.com/Varying-Vagrant-Vagrants/VVV/archive/master.zip" -P /tmp/vvv
+  - unzip /tmp/vvv/master.zip -d /tmp/vvv/
+  - mv /tmp/vvv/VVV-master/docs ./
+
 script:
-- bundle exec jekyll --version
-- ls -lah
-- bundle exec jekyll build
+  - bundle exec jekyll --version
+  - ls -lah
+  - bundle exec jekyll build
+
 deploy:
   provider: s3
   access_key_id: AKIAIH6ZAE5UVSWXTBHA
@@ -13,6 +22,7 @@ deploy:
     secure: aWwy5n7O3/cYxprcFzOYNM3tTGJIjPqIaBaA07aCrmNKqwLMi4KN7bn3UO15MLNpwv5UmOVwhA1sluQnD6pgQ0LpzUnwfa4R7XPZmGeqC7equ+xwHVb7sslPBycqwha/ji2Lg0sC7VfxgccOoM6eTYRk5JczNqyw8RWkygTzO3pAUK66uONuv7Zy687nqgB+OLpMSQfhK+x5tjueg8p7gIUlgoC0GEfMz/O0HmC7ei0KjBx2bzsdNuxpDexlMMC9M+hfz28GC8t128chQwPjYnkqP7CMmU5JmFtRhOHHlJLwg5xJwR+JKaomWPnxNMP7rFmdR9xfZXiZsKubgGeWsVGhqjETd35WFZ5sfhcm9/YRz4pFLAAoBkDKZsQjmgyTfeLrDm1IOYCNURwWx4Dg80n+Bkwvg6oLDN71O7TN/BAPtxqwmCZUy1tyVvlCBSYFv2julV+MfsQj92i3mR/p2Kebp4ysGxERwL2YPbRh9TMMOsYzPLtXtsZNE1ik2gKxXvppcpnz3SHEzHI16sh5rrwsRDig0S0/+Rc/crZEefuv+4WxUWwnJzHqqSjV+dwhiDq0lK86I+L4YaXkhNGtGvphgdavEvr8XWl8R4V+MgdRbhVASKJL/QaESA1d0N4CwE3Wux2LBoVBqgwqc27FIM55U/zAHXUBK4j7aXJkTz0=
   bucket: vvv.org
   local-dir: _site
+  upload-dir: $TRAVIS_BRANCH
   acl: public_read
   on:
     repo: Varying-Vagrant-Vagrants/varyingvagrantvagrants.org
