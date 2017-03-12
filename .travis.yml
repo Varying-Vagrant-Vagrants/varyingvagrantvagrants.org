@@ -6,9 +6,9 @@ rvm:
   - 2.4.0
 
 before_script:
-  - wget "https://github.com/Varying-Vagrant-Vagrants/VVV/archive/master.zip" -P /tmp/vvv
-  - unzip /tmp/vvv/master.zip -d /tmp/vvv/
-  - mv /tmp/vvv/VVV-master/docs ./
+  - wget "https://github.com/Varying-Vagrant-Vagrants/VVV/archive/develop.zip" -P /tmp/vvv
+  - unzip /tmp/vvv/develop.zip -d /tmp/vvv/
+  - mv /tmp/vvv/VVV-develop/docs ./
 
 script:
   - bundle exec jekyll --version
@@ -26,7 +26,7 @@ deploy:
   acl: public_read
   on:
     repo: Varying-Vagrant-Vagrants/varyingvagrantvagrants.org
-    branch: master
+    branch: develop
   skip_cleanup: true
   region: us-west-2
   detect_encoding: true
