@@ -10,7 +10,7 @@ before_script:
   - unzip /tmp/vvv/develop.zip -d /tmp/vvv/
   - mv /tmp/vvv/VVV-develop/docs ./
   - cp /tmp/vvv/VVV-develop/.github/CONTRIBUTING.md ./docs/en-US/contributing.md
-  - cp /tmp/vvv/VVV-develop/CHANGELOG.md ./docs/en-us/changelog.md
+  - cp /tmp/vvv/VVV-develop/CHANGELOG.md ./docs/en-US/changelog.md
 
 script:
   - bundle exec jekyll --version
