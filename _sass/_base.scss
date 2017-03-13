@@ -85,7 +85,17 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
 
+h1, h2, h3 {
+	margin-top: 1em;
+}
 
+h3 {
+	font-weight: 300;
+}
+
+p {
+    line-height: 1.6;
+}
 
 /**
  * Links
