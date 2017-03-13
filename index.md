@@ -7,13 +7,13 @@ Varying Vagrant Vagrants is an open source [Vagrant](https://www.vagrantup.com) 
 
 VVV is ideal for developing themes and plugins as well as for [contributing to WordPress core](https://make.wordpress.org/core/).
 
-## Varying Vagrant Vagrants Objectives
+## Objectives
 
-* Provide an approachable development environment with a modern server configuration.
-* Continue to work towards a stable state of software and configuration included in the default provisioning.
-* Provide excellent and clear documentation throughout VVV to aid in both learning and scaffolding.
+* Approachable development environment with a modern server configuration.
+* Stable state of software and configuration in default provisioning.
+* Excellent and clear documentation to aid in learning and scaffolding.
 
-Read more about the [history of VVV](history.md), the [governance of the project](governance.md), and [how you can contribute](contributing.md).
+Read more about the [history of VVV](docs/en-US/history.md), the [governance of the project](docs/en-US/governance.md), and [how you can contribute](docs/en-US/contributing.md).
 
 ## Requirements
 
