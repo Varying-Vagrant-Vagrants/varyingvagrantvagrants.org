@@ -1,10 +1,9 @@
 ---
-layout: page
+category: 2. Getting Started
+order: 1
 title: Installation
 permalink: /docs/en-US/installation/
 ---
-
-# Installation
 
 1. Start with any local operating system such as Mac OS X, Linux, or Windows.
     * For Windows 8 or higher it is recommended that you run the cmd window as Administrator

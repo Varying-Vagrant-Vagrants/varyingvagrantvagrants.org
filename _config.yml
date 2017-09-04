@@ -11,7 +11,6 @@ email: jeremy.felt@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://varyingvagrantvagrants.org" # the base hostname & protocol for your site
 markdown: kramdown
-plugins: [jekyll-paginate]
 permalink: /blog/:year/:month/:day/:title.html
 paginate: 10
 paginate_path: /blog/page:num
@@ -19,9 +18,84 @@ exclude:
   - vendor
   - README.md
   - Gemfile*
-navigation:
-- text: Blog
-  url: /blog/
-  layout: post
-- text: Documentation
-  url: /docs/en-US/
+#navigation:
+#- text: Blog
+#  url: /blog/
+#  layout: default
+#- text: Documentation
+#  url: /docs/en-US/
+
+
+# ----
+# Site
+
+show_full_navigation: false
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /siteicon.png
+description: Product documentation template for Jekyll.
+author:
+  name:
+  email:
+  twitter: # twitter username without the @ symbol
+#social:
+#  name: Edition Template
+#  links:
+#    - https://github.com/CloudCannon/edition-jekyll-template
+
+# -----
+# Build
+
+#permalink: pretty
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+collections:
+  docs:
+    title: Documentation
+    permalink: /:path/
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+  -
+    scope:
+      path: ""
+      type: "docs"
+    values:
+      seo:
+        type: Article
+      _comments:
+        category: Group navigation links with this field
+        order: Used to sort links in the navigation
+      _options:
+        content:
+          width: 800
+          height: 2000
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      _comments:
+        type: Marks the impact of this release
+
+# -----------
+# CloudCannon
+
+types:
+  - minor
+  - major

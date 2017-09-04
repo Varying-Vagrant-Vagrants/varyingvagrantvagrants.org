@@ -1,5 +1,6 @@
 ---
-layout: page
+category: 1. Introduction
+order: 4
 title: Governance
 permalink: /docs/en-US/governance/
 ---

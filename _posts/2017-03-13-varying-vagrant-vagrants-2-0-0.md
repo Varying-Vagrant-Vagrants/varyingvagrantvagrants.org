@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Varying Vagrant Vagrants 2.0.0"
 date:   2017-03-13 18:00:00 -0000
 author: jeremyfelt

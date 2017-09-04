@@ -1,2 +1,9 @@
 source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
+
+gem 'jekyll'
+gem 'github-pages'
+group :jekyll_plugins do
+  gem 'jekyll-sitemap'#, '0.11.0'
+  gem 'jekyll-seo-tag'#, '2.0.0'
+  gem 'jekyll-feed'#, '0.7.2'
+end
