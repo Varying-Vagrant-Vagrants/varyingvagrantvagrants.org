@@ -18,6 +18,7 @@ exclude:
   - vendor
   - README.md
   - Gemfile*
+  - LICENCE
 #navigation:
 #- text: Blog
 #  url: /blog/
@@ -52,12 +53,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENCE
 
 collections:
   docs:
