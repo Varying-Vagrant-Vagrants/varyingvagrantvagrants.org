@@ -19,7 +19,7 @@ $nav-width: 300px;
 
 $space: 20px;
 
-$baseurl: {{ site.baseurl }};
+$baseurl: "{{ site.baseurl }}";
 $mobile-break: 700px;
 $full-width-break: $nav-width + ($space * 4) + $content-max-width;
 
