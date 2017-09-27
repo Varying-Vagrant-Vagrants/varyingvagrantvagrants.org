@@ -1,5 +1,6 @@
 ---
-layout: page
+category: 5. Reference
+order: 1
 title: vvv-config.yml
 permalink: /docs/en-US/vvv-config/
 ---

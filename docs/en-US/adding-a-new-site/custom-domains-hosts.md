@@ -1,15 +1,10 @@
 ---
-layout: page
+layout: default
+category: 3. Adding a New Site
+order: 1
 title: Custom Domains and Hosts
 permalink: /docs/en-US/adding-a-new-site/custom-domains-hosts/
 ---
-
-* [Add New Sites](index.md)
-   * [Changing a sites PHP Version](changing-php-version.md)
-   * [Custom Domains and Hosts](custom-domains-hosts.md)
-   * [Custom Paths and Folders](custom-paths-and-folders.md)
-   * [Nginx Configs](nginx-configs.md)
-   * [Setup Scripts](setup-script.md)
 
 There are 3 ways to define hosts
 
@@ -21,13 +16,16 @@ The recommended way is to use the `vvv-custom.yml` file. `vvv-hosts` is supporte
 
 When changing hosts, the Nginx config will need updating so that Nginx knows to listen for requests on those domains. If this isn't done, the VVV dashboard will appear instead of the desired site.
 
-**Remember**, you need to reprovision for a change to take effect, run `vagrant reload` after making changes.
+<div class="note">
+	<h5>Don't forget to Reprovision on Changes</h5>
+	If you modify <code>vvv-custom.yml</code>, you must reprovision for the changes to take effect. Run <code>vagrant reload</code> after making changes.
+</div>
 
 ## vvv-custom.yml
 
 When adding a site in `vvv-custom.yml`, add a hosts section listing the domains of that site. For example:
 
-```YAML
+```yaml
 example:
   hosts:
     - example.com

@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: default
+category: 3. Adding a New Site
+order: 1
 title: Migrating from VVV 1.4.x
 permalink: /docs/en-US/adding-a-new-site/migrating-from-vvv-1-4-x
 ---
-
-# Migrating from VVV 1
 
 VVV 1 sites still work, but they require an additional step.
 
@@ -42,7 +42,6 @@ my-test-site:
 ### VVV 1 Sites in Non-Standard Folders
 
 Some VVV 1 sites are in nested or non-standard folder structures. These are still supported. See the [custom paths and folders](custom-paths-and-folders.md) documentation for how to configure these sites.
-
 
 ## Why is This Needed?
 

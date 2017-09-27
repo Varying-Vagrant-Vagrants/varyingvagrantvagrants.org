@@ -1,5 +1,6 @@
 ---
-layout: page
+category: 1. Introduction
+order: 3
 title: History
 permalink: /docs/en-US/history/
 ---
