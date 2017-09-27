@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Varying Vagrant Vagrants 1.2.0"
 date:   2014-12-14 23:00:00 -0900
 ---

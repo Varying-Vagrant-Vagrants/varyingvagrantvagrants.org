@@ -1,39 +1,9 @@
 ---
-layout: page
-title: VVV 2.0.0 Documentation
+category: 1. Introduction
+order: 100
+title: Misc
 permalink: /docs/en-US/
 ---
-
-## Getting Started
-
-These guides are intended to help with the initial installation of VVV as well as to provide ongoing support as you get familiar with its configuration.
-
-* [Installing VVV 2](installation.md)
-* [Add New Sites](adding-a-new-site/index.md)
-   * [Changing a sites PHP Version](adding-a-new-site/changing-php-version.md)
-   * [Custom Domains and Hosts](adding-a-new-site/custom-domains-hosts.md)
-   * [Custom Paths and Folders](adding-a-new-site/custom-paths-and-folders.md)
-   * [Nginx Configs](adding-a-new-site/nginx-configs.md)
-   * [Setup Scripts](adding-a-new-site/setup-script.md)
-* [Migrating from VVV1](migrating-vvv1.md)
-* [Utilities](utilities.md)
-* [Troubleshooting](troubleshooting.md)
-* [Guide to vvv-custom.yml](vvv-config.yml.md)
-* [History](history.md)
-* [Governance](governance.md)
-
-## Reference documents
-
-* [Default credentials](references/default-credentials.md) is a list of the default usernames and passwords provsioned in VVV.
-* [PHP Extensions](references/php-extensions.md) is a list of the PHP extensions provisioned by default.
-* [Installed packages](references/installed-packages.md) is a list of packages installed during default provisioning.
-* [Default sites](references/default-sites.md) installed with VVV.
-* [Basic usage](references/basic-usage.md) provides the basics of using Vagrant to manage a VM.
-
-## Help
-
-* [Troubleshooting](troubleshooting.md)
-* [Migrating from VVV 1 to 2](migrating-vvv1.md)
 
 ## Helpful Extensions
 
@@ -50,7 +20,3 @@ The dashboard provided by VVV allows for easy replacement by looking for a `www/
 * @leogopal's [VVV Dashboard](https://github.com/leogopal/VVV-Dashboard)
 * @stevenkword's [VVV Dashboard Custom](https://github.com/stevenkword/vvv-dashboard-custom)
 * @goblindegook's [VVV Material Dashboard](https://github.com/goblindegook/vvv-material-dashboard)
-
-## Copyright / License
-
-VVV is copyright (c), the contributors of the VVV project under the [MIT License](LICENSE).

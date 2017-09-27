@@ -1,5 +1,6 @@
 ---
-layout: page
+category: 4. Troubleshooting
+order: 1
 title: Troubleshooting
 permalink: /docs/en-US/troubleshooting/
 ---

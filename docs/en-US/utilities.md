@@ -1,5 +1,7 @@
 ---
-layout: page
+category: 5. Reference
+order: 1
+
 title: Utilities
 permalink: /docs/en-US/utilities/
 ---

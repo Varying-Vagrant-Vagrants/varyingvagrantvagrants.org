@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Varying Vagrant Vagrants
+category: 1. Introduction
+order: 1
 ---
 
 Varying Vagrant Vagrants is an open source [Vagrant](https://www.vagrantup.com) configuration focused on [WordPress](https://wordpress.org) development.

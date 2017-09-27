@@ -1,15 +1,10 @@
 ---
-layout: page
+layout: default
+category: 3. Adding a New Site
+order: 1
 title: Adding a New Site
 permalink: /docs/en-US/adding-a-new-site/
 ---
-
-* [Add New Sites](index.md)
-   * [Changing a sites PHP Version](changing-php-version.md)
-   * [Custom Domains and Hosts](custom-domains-hosts.md)
-   * [Custom Paths and Folders](custom-paths-and-folders.md)
-   * [Nginx Configs](nginx-configs.md)
-   * [Setup Scripts](setup-script.md)
 
 Adding a new site is as simple as adding it under the sites section of `vvv-custom.yml`. If `vvv-custom.yml` does not exist, you can create it by copying `vvv-config.yml` to `vvv-custom.yml`.
 

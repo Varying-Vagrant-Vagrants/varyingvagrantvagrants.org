@@ -1,15 +1,10 @@
 ---
-layout: page
+layout: default
+category: 3. Adding a New Site
+order: 1
 title: Nginx Configuration
 permalink: /docs/en-US/adding-a-new-site/nginx-configuration/
 ---
-
-* [Add New Sites](index.md)
-   * [Changing a sites PHP Version](changing-php-version.md)
-   * [Custom Domains and Hosts](custom-domains-hosts.md)
-   * [Custom Paths and Folders](custom-paths-and-folders.md)
-   * [Nginx Configs](nginx-configs.md)
-   * [Setup Scripts](setup-script.md)
 
 Some sites use Apache or IIS to serve pages, but VVV uses the popular Nginx. VVV provides an include for setting up WordPress easily, and a file for setting your own Nginx configuration on a per site basis named `vvv-nginx.conf`
 

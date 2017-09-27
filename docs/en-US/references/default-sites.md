@@ -1,14 +1,9 @@
 ---
-layout: page
-title: Default sites configured in VVV
+category: 2. Getting Started
+order: 3
+title: Default sites in VVV
 permalink: /docs/en-US/references/default-sites/
 ---
-
-* [Basic usage](basic-usage.md) provides the basics of using Vagrant to manage a VM.
-* [Default credentials](default-credentials.md) is a list of the default usernames and passwords provsioned in VVV.
-* [Default sites](default-sites.md) installed with VVV.
-* [Installed packages](installed-packages.md) is a list of packages installed during default provisioning.
-* [PHP Extensions](php-extensions.md) is a list of the PHP extensions provisioned by default.
 
 ## What are the Default Sites?
 
