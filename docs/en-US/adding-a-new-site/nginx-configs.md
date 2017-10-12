@@ -3,7 +3,7 @@ layout: default
 category: 3. Adding a New Site
 order: 1
 title: Nginx Configuration
-permalink: /docs/en-US/adding-a-new-site/nginx-configuration/
+permalink: /docs/en-US/adding-a-new-site/nginx-configuration
 ---
 
 Some sites use Apache or IIS to serve pages, but VVV uses the popular Nginx. VVV provides an include for setting up WordPress easily, and a file for setting your own Nginx configuration on a per site basis named `vvv-nginx.conf`
@@ -58,7 +58,7 @@ set $upstream {upstream};
 
 The `{upstream}` variable is set from `vvv-custom.yml`, and is used to determine the version of PHP to use. Removing this will disable that functionality.
 
-It may be desirable to force a site to use a particular version of PHP, for details see the [changing PHP versions](changing-php-version.md) documentation.
+It may be desirable to force a site to use a particular version of PHP, for details see the [changing PHP versions](changing-php-version/) documentation.
 
 ## PHP Error Logs
 

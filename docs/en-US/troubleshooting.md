@@ -88,7 +88,7 @@ VVV relies on the stability of both Vagrant and VirtualBox. These caveats are co
 
 ### Memory Allotment
 
-The default memory allotment for the VVV virtual machine is 1024MB. If you would like to raise or lower this value to better match your system requirements, a [you can do so with the vm_config section of `vvv-custom.yml`](vm_config.md) is in the wiki.
+The default memory allotment for the VVV virtual machine is 1024MB. If you would like to raise or lower this value to better match your system requirements, a [you can do so with the vm_config section of `vvv-custom.yml`](../vm-config/) is in the wiki.
 
 ### 64bit Ubuntu and Older CPUs
 

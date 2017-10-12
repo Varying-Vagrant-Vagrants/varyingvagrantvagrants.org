@@ -18,9 +18,9 @@ To do this there are five steps:
 
 I'm going to walk through setting up a blog named vvvtest.com locally using VVV, but this could be a site currently hosted in MAMP.
 
-If you're migrating a site from VVV 1, read this page, then visit the [migration page](../migrating-vvv1.md) for further details.
+If you're migrating a site from VVV 1, read this page, then visit the [migration page](migrating-from-vvv-1-4-x/) for further details.
 
-You may also find that the default sites created by VVV are enough for what you need. [Read about the default sites here](../references/default-sites.md)
+You may also find that the default sites created by VVV are enough for what you need. [Read about the default sites here](../references/default-sites/)
 
 **Remember: Always reprovision after making changes to `vvv-custom.yml`**
 
@@ -40,7 +40,7 @@ vvvtest:
     - vvvtest.com
 ```
 
-Read here for [more information about Domains and hosts](custom-domains-hosts.md)
+Read here for [more information about Domains and hosts](custom-domains-hosts/)
 
 ## Files
 
@@ -48,7 +48,7 @@ Now that VVV knows about our site with the name `vvvtest`, it's going to look in
 
 After creating the folder, create a `provision` subfolder, e.g. `www/testables/provision`. See more below about what goes in this folder.
 
-If you'd like to change the folders VVV uses, [read here for more information](custom-paths-and-folders.md)
+If you'd like to change the folders VVV uses, [read here for more information](custom-paths-and-folders/)
 
 ### Copying In Site Files
 
@@ -76,7 +76,7 @@ The following files should be created within the `provision` folder created abov
  - vvv-init.sh
  - vvv-nginx.conf
 
-`vvv-init.sh` determines how VVV will download, install, and setup WordPress. [Read about `vvv-init.sh` and find an example to copy/paste here](setup-script.md).
+`vvv-init.sh` determines how VVV will download, install, and setup WordPress. [Read about `vvv-init.sh` and find an example to copy/paste here](setup-script/).
 
 ### Nginx config
 
@@ -100,7 +100,7 @@ server {
 }
 ```
 
-For more information about Nginx and VVV, read the [Nginx Configs page](nginx-configs.md) of adding a new site.
+For more information about Nginx and VVV, read the [Nginx Configs page](nginx-configuration/) of adding a new site.
 
 ## Reprovision
 

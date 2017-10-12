@@ -15,7 +15,7 @@ VVV is ideal for developing themes and plugins as well as for [contributing to W
 * Stable state of software and configuration in default provisioning.
 * Excellent and clear documentation to aid in learning and scaffolding.
 
-Read more about the [history of VVV](docs/en-US/history.md), the [governance of the project](docs/en-US/governance.md), and [how you can contribute](docs/en-US/contributing.md).
+Read more about the [history of VVV](docs/en-US/history/), the [governance of the project](docs/en-US/governance/), and [how you can contribute](https://github.com/Varying-Vagrant-Vagrants/VVV/blob/develop/.github/CONTRIBUTING.md).
 
 ## Requirements
 
@@ -27,7 +27,7 @@ In addition to VirtualBox, provider support is also included for Parallels, Hype
 
 ## Documentation
 
-The [documentation](docs/en-US/index.md) area of this site is in progress. The [VVV Wiki](https://github.com/varying-vagrant-vagrants/vvv/wiki) contains documentation that may help. Open a [new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV) if you run into trouble or have any tips that we need to know.
+The [documentation](docs/en-US/) area of this site is in progress. The [VVV Wiki](https://github.com/varying-vagrant-vagrants/vvv/wiki) contains documentation that may help. Open a [new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV) if you run into trouble or have any tips that we need to know.
 
 ## Copyright / License
 
