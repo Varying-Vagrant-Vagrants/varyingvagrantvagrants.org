@@ -41,7 +41,7 @@ my-test-site:
 
 ### VVV 1 Sites in Non-Standard Folders
 
-Some VVV 1 sites are in nested or non-standard folder structures. These are still supported. See the [custom paths and folders](custom-paths-and-folders.md) documentation for how to configure these sites.
+Some VVV 1 sites are in nested or non-standard folder structures. These are still supported. See the [custom paths and folders](custom-paths-and-folders/) documentation for how to configure these sites.
 
 ## Why is This Needed?
 

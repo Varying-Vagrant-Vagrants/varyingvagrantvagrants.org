@@ -34,7 +34,7 @@ Once these are installed, **reboot your computer** ( if you don't there may be n
 1. Start the Vagrant environment with `vagrant up`
     * Be patient as the magic happens. This could take a while on the first run as your local machine downloads the required files.
     * Watch as the script ends, as an administrator or `su` ***password may be required*** to properly modify the hosts file on your local machine.
-1. Visit any of the [built in WordPress sites](../references/default-sites.md) or the VVV Dashboard at [http://vvv.test](http://vvv.test)
+1. Visit any of the [built in WordPress sites](../references/default-sites/) or the VVV Dashboard at [http://vvv.test](http://vvv.test)
 
 Fancy, yeah?
 
@@ -62,4 +62,4 @@ Now that you're up and running, start poking around and modifying things.
 1. Suspend the box's state in memory with `vagrant suspend` and bring it right back with `vagrant resume`.
 1. Reapply provisioning to a running box with `vagrant provision`.
 1. Destroy the box with `vagrant destroy`. Files added in the `www` directory will persist on the next `vagrant up`.
-1. Start modifying and adding local files to fit your needs. Take a look at [Adding a Site](adding-a-new-site/index.md) for tips on adding new projects.
+1. Start modifying and adding local files to fit your needs. Take a look at [Adding a Site](../adding-a-new-site/) for tips on adding new projects.

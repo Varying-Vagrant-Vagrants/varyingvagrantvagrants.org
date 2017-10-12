@@ -2,7 +2,7 @@
 category: 5. Reference
 order: 1
 title: vvv-config.yml
-permalink: /docs/en-US/vvv-config/
+permalink: /docs/en-US/vvv-config
 ---
 
 `vvv-config.yml` is the default config file that VVV uses to set itself up. Copy this file to `vvv-custom.yml` to make changes and add your own site.
@@ -116,7 +116,7 @@ It's recommend that instead the `utilities` section be used when possible. Writi
 
 ### nginx_upstream
 
-This option sets where Nginx passes requests to, and is primarily for setting the PHP version used. [You can read more about it here](adding-a-new-site/changing-php-version.md)
+This option sets where Nginx passes requests to, and is primarily for setting the PHP version used. [You can read more about it here](../adding-a-new-site/changing-php-version/)
 
 ### hosts
 
