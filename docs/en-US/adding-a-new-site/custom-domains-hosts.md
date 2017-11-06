@@ -1,7 +1,7 @@
 ---
 layout: default
 category: 3. Adding a New Site
-order: 1
+order: 2
 title: Custom Domains and Hosts
 permalink: /docs/en-US/adding-a-new-site/custom-domains-hosts/
 ---

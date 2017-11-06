@@ -1,7 +1,7 @@
 ---
 layout: default
 category: 3. Adding a New Site
-order: 1
+order: 3
 title: Custom Paths and Folders
 permalink: /docs/en-US/adding-a-new-site/custom-paths-and-folders/
 ---

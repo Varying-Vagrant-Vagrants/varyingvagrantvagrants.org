@@ -1,7 +1,7 @@
 ---
 layout: default
 category: 3. Adding a New Site
-order: 1
+order: 4
 title: Changing PHP Version
 permalink: /docs/en-US/adding-a-new-site/changing-php-version/
 ---
