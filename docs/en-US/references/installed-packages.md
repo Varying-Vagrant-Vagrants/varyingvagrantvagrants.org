@@ -16,7 +16,7 @@ These packages are installed by default in VVV:
 1. [php-fpm](http://php-fpm.org/) 7.0.x
 1. [memcached](http://memcached.org/)
 1. PHP [memcache extension](https://pecl.php.net/package/memcache)
-1. PHP [xdebug extension](https://pecl.php.net/package/xdebug/)
+1. PHP [xdebug extension](https://pecl.php.net/package/xdebug)
 1. PHP [imagick extension](https://pecl.php.net/package/imagick/)
 1. [PHPUnit](https://phpunit.de/)
 1. [ack-grep](http://beyondgrep.com/)

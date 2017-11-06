@@ -20,7 +20,7 @@ sites:
     allow_customfile: false
     nginx_upstream: php
     hosts:
-      - local.wordpress.dev
+      - local.wordpress.test
 
   wordpress-develop:
     repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
@@ -31,7 +31,7 @@ sites:
     allow_customfile: false
     nginx_upstream: php
     hosts:
-      - develop.wordpress.dev
+      - develop.wordpress.test
 
 vm_config:
   memory: 1024
@@ -124,7 +124,7 @@ This defines the domains and hosts for VVV to listen on. If the vagrant host plu
 
 ```yaml
 hosts:
-  - local.wordpress.dev
+  - local.wordpress.test
 ```
 
 ## vm_config

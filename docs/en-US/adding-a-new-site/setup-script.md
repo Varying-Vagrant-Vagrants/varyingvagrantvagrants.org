@@ -1,7 +1,7 @@
 ---
 layout: default
 category: 3. Adding a New Site
-order: 1
+order: 5
 title: Setup Script
 permalink: /docs/en-US/adding-a-new-site/setup-script/
 ---

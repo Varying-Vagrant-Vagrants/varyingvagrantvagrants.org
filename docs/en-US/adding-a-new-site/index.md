@@ -115,7 +115,7 @@ Now our site is active and running in VVV, but there's no content. We need to tr
 There are several ways to do this:
 
  - Do the 5 minute install of WordPress and use the importer plugin
- - Use the PHPMyAdmin install that comes with VVV, by visiting [http://vvv.dev](http://vvv.dev)
+ - Use the PHPMyAdmin install that comes with VVV, by visiting [http://vvv.test](http://vvv.test)
  - Connect directly to the MySQL server using the default credentials
  - Restore a backup via a plugin
- - Automatically import an sql file in vvv-init.sh if the database is empty using the `mysql` command
+ - Automatically import an sql file in `vvv-init.sh` if the database is empty using the `mysql` command

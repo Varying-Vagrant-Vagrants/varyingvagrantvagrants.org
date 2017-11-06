@@ -1,7 +1,7 @@
 ---
 layout: default
 category: 3. Adding a New Site
-order: 1
+order: 6
 title: Nginx Configuration
 permalink: /docs/en-US/adding-a-new-site/nginx-configuration/
 ---

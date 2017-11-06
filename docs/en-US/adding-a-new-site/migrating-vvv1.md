@@ -1,7 +1,7 @@
 ---
 layout: default
 category: 3. Adding a New Site
-order: 1
+order: 7
 title: Migrating from VVV 1.4.x
 permalink: /docs/en-US/adding-a-new-site/migrating-from-vvv-1-4-x
 ---

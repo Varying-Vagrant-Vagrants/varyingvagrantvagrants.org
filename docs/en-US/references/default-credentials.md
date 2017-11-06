@@ -30,13 +30,13 @@ __Password:__ `vagrant`
 #### WordPress Stable
 * LOCAL PATH: vagrant-local/www/wordpress-default
 * VM PATH: /srv/www/wordpress-default
-* URL: `http://local.wordpress.dev`
+* URL: `http://local.wordpress.test`
 * DB Name: `wordpress_default`
 
 #### WordPress Develop
 * LOCAL PATH: vagrant-local/www/wordpress-develop
 * VM PATH: /srv/www/wordpress-develop
-* /src URL: `http://src.wordpress-develop.dev`
-* /build URL: `http://build.wordpress-develop.dev`
+* /src URL: `http://src.wordpress-develop.test`
+* /build URL: `http://build.wordpress-develop.test`
 * DB Name: `wordpress_develop`
 * DB Name: `wordpress_unit_tests`
