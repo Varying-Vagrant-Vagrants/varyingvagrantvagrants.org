@@ -19,12 +19,6 @@ exclude:
   - README.md
   - Gemfile*
   - LICENCE
-#navigation:
-#- text: Blog
-#  url: /blog/
-#  layout: default
-#- text: Documentation
-#  url: /docs/en-US/
 
 
 # ----
@@ -53,6 +47,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-paginate
 
 collections:
   docs:
