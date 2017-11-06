@@ -30,14 +30,14 @@ sites:
     repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-default.git
     nginx_upstream: php71
     hosts:
-      - local.wordpress.dev
+      - local.wordpress.test
 
   wordpress-develop:
     repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
     nginx_upstream: php56
     hosts:
-      - src.wordpress-develop.dev
-      - build.wordpress-develop.dev
+      - src.wordpress-develop.test
+      - build.wordpress-develop.test
 
 utilities:
   core:

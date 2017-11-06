@@ -9,8 +9,8 @@ permalink: /docs/en-US/references/default-sites/
 
 VVV creates and sets up several WordPress installs for you automatically, these are:
 
- - [http://local.wordpress.dev](http://local.wordpress.dev) - a standard WordPress install
- - [http://src.wordpress-develop.dev](http://src.wordpress-develop.dev) and [http://build.wordpress-develop.dev](http://build.wordpress-develop.dev) - a copy of the develop branch of WordPress
+ - [http://local.wordpress.test](http://local.wordpress.test) - a standard WordPress install
+ - [http://src.wordpress-develop.test](http://src.wordpress-develop.test) and [http://build.wordpress-develop.test](http://build.wordpress-develop.test) - a copy of the develop branch of WordPress
 
 You can see these in your VVV config, allowing you to make new sites, or remove the built in sites if you so choose.
 
@@ -25,5 +25,5 @@ Multiple projects can be developed at once in the same environment.
 
 VVV's `config`, `database`, `log` and `www` directories are shared with the virtualized server.
 
-These shared directories allow you to work, for example, in `vagrant-local/www/wordpress-default` in your local file system and have those changes immediately reflected in the virtualized server's file system and http://local.wordpress.dev/. Likewise, if you `vagrant ssh` and make modifications to the files in `/srv/www/`, you'll immediately see those changes in your local file system.
+These shared directories allow you to work, for example, in `vagrant-local/www/wordpress-default` in your local file system and have those changes immediately reflected in the virtualized server's file system and http://local.wordpress.test/. Likewise, if you `vagrant ssh` and make modifications to the files in `/srv/www/`, you'll immediately see those changes in your local file system.
 
