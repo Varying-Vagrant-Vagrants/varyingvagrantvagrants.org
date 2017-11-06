@@ -7,4 +7,5 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'#, '2.0.0'
   gem 'jekyll-feed'#, '0.7.2'
   gem 'jekyll-paginate'
+  gem 'jekyll-relative-links'
 end

@@ -48,7 +48,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-paginate
-
+  - jekyll-relative-links
+  
 collections:
   docs:
     title: Documentation
