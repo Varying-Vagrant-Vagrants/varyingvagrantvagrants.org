@@ -2,7 +2,7 @@
 category: 2. Getting Started
 order: 2
 title: Software Requirements
-permalink: /docs/en-US/installation/software-requirements
+permalink: /docs/en-US/installation/software-requirements/
 ---
 
 VVV requires recent versions of both Vagrant and VirtualBox to be installed, along with some vagrant plugins.
