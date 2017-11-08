@@ -43,17 +43,18 @@
 
 			<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
 				<ul>
-					{% assign grouped = site.pages |  group_by: 'category' | sort: 'name' %}
 					{% for group in grouped %}
-						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
-							{% assign items = group.items | sort: 'order' %}
-							<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
-							<ul>
-								{% for item in items %}
-									<li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
-								{% endfor %}
-							</ul>
-						</li>
+						{% if group.name != '' %}
+							<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
+								{% assign items = group.items | sort: 'order' %}
+								<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+								<ul>
+									{% for item in items %}
+										<li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+									{% endfor %}
+								</ul>
+							</li>
+						{% endif %}
 					{% endfor %}
 				</ul>
 
