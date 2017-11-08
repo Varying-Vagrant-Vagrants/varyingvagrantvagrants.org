@@ -2,13 +2,13 @@
 category: 2. Getting Started
 order: 2
 title: Software Requirements
-permalink: /docs/en-US/installation/software-requirements
+permalink: /docs/en-US/installation/software-requirements/
 ---
 
 VVV requires recent versions of both Vagrant and VirtualBox to be installed, along with some vagrant plugins.
 
 1. Start with any local operating system such as Mac OS X, Linux, or Windows.
-    * For Windows 8 or higher it is recommended that you run the cmd window as Administrator
+    * For Windows 8 or higher it is recommended that you run the cmd window as Administrator.
 1. Install [VirtualBox 5.x](https://www.virtualbox.org/wiki/Downloads)
 1. Install [Vagrant 2.x](https://www.vagrantup.com/downloads.html)
     * [Vagrant](https://www.vagrantup.com) is a "tool for building and distributing development environments". It works with [virtualization](https://en.wikipedia.org/wiki/X86_virtualization) software such as [VirtualBox](https://www.virtualbox.org/) to provide a virtual machine sandboxed from your local environment.
@@ -28,4 +28,4 @@ VVV requires recent versions of both Vagrant and VirtualBox to be installed, alo
 
 ## Windows Users
 
-You may need to turn on virtualisation in your computers BIOS, some computers come with it turned off by default. Refer to your machines manufacturer for how to access your BIOS.
+You may need to turn on virtualization in your computers BIOS, some computers come with it turned off by default. Refer to your machines manufacturer for how to access your BIOS.
