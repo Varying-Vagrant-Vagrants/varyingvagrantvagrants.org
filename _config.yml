@@ -19,6 +19,7 @@ exclude:
   - README.md
   - Gemfile*
   - LICENCE
+github_repository_url: "https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org"
 
 
 # ----
@@ -49,7 +50,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-relative-links
-  
+
 collections:
   docs:
     title: Documentation
