@@ -115,6 +115,15 @@ header {
 			width: $emblem-size;
 			margin-right: $space - 5;
 		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+
+			&:hover {
+				color: #fff;
+			}
+		}
 	}
 
 	.open-nav {
