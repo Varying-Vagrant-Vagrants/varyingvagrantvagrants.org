@@ -17,7 +17,7 @@ First make sure you have all the necessary software installed for Vagrant to run
 git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vagrant-local
 ```
 
-Alternatively, for faster updates and bleeding edge features, or if you want to help test the next version, use the `develop` branch instead of the `master` branch
+Alternatively, for faster updates and bleeding edge features, or if you want to help test the next version, use the `develop` branch instead of the `master` branch.
 
 ### Without `git`
 
@@ -28,11 +28,11 @@ There are 2 methods, both involve downloading a zip file:
 
 ## Starting VVV
 
-1. In a command prompt, change into the new directory with `cd vagrant-local`
-1. Start the Vagrant environment with `vagrant up`
+1. In a command prompt, change into the new directory with `cd vagrant-local`.
+1. Start the Vagrant environment with `vagrant up`.
     * Be patient as the magic happens. This could take a while on the first run as your local machine downloads the required files.
     * Watch as the script ends, as an administrator or `su` ***password may be required*** to properly modify the hosts file on your local machine.
-1. Visit any of [the VVV Dashboard at http://vvv.test](http://vvv.test) to view your new WordPress sites
+1. Visit [the VVV Dashboard at http://vvv.test](http://vvv.test) to view your new WordPress sites.
 
 Fancy, yeah?
 
