@@ -40,6 +40,8 @@ There has also been a **great** improvement in the quality and presentation of t
 
 As a bonus, check out all the excellent work that's been done on the VVV dashboard at your local [http://vvv.test](http://vvv.test) site.
 
+![A screenshot of the new dashboard used in VVV 2.1.0]({{ "/images/vvv-dash-2.1.0.png" | absolute_url }})
+
 ## And more
 
 A [full changelog](https://varyingvagrantvagrants.org/docs/en-US/changelog/) is up that has all of the details for this release. We fixed MailCatcher, made some tweaks to how PHPCS is installed and its configuration, and applied some small adjustments to the VM configuration.
