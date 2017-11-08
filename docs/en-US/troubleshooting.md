@@ -47,7 +47,7 @@ This is a generic error that can indicate multiple things, including:
 If this happens, do the following, and provide the results when asking for help.
 
  - Run `vagrant ssh`, if this works and you're able to get inside the VVV machine and run commands that is useful information, and may allow you to manually run the commands to bring up nginx and PHP
- - Halt the machine with `vagrant halt` and turn it back on in verbose logging mode using `vagrant up --provision --verbose | vvv.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
+ - Halt the machine with `vagrant halt` and turn it back on in verbose logging mode using `vagrant up --provision --debug | tee vvv.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
 
 ## Corrupt VM
 
