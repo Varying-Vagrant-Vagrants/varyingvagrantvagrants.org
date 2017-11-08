@@ -8,9 +8,9 @@ permalink: /docs/en-US/installation/software-requirements/
 VVV requires recent versions of both Vagrant and VirtualBox to be installed, along with some vagrant plugins.
 
 1. Start with any local operating system such as Mac OS X, Linux, or Windows.
-    * For Windows 8 or higher it is recommended that you run the cmd window as Administrator
+    * For Windows 8 or higher it is recommended that you run the cmd window as Administrator.
 1. Install [VirtualBox 5.x](https://www.virtualbox.org/wiki/Downloads)
-1. Install [Vagrant 1.x](https://www.vagrantup.com/downloads.html)
+1. Install [Vagrant 2.x](https://www.vagrantup.com/downloads.html)
     * [Vagrant](https://www.vagrantup.com) is a "tool for building and distributing development environments". It works with [virtualization](https://en.wikipedia.org/wiki/X86_virtualization) software such as [VirtualBox](https://www.virtualbox.org/) to provide a virtual machine sandboxed from your local environment.
     * `vagrant` will now be available as a command in your terminal, try it out.
     * Provider support is included for VirtualBox, Parallels, Hyper-V, VMWare Fusion, and VMWare Workstation.
@@ -25,3 +25,7 @@ VVV requires recent versions of both Vagrant and VirtualBox to be installed, alo
         * If vagrant-triggers is not installed, VVV will not provide automated database backups.
     1. Install the [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest) plugin with `vagrant plugin install vagrant-vbguest`.
         * Note: This step is not a requirement. When installed, it keeps the [VirtualBox Guest Additions](https://www.virtualbox.org/manual/ch04.html) kernel modules of your guest synchronized with the version of your host whenever you do `vagrant up`. This can prevent some subtle shared folder errors.
+
+## Windows Users
+
+You may need to turn on virtualization in your computers BIOS, some computers come with it turned off by default. Refer to your machines manufacturer for how to access your BIOS.
