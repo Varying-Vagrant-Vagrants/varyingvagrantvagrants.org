@@ -43,13 +43,6 @@
 
 			<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
 				<ul>
-					<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
-						{% assign home = site.html_pages | where: 'url', '/' | first %}
-						<a href="{{ site.baseurl }}/">{{ home.title }}</a>
-					</li>
-				</ul>
-
-				<ul>
 					{% assign grouped = site.pages |  group_by: 'category' | sort: 'name' %}
 					{% for group in grouped %}
 						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
