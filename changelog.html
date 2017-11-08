@@ -8,7 +8,7 @@ permalink: blog/
 <div class="changelog">
 	{% for change in site.posts %}
 		<div class="changelog-item">
-			<h3><a href="{{ site.url }}{{ change.url }}/">{{ change.title }}</a></h3>
+			<h3><a href="{{ site.url }}{{ change.url }}">{{ change.title }}</a></h3>
 			<p><span class="date">{{ change.date | date: "%B %d, %Y" }}</span></p>
 
 			{{ change.content }}
