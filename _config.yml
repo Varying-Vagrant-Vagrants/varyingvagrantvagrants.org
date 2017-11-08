@@ -20,6 +20,7 @@ exclude:
   - Gemfile*
   - LICENCE
 github_repository_url: "https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org"
+google_analytics_key: "UA-57670102-1"
 
 
 # ----

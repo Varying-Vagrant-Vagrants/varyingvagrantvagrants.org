@@ -14,7 +14,7 @@ before_script:
 script:
   - bundle exec jekyll --version
   - ls -lah
-  - bundle exec jekyll build
+  - JEKYLL_ENV=production bundle exec jekyll build
 
 deploy:
   provider: s3
