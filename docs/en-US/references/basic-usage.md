@@ -2,12 +2,13 @@
 category: 2. Getting Started
 order: 3
 title: Basic Usage
+description: VVV assumes some very basic terminal/command line knowledge but Vagrant Manager allows your to manage Vagrant with a visual UI.
 permalink: /docs/en-US/references/basic-usage/
 ---
 
 ## Using a GUI
 
-This documentation assumes some very basic terminal/command line knowledge to run simple commands. However, some people prefer the convenience of a visual UI. If you fall into this category then consider the [Vagrant Manager](http://vagrantmanager.com/)  project.
+This documentation assumes some very basic terminal/command line knowledge to run simple commands. However, some people prefer the convenience of a visual UI. If you fall into this category then consider the [Vagrant Manager](http://vagrantmanager.com/) project.
 
 Note: Until you provision VVV for the first time, Vagrant Manager will not pick up VVV. Running `vagrant up --provision`  inside the VVV folder and allowing it to successfully finish should be enough.
 

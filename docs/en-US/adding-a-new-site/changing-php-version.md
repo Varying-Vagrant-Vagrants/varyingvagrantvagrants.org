@@ -1,8 +1,8 @@
 ---
-layout: default
 category: 3. Adding a New Site
 order: 4
 title: Changing PHP Version
+description: VVV supports the nginx_upstream option in the sites section of vvv-custom.yml to set the PHP version.
 permalink: /docs/en-US/adding-a-new-site/changing-php-version/
 ---
 

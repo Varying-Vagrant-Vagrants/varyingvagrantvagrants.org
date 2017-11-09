@@ -1,8 +1,8 @@
 ---
-layout: default
 category: 3. Adding a New Site
 order: 7
 title: Migrating from VVV 1.4.x
+description: For continuing support of VVV 1 sites you now have to add your sites to the sites section of vvv-custom.yml.
 permalink: /docs/en-US/adding-a-new-site/migrating-from-vvv-1-4-x/
 ---
 

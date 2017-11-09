@@ -1,12 +1,12 @@
 ---
-layout: default
 category: 3. Adding a New Site
 order: 6
 title: Nginx Configuration
+description: VVV uses the popular Nginx to serve pages. Therefore VVV provides an include for setting up WordPress easily and a file for per site Nginx configurations.
 permalink: /docs/en-US/adding-a-new-site/nginx-configuration/
 ---
 
-Some sites use Apache or IIS to serve pages, but VVV uses the popular Nginx. VVV provides an include for setting up WordPress easily, and a file for setting your own Nginx configuration on a per site basis named `vvv-nginx.conf`
+Some sites use Apache or IIS to serve pages, but VVV uses the popular Nginx. VVV provides an include for setting up WordPress easily, and a file for setting your own Nginx configuration on a per site basis named `vvv-nginx.conf`.
 
 ## A Standard WordPress Nginx Configuration
 

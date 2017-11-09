@@ -2,6 +2,7 @@
 category: 5. Reference
 order: 1
 title: Packages installed in VVV
+description: VVV uses Ubuntu 14.04 LTS (Trusty Tahr) and comes with a few packages installed by default.
 permalink: /docs/en-US/installed-packages/
 ---
 
@@ -19,8 +20,8 @@ These packages are installed by default in VVV:
 1. PHP [xdebug extension](https://pecl.php.net/package/xdebug)
 1. PHP [imagick extension](https://pecl.php.net/package/imagick/)
 1. [PHPUnit](https://phpunit.de/)
-1. [ack-grep](http://beyondgrep.com/)
-1. [git](http://git-scm.com/)
+1. [ack-grep](https://beyondgrep.com/)
+1. [git](https://git-scm.com/)
 1. [subversion](https://subversion.apache.org/)
 1. [ngrep](http://ngrep.sourceforge.net/usage.html)
 1. [dos2unix](http://dos2unix.sourceforge.net/)

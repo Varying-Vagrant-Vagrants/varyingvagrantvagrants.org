@@ -1,8 +1,8 @@
 ---
-layout: default
 category: 3. Adding a New Site
 order: 5
 title: Setup Script
+description: VVV runs vvv-init.sh when it sets up the site to give you an opportunity to execute shell commands.
 permalink: /docs/en-US/adding-a-new-site/setup-script/
 ---
 

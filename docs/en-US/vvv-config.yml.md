@@ -2,6 +2,7 @@
 category: 5. Reference
 order: 1
 title: vvv-config.yml
+description: vvv-config.yml is the default config file that VVV uses to set itself up. Use vvv-custom.yml to make changes and add your own site.
 permalink: /docs/en-US/vvv-config/
 ---
 

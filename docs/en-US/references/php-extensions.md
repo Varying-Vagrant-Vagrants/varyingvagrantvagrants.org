@@ -2,12 +2,13 @@
 category: 5. Reference
 order: 1
 title: PHP Extensions
+description: VVV comes with a few bundled PHP modules, installed from the ondrej/php PPA maintained by Ondřej Surý.
 permalink: /docs/en-US/references/php-extensions/
 ---
 
 This page lists all the PHP Modules bundled with VVV.
 
-PHP & all modules listed below are installed from [this PPA](https://launchpad.net/~ondrej/+archive/ubuntu/php) maintained by  
+PHP & all modules listed below are installed from [this PPA](https://launchpad.net/~ondrej/+archive/ubuntu/php) maintained by
 [Ondřej Surý](https://github.com/oerdnj)
 
 | Module                                                     | Provided By Package |

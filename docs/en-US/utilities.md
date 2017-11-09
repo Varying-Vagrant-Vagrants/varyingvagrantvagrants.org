@@ -1,12 +1,12 @@
 ---
 category: 5. Reference
 order: 1
-
 title: Utilities
+description: Utilities are packages for VVV that install system level functionality. The core utilities package installs phpMyAdmin, webgrind, and other versions of PHP.
 permalink: /docs/en-US/utilities/
 ---
 
-Utilities are packages for VVV that install system level functionality. For example, a core utilities package is provided by default. This default utility can install phpmyadmin, webgrind, and other versions of PHP.
+Utilities are packages for VVV that install system level functionality. For example, a core utilities package is provided by default. This default utility can install phpMyAdmin, webgrind, and other versions of PHP.
 
 Here are the default utilities as they would be defined in `vvv-custom.yml` in full:
 

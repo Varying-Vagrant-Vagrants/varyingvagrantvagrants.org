@@ -2,6 +2,7 @@
 category: 2. Getting Started
 order: 3
 title: Default sites in VVV
+description: VVV creates and sets up several WordPress installs for you automatically.
 permalink: /docs/en-US/references/default-sites/
 ---
 
