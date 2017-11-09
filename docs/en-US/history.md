@@ -2,6 +2,7 @@
 category: 1. Introduction
 order: 3
 title: History
+description: VVV has come a long way since it was first launched as Varying Vagrant Vagrants in December of 2012.
 permalink: /docs/en-US/history/
 ---
 

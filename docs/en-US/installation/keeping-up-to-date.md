@@ -2,6 +2,7 @@
 category: 2. Getting Started
 order: 3
 title: Keeping Up To Date
+description: Update VVV from time to time to keep pace with new fixes and improvements.
 permalink: /docs/en-US/installation/keeping-up-to-date/
 ---
 

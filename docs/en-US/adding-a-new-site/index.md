@@ -1,8 +1,8 @@
 ---
-layout: default
 category: 3. Adding a New Site
 order: 1
 title: Adding a New Site
+description: Adding a new site in VVV is as simple as adding it under the sites section of vvv-custom.yml. Create it by copying vvv-config.yml to vvv-custom.yml.
 permalink: /docs/en-US/adding-a-new-site/
 ---
 

@@ -2,6 +2,7 @@
 category: 5. Reference
 order: 1
 title: Default Credentials
+description: Default usernames and passwords for databases and WordPress installations.
 permalink: /docs/en-US/default-credentials/
 ---
 

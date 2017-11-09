@@ -2,6 +2,7 @@
 category: 5. Reference
 order: 1
 title: vm_config
+description: vm_config is an optional section of the VVV configuration file that allows setting virtual machine parameters.
 permalink: /docs/en-US/vm-config/
 ---
 

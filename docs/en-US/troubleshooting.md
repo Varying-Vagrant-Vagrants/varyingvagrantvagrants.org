@@ -2,6 +2,7 @@
 category: 4. Troubleshooting
 order: 1
 title: Troubleshooting
+description: Find help on GitHub and the wiki or check how to resolve common problems.
 permalink: /docs/en-US/troubleshooting/
 ---
 

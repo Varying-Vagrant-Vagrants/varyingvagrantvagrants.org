@@ -2,6 +2,7 @@
 category: 1. Introduction
 order: 2
 title: What is VVV?
+description: Varying Vagrant Vagrants is an open source Vagrant configuration focused on WordPress development.
 permalink: /docs/en-US/what-is-vvv/
 ---
 

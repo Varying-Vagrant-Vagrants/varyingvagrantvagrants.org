@@ -2,6 +2,7 @@
 category: 1. Introduction
 order: 100
 title: Misc
+description: Customize your VVV install with helpful extensions and custom dashboards.
 permalink: /docs/en-US/
 ---
 

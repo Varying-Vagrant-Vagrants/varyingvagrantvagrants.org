@@ -2,6 +2,7 @@
 category: 2. Getting Started
 order: 1
 title: Installation
+description: VVV can be installed with git by cloning the main VVV repo into a local directory or by downloading a zip file. Start VVV with 'vagrant up'.
 permalink: /docs/en-US/installation/
 ---
 

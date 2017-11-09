@@ -2,6 +2,7 @@
 category: 1. Introduction
 order: 4
 title: Governance
+description: The VVV core project and its individual modules, collectively organized as Varying Vagrant Vagrants, are governed with a benevolent dictator governance model.
 permalink: /docs/en-US/governance/
 ---
 
