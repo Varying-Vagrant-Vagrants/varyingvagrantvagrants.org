@@ -29,16 +29,8 @@ google_analytics_key: "UA-57670102-1"
 show_full_navigation: false
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: Product documentation template for Jekyll.
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-#social:
-#  name: Edition Template
-#  links:
-#    - https://github.com/CloudCannon/edition-jekyll-template
+logo: /images/vvv.png
+description: "Documentation for the open source Vagrant configuration for developing with WordPress."
 
 # -----
 # Build
@@ -64,6 +56,7 @@ defaults:
       path: ""
     values:
       layout: default
+      image: /images/vvv.png
   -
     scope:
       path: ""
