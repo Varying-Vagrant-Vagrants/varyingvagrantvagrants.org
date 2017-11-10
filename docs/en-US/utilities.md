@@ -54,3 +54,10 @@ With this in mind, I would expect the java repository mentioned earlier to have 
  - readme.md
 
 The name of the subfolder maps directly on to what is put in `vvv-custom.yml`. VVV will run the `provision.sh` file, at which point it can do as it pleases. This could be installing a package via `apt-get` or something else. Other files can be included in these folders for `provision.sh` to make use of.
+
+## Community Utilities
+
+Community utilities are independently developed and contributed by interested members of the community, provided on an 'as is' basis.
+
+* **VVV Solr Utilities**: Installs Solr and Java.  
+  [https://github.com/ocean90/vvv-solr-utilities](https://github.com/ocean90/vvv-solr-utilities)
