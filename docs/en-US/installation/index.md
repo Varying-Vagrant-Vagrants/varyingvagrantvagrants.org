@@ -9,6 +9,8 @@ First make sure you have all the necessary software installed for Vagrant to run
 
 ## Installing VVV
 
+There are 2 methods to getting VVV, but we recommend using `git` as it makes updating much easier
+
 ### With `git`
 
 **This is the recommended method** for installing VVV. Clone the main VVV repo into a local directory:
@@ -26,6 +28,26 @@ There are 2 methods, both involve downloading a zip file:
   * download and extract the repository `develop` branch [zip file](https://github.com/varying-vagrant-vagrants/vvv/archive/develop.zip) to a `vagrant-local` directory on your computer.
   * OR download and extract a [stable release](https://github.com/varying-vagrant-vagrants/vvv/releases) zip file if you'd like some extra comfort.
 
+**Note:** We strongly recommend using the `git` method, it makes updating VVV to get new features and fixes significantly easier.
+
+#### Converting a Zip Install to a `git` Install
+
+Navigate in the terminal to the VVV folder, and run the following commands:
+
+```
+git init
+git remote add origin https://github.com/Varying-Vagrant-Vagrants/VVV.git
+git fetch
+git reset origin/master
+git checkout -tf origin/master
+```
+
+Once this is done, run `vagrant reload --provision` to update. Remember to copy your config from `vvv-config.yml` to `vvv-custom.yml` before doing this or your configs changes will be overwritten.
+
+## Post installation
+
+Once you've installed everything, copy `vvv-config.yml` to `vvv-custom.yml`. Any changes to `vvv-config.yml` will get overwritten when you update VVV, so always make changes to `vvv-custom.yml`.
+
 ## Starting VVV
 
 1. In a command prompt, change into the new directory with `cd vagrant-local`.
@@ -38,7 +60,7 @@ Fancy, yeah?
 
 ## What Did That Do?
 
-The first time you run `vagrant up`, a packaged box containing a basic virtual machine is downloaded to your local machine and cached for future use. The file used by Varying Vagrant Vagrants contains an installation of Ubuntu 14.04 and is about 332MB.
+The first time you run `vagrant up`, a packaged box containing a basic virtual machine is downloaded to your local machine and cached for future use. The file used by Varying Vagrant Vagrants contains an installation of Ubuntu 14.04 and is about ~332MB.
 
 After this box is downloaded, it begins to boot as a sandboxed virtual machine using VirtualBox. Once booted, it runs the provisioning script included with VVV. This initiates the download and installation of around 100MB of packages on the new virtual machine.
 
