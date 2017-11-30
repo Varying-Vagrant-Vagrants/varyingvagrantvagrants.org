@@ -50,6 +50,45 @@ If this happens, do the following, and provide the results when asking for help.
  - Run `vagrant ssh`, if this works and you're able to get inside the VVV machine and run commands that is useful information, and may allow you to manually run the commands to bring up nginx and PHP
  - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `vagrant up --provision --debug &> vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
 
+### Vagrant Plugin Install Issues and Broken Vagrant Upgrades 
+
+When updating from Vagrant 1.x to 2.x, Vagrants bundler can throw errors, here's an example:
+
+```shell
+$ vagrant plugin install vagrant-triggers vagrant-vbguest vagrant-hostsupdater
+Installing the 'vagrant-triggers' plugin. This can take a few minutes...
+Bundler, the underlying system Vagrant uses to install plugins,
+reported an error. The error is shown below. These errors are usually
+caused by misconfigured plugin installations or transient network
+issues. The error from Bundler is:
+
+conflicting dependencies ffi (= 1.9.18) and ffi (= 1.9.14)
+  Activated ffi-1.9.14
+  which does not match conflicting dependency (= 1.9.18)
+
+  Conflicting dependency chains:
+    ffi (= 1.9.14), 1.9.14 activated
+
+  versus:
+    ffi (= 1.9.18)
+
+  Gems matching ffi (= 1.9.18):
+    ffi-1.9.18-x64-mingw32
+ ```
+ 
+ When this happens, the solution is to completely uninstall Vagrant, then reinstall. Do this either using the uninstall tool in the DMG on MacOS, or the standard uninstaller on Windows.
+ 
+### .dev Domain Issues
+
+If you can't load .dev domains, there are 2 common issues that could be causing this:
+
+ - Not having the vagrant hosts updater plugin installed
+ - Google
+ 
+The `.dev` TLD is owned by Google, and isn't free for development. Google have taken steps to enforce security rules, so you may be unable to access `.dev` domains without HTTPS on Chromium based browsers.
+
+The fix is simple, switch to `.test`, it's protected by an RFC, and doesn't have the restrictions of `.localhost`, or the bonjour/Zeroconf conflicts of `.local`
+
 ## Corrupt VM
 
 It's possible that the Virtual Machine file system may become corrupted. This might happen if your VM didn't shut down correctly, perhaps there was a power cut or your laptop ran out of power unexpectedly.
@@ -69,7 +108,7 @@ If there's a typo or syntax error in `vvv-custom.yml` the provisioner will fail.
 
 ### Out of Date VVV
 
-VVV is an active project, but if it isn't up to date you might suffer from bugs that have already been fixed. Do a `git pull` and restart/reprovision VVV.
+VVV is an active project, but if it isn't up to date you might suffer from bugs that have already been fixed. Do a `git pull` and restart/reprovision VVV. If you download a zip instead, you can go to the install instructions for commands to convert your install to use git.
 
 ### Out of Date Software
 
