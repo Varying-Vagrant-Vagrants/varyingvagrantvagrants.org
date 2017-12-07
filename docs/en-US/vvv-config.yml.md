@@ -115,9 +115,11 @@ It may be necessary to run ruby script during provisioning to do more complex th
 
 It's recommended that instead the `utilities` section be used when possible. Writing your own Vagrant Ruby code is an in depth topic, and could destabilise VVV if done incorrectly. This should only be used by advanced users with knowledge of the subject.
 
+Note that `Customfile` will be looked for in the site's `local_dir`, not in the VVV installation folder.
+
 ### nginx_upstream
 
-This option sets where Nginx passes requests to, and is primarily for setting the PHP version used. [You can read more about it here](adding-a-new-site/changing-php-version.md)
+This option sets where Nginx passes requests to, and is primarily for setting the PHP version used. [You can read more about it here](adding-a-new-site/changing-php-version.md).
 
 ### hosts
 
