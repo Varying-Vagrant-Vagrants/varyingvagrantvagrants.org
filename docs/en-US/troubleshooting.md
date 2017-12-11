@@ -34,6 +34,12 @@ vagrant up --provision
 
 ## Common Problems
 
+### Host Issues When Using The `vv` Command
+
+The problem is that `vv` doesn't add hosts to the `vvv-custom.yml` file, so you need to add the site and its hosts to the `vvv-custom.yml` file then reprovision. If you don't do this, VVV will be unaware that the site `vv` tried to set up exists.
+
+`vv` doesn't fully support VVV 2+, and a lot of its features were integrated into VVV 2 making the tool unnecessary. The `vv` project has also been abandoned by its maintainers.
+
 ### SSH Timeout During Provision
 
 This is a generic error that can indicate multiple things, including:
