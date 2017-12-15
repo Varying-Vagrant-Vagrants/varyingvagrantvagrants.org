@@ -42,3 +42,20 @@ WordPress will have been installed with `.dev` in the site URL, so you need to u
 4. Run `wp search-replace '.dev' '.test'`
 
 If you've hardcoded the `.dev` domain in your plugins or themes, or `wp-config.php`, those will need manually changing
+
+#### Example: Search Replacing `local.wordpress.dev` to `local.wordpress.test`
+
+These are the commands that would change the default site over from `.dev` to `.test`:
+
+ - `vagrant ssh`
+ - `cd /srv/www`
+ - `cd wordpress-default/public_html`
+ - `wp search-replace '.dev' '.test'`
+
+## Migrating from `.local`
+
+The steps are identical to those for `.dev`, except, the search replace command swaps `.dev` for `.local`:
+
+```
+wp search-replace '.dev' '.test'
+```
