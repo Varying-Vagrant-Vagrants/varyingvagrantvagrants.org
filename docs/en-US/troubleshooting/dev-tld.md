@@ -59,3 +59,9 @@ The steps are identical to those for `.dev`, except, the search replace command 
 ```
 wp search-replace '.dev' '.test'
 ```
+
+## Post Migration Troubleshooting
+
+If after you've done this, you're getting a white screen of death, consider turning on XDebug or checking the PHP error logs of that site. If you're using a VVV custom site template, or one of the default sites, they should be in a `logs` subfolder adjacent to `public_html`.
+
+Also keep in mind that some plugins and themes do unusual things, such as storing hashes of URLs. These will need adjusting manually.
