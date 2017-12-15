@@ -77,17 +77,6 @@ conflicting dependencies ffi (= 1.9.18) and ffi (= 1.9.14)
  ```
  
  When this happens, the solution is to completely uninstall Vagrant, then reinstall. Do this either using the uninstall tool in the DMG on MacOS, or the standard uninstaller on Windows.
- 
-### .dev Domain Issues
-
-If you can't load .dev domains, there are 2 common issues that could be causing this:
-
- - Not having the vagrant hosts updater plugin installed
- - Google
- 
-The `.dev` TLD is owned by Google, and isn't free for development. Google have taken steps to enforce security rules, so you may be unable to access `.dev` domains without HTTPS on Chromium based browsers.
-
-The fix is simple, switch to `.test`, it's protected by an RFC, and doesn't have the restrictions of `.localhost`, or the bonjour/Zeroconf conflicts of `.local`
 
 ## Corrupt VM
 
