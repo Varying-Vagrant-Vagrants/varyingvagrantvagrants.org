@@ -3,7 +3,7 @@ category: 4. Troubleshooting
 order: 2
 title: .dev domains
 description: Issues with .dev sites
-permalink: /docs/en-US/troubleshooting/dev-tld
+permalink: /docs/en-US/troubleshooting/dev-tld/
 ---
 
 A lot of people use the `.dev` domain for local development, but this TLD is actually owned by Google, and isn't free for development. They've begun enforcing special rules on sites using this domain when using Chrome. You also run the risk of clashes with Google owned domains.
