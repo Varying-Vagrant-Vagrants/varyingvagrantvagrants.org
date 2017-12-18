@@ -39,7 +39,8 @@ WordPress will have been installed with `.dev` in the site URL, so you need to u
 1. SSH into VVV using `vagrant ssh`
 2.  `cd` into the `/srv/www` folder, then `cd` into the subfolder with your site. This should be the same as your `www` folder.
 3. Enter the `public_html` subfolder so that we can use WP CLI
-4. Run `wp search-replace '.dev' '.test' --recurse-objects`
+4. Run `wp search-replace '.dev' '.test' --recurse-objects`, adding ` --network` on the end if it's a multisite installation.
+5. Run `exit` to exit the VM and return the terminal back to normal
 
 If you've hardcoded the `.dev` domain in your plugins or themes, or `wp-config.php`, those will need manually changing
 
@@ -51,6 +52,19 @@ These are the commands that would change the default site over from `.dev` to `.
  - `cd /srv/www`
  - `cd wordpress-default/public_html`
  - `wp search-replace '.dev' '.test' --recurse-objects`
+ - `exit`
+
+#### Multisites
+
+If you're using a multisite install, you need to add ` --network` on to the end of the search replace command so that it runs on all tables, not just those of the first site. Otherwise the instructions are identical, for example:
+
+ - `vagrant ssh`
+ - `cd /srv/www`
+ - `cd wordpress-default/public_html`
+ - `wp search-replace '.dev' '.test' --recurse-objects --network`
+ - `exit`
+
+If you've already ran the commands without the network flag, you can run the process again without breaking things.
 
 ## Migrating from `.local`
 
@@ -65,3 +79,7 @@ wp search-replace '.local' '.test' --recurse-objects
 If after you've done this, you're getting a white screen of death, consider turning on XDebug or checking the PHP error logs of that site. If you're using a VVV custom site template, or one of the default sites, they should be in a `logs` subfolder adjacent to `public_html`.
 
 Also keep in mind that some plugins and themes do unusual things, such as storing hashes of URLs. These will need adjusting manually.
+
+### Sites Created With `vv`
+
+The `vv` tool bypasses the normal flow, and reaches into VVV and places its own non-standard Nginx configs inside the virtual machine. If you can't migrate to a custom site template, you will need to SSH into the virtual machine using `vagrant ssh`, and modify the Nginx configs for `vv` sites manually. These can be found in `/etc/nginx` using vim or nano, with the filenames `~sitename~.conf` where `~sitename~` is the name of the `vv` site.
