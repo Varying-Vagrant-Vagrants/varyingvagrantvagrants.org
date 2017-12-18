@@ -22,11 +22,12 @@ Because we can't detect all customizations made to default sites, automatically 
 With WP-CLI, it's pretty straight forward:
 
 * `vagrant ssh`
-* `cd /srv/www/wordpress-develop/`
-* `wp option update home http://src.wordpress-develop.test`
-* `wp option update siteurl http://src.wordpress-develop.test`
+* `cd /srv/www/wordpress-develop/public_html`
+* `wp search-replace '.dev' '.test' --recurse-objects --network`
 
 On new provisions of VVV, this will all be setup automatically. On your own custom sites, you'll need to adjust accordingly. Embrace the `.test` domain!
+
+**Update:** We've added [more extensive instructions for migrating from `.dev` to `.test` here](https://varyingvagrantvagrants.org/docs/en-US/troubleshooting/dev-tld/)
 
 Thanks to [Gary](https://github.com/pento) for [warning us](https://github.com/Varying-Vagrant-Vagrants/VVV/issues/583) about this 2.5 years ago. :)
 
