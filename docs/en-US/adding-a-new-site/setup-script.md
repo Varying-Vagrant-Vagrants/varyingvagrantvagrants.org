@@ -23,7 +23,7 @@ Here is an example script that will work for a basic WordPress multisite install
 #!/usr/bin/env bash
 
 # Add the site name to the hosts file
-echo "127.0.0.1 ${VVV_SITE_NAME}.local # vvv-auto" >> "/etc/hosts"
+echo "127.0.0.1 ${VVV_SITE_NAME}.test # vvv-auto" >> "/etc/hosts"
 
 # Make a database, if we don't already have one
 echo -e "\nCreating database '${VVV_SITE_NAME}' (if it's not already there)"
@@ -41,13 +41,14 @@ cd ${VVV_PATH_TO_SITE}
 if ! $(wp core is-installed --allow-root); then
   wp core download --path="${VVV_PATH_TO_SITE}" --allow-root
   wp core config --dbname="${VVV_SITE_NAME}" --dbuser=wp --dbpass=wp --quiet --allow-root
-  wp core multisite-install --url="${VVV_SITE_NAME}.local" --quiet --title="${VVV_SITE_NAME}" --admin_name=admin --admin_email="admin@${VVV_SITE_NAME}.local" --admin_password="password" --allow-root
+  wp core multisite-install --url="${VVV_SITE_NAME}.test" --quiet --title="${VVV_SITE_NAME}" --admin_name=admin --admin_email="admin@${VVV_SITE_NAME}.test" --admin_password="password" --allow-root
 else
   wp core update --allow-root
 fi
 ```
 
 This will:
- - download, configure and install a fresh copy of WordPress, keep it up to date
- - Make sure the PHP error logs are created
- - Check if a database exists, if it isn't, create one and grant the needed priviledges
+ - Associate the VVV /etc/hosts file with your domain
+ - Check if a database exists, if it doesn't, create one and grant the needed priviledges
+ - Make sure the NGINX error logs are created
+ - Download, configure and install a fresh copy of WordPress or update the currently installed version of WordPress.
