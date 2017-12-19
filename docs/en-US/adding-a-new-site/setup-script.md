@@ -41,7 +41,7 @@ cd ${VVV_PATH_TO_SITE}
 if ! $(wp core is-installed --allow-root); then
   wp core download --path="${VVV_PATH_TO_SITE}" --allow-root
   wp core config --dbname="${VVV_SITE_NAME}" --dbuser=wp --dbpass=wp --quiet --allow-root
-  wp core multisite-install --url="${VVV_SITE_NAME}.local" --quiet --title="${VVV_SITE_NAME}" --admin_name=admin --admin_email="admin@${VVV_SITE_NAME}.test" --admin_password="password" --allow-root
+  wp core multisite-install --url="${VVV_SITE_NAME}.test" --quiet --title="${VVV_SITE_NAME}" --admin_name=admin --admin_email="admin@${VVV_SITE_NAME}.test" --admin_password="password" --allow-root
 else
   wp core update --allow-root
 fi
