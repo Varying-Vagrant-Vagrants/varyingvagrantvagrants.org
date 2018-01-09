@@ -40,7 +40,7 @@ git init
 git remote add origin https://github.com/Varying-Vagrant-Vagrants/VVV.git
 git fetch
 git reset origin/master
-git checkout -tf origin/master
+git checkout -f origin/master
 ```
 
 Once this is done, run `vagrant reload --provision` to update. Remember to copy your config from `vvv-config.yml` to `vvv-custom.yml` before doing this or your configs changes will be overwritten.
