@@ -1,5 +1,5 @@
 ---
-category: 4. Troubleshooting
+category: 5. Troubleshooting
 order: 3
 title: Issues With vv
 description: Using the abandoned vv project can cause problems with VVV 2 and above.
