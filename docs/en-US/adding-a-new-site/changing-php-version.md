@@ -10,7 +10,7 @@ You can set the PHP version in `vvv-custom.yml` when defining a site. To do this
 
 Here’s an example that uses PHP v7.1:
 
-```YAML
+```yaml
 sites:
   example:
     nginx_upstream: php71
@@ -24,10 +24,10 @@ This will not work if `set $upstream {upstream};` is removed from the nginx conf
 
 In this example, we have changed the `wordpress-default` site to use PHP 7.1, and the `wordpress-develop` site to use PHP 5.6:
 
-```YAML
+```yaml
 sites:
   wordpress-default:
-    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-default.git
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
     nginx_upstream: php71
     hosts:
       - local.wordpress.test
@@ -65,4 +65,4 @@ To this:
  set $upstream php71;
 ```
 
-That site is now using PHP 7.1, remember to reprovision using `vagrant reload --provision`
+That site is now using PHP 7.1, remember to reprovision using `vagrant reload --provision` for changes to take effect

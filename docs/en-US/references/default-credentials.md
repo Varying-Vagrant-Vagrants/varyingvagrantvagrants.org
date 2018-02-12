@@ -1,5 +1,5 @@
 ---
-category: 5. Reference
+category: 6. Reference
 order: 1
 title: Default Credentials
 description: Default usernames and passwords for databases and WordPress installations.

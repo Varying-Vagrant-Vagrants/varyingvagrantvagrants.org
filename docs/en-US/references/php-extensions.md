@@ -1,5 +1,5 @@
 ---
-category: 5. Reference
+category: 6. Reference
 order: 1
 title: PHP Extensions
 description: VVV comes with a few bundled PHP modules, installed from the ondrej/php PPA maintained by Ondřej Surý.

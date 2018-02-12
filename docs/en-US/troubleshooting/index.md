@@ -1,5 +1,5 @@
 ---
-category: 4. Troubleshooting
+category: 5. Troubleshooting
 order: 1
 title: Troubleshooting
 description: Find help on GitHub and the wiki or check how to resolve common problems.
