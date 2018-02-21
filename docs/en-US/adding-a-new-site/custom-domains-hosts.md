@@ -16,10 +16,7 @@ The recommended way is to use the `vvv-custom.yml` file. `vvv-hosts` is supporte
 
 When changing hosts, the Nginx config will need updating so that Nginx knows to listen for requests on those domains. If this isn't done, the VVV dashboard will appear instead of the desired site.
 
-<div class="note">
-	<h5>Don't forget to Reprovision on Changes</h5>
-	If you modify <code>vvv-custom.yml</code>, you must reprovision for the changes to take effect. Run <code>vagrant reload</code> after making changes.
-</div>
+{% include always_reprovision.html %}
 
 ## vvv-custom.yml
 

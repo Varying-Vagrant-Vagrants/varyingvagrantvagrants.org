@@ -33,7 +33,4 @@ You may also find that the default sites created by VVV are enough for what you 
 
 At this point, mysql or PHPMyAdmin can be used to upload a database for content, and plugins/themes/uploads can be copied. The installation of WP will be in `www/example/public_html`, and a PHP error log will be located at `www/example/logs/`.
 
-<div class="note">
-  <h5>Always Reprovision on Changes</h5>
-  If you modify provisioner files, or the VVV config you must reprovision for the changes to take effect. Run <code>vagrant reload --provision</code> after making changes.
-</div>
+{% include always_reprovision.html %}

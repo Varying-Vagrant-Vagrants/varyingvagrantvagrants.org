@@ -35,7 +35,4 @@ This is the Nginx configuration for this site, that gets installed by VVV. It is
 
 For more information about Nginx and VVV, read the [Nginx Configs page](nginx-configs.md).
 
-<div class="note">
-	<h5>Don't forget to Reprovision on Changes</h5>
-	If you modify provisioner files, you must reprovision for the changes to take effect. Run <code>vagrant reload --provision</code> after making changes.
-</div>
+{% include always_reprovision.html %}

@@ -15,10 +15,7 @@ Your script might:
  - Run `composer install` and other dependency managers and task runners
  - Create an empty database if it doesn't exist and fill it with starter content
 
-<div class="note">
-	<h5>Don't forget to Reprovision on Changes</h5>
-	If you modify provisioner files, you must reprovision for the changes to take effect. Run <code>vagrant reload --provision</code> after making changes.
-</div>
+{% include always_reprovision.html %}
 
 ## An Example
 

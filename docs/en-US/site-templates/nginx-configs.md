@@ -8,10 +8,7 @@ permalink: /docs/en-US/site-templates/nginx-configuration/
 
 Some sites use Apache or IIS to serve pages, but VVV uses the popular Nginx. VVV provides an include for setting up WordPress easily, and a file for setting your own Nginx configuration on a per site basis named `vvv-nginx.conf`.
 
-<div class="note">
-	<h5>Don't forget to Reprovision on Changes</h5>
-	If you modify provisioner files, you must reprovision for the changes to take effect. Run <code>vagrant reload --provision</code> after making changes.
-</div>
+{% include always_reprovision.html %}
 
 ## A Standard WordPress Nginx Configuration
 
