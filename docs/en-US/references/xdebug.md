@@ -1,5 +1,5 @@
 ---
-category: 5. Reference
+category: 6. Reference
 order: 2
 title: XDebug
 permalink: /docs/en-US/references/xdebug/

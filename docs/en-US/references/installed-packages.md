@@ -1,5 +1,5 @@
 ---
-category: 5. Reference
+category: 6. Reference
 order: 1
 title: Packages installed in VVV
 description: VVV uses Ubuntu 14.04 LTS (Trusty Tahr) and comes with a few packages installed by default.
