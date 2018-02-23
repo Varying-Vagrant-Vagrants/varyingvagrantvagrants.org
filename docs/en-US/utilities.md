@@ -17,8 +17,12 @@ utilities:
     - opcache-status
     - phpmyadmin
     - webgrind
+    - trusted-hosts
+    - tls-ca
 utility-sources:
-  core: https://github.com/Varying-Vagrant-Vagrants/vvv-utilities.git
+  core:
+    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-utilities.git
+    branch: master
 ```
 
 Utilities are defined at the end of the file, outside of the sites section. The `utility-sources` section defines the name of a utility and where it can be found.
