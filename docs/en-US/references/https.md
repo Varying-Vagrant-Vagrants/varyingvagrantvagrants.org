@@ -12,7 +12,7 @@ To use `https://` URLs you need to generate certificates, luckily VVV has you co
 
 Using VVV 2.2+ ( switch to `develop` branch if it hasn't been released yet ), then add `tls-ca` as a utility under `core`, like this:
 
-```
+```YAML
 utilities:
   core:
     - memcached-admin
