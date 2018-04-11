@@ -38,12 +38,19 @@ For example, a site named `example`, will have the following files:
  - `/vagrant/certificates/example/dev.key`
  - `/vagrant/certificates/example/dev.crt`
 
-## Adding a Certificate Authority Certificate
+## Trusting a Certificate Authority Certificate
 
-Once the main authority certificate is accepted, all certificates VVV generates will always be accepted. The details of how to do this will depend on your platform, but to do so you will need to know where the certificate is located.
+Once the main authority certificate is trusted by your operating system or browser, all certificates VVV generates will always be trusted. The details of how to do this will depend on your platform, but to do so you will need to know where the certificate is located.
 
 You can find the central certificate in `certificates/ca/ca.crt`. There are some caveats though:
 
  - This only works for your instance of VVV, you cannot use this to generate certificates for other VVV users
  - This will only work on your machine, this cannot be used to generate an SSL certificate for a live website
  - This will never work for `.dev` domains, Google have preloaded Chrome with security policies, and Firefox has followed suit. These cannot be dismissed. Since the `.dev` TLD is owned and used by Google it isn't safe, switch to `.test` TLDs
+
+### Trusting the VVV root certificate on macOS / OS X
+
+* Import the `certificates/ca/ca.crt` file into Keychain Access.
+* Right-click the certificate and click Get Info.
+* Expand the Trust section at the top, and under `Secure Sockets Layer (SSL)`, select `Always Trust`.
+* Close the window. You'll be prompted to enter your password to save the changes.
