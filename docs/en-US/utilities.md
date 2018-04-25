@@ -1,5 +1,5 @@
 ---
-category: 5. Reference
+category: 6. Reference
 order: 1
 title: Utilities
 description: Utilities are packages for VVV that install system level functionality. The core utilities package installs phpMyAdmin, webgrind, and other versions of PHP.
