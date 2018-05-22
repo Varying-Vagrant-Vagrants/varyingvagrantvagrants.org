@@ -21,7 +21,7 @@ But if you want to be thorough, follow these steps:
  3. Run `vagrant box update` ( optional but probably for the best ).
  4. `git pull` if you used git to install VVV.
     1.  if you downloaded VVV as a zip, download and extract a new copy of VVV over the top. Make sure that your existing sites in `www` aren't overwritten, and you have DB backups.
-    2. If you used `git` you should be fine, as long as you had `vagrant triggers`
+    2. If you used `git` you should be fine
  5. Now your copy of VVV is up to date.
  6. Run `vagrant up --provision` to update the box and bring it up.
 
@@ -31,5 +31,4 @@ VVV is intended as a developer environment, and you should be able to throw away
 
 For most users, halting the VM, fetching the latest version, then provisioning is perfectly safe.
 
-If for whatever reason the VVV VM is lost, VVV will attempt to restore from its own backups made via `vagrant-triggers`, but you should not rely on this ( and you shouldn't modify these backups either else data loss can occur on provisioning ).
-
+If for whatever reason the VVV VM is lost, VVV will attempt to restore from its own backups made, but you should not rely on this ( and you shouldn't modify these backups either else data loss can occur on provisioning ).
