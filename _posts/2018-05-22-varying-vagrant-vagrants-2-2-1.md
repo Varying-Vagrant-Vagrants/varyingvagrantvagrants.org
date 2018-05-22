@@ -19,6 +19,10 @@ This does mean that users with the triggers plugin installed will get a warning 
 vagrant plugin uninstall vagrant-triggers
 ```
 
+## PHP 7.2
+
+VVV now uses PHP 7.2 by default. [See here on how to change a sites PHP version](https://varyingvagrantvagrants.org/docs/en-US/adding-a-new-site/changing-php-version/).
+
 ## TLS
 
 Testing with `https` is an important part of development, so we've added a new `TLS-CA` utility, that comes with new installs by default. This installs a certificate authority just for your machine, letting you test `https://` addresses locally.
