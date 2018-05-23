@@ -1,7 +1,7 @@
 ---
-category: 6. Reference
-order: 4
-title: HTTPS
+category: 8. TLS and HTTPS
+order: 1
+title: Setting Up HTTPS
 description: Setting up https with VVV's built in certificate authority
 permalink: /docs/en-US/references/https/
 ---
@@ -28,29 +28,3 @@ Then, reprovision `vagrant reload --provision`. When this finishes, every site u
 Visit your site with `https`, and you'll notice that the first time it loads, the browser will complain about an invalid certificate authority. Skip this screen, and it should never show again. This should happen for each new site. See the section below, on accepting a certificate authority to prevent this from happening.
 
 *Note:* `wordpress-default` is deprecated, switch to `custom-site-template` or create an additional site using the custom site template.
-
-### Adjusting Site Templates
-
-Non-official site templates will need to adjust their `vvv-nginx.conf` to reference the certificates. Certificates are stored in a `certificates` subfolder of the VVV install, available in the VM at `/vagrant/certificates/`. Each site has a subfolder, with a `dev.key` and a `dev.crt`.
-
-For example, a site named `example`, will have the following files:
-
- - `/vagrant/certificates/example/dev.key`
- - `/vagrant/certificates/example/dev.crt`
-
-## Trusting a Certificate Authority Certificate
-
-Once the main authority certificate is trusted by your operating system or browser, all certificates VVV generates will always be trusted. The details of how to do this will depend on your platform, but to do so you will need to know where the certificate is located.
-
-You can find the central certificate in `certificates/ca/ca.crt`. There are some caveats though:
-
- - This only works for your instance of VVV, you cannot use this to generate certificates for other VVV users
- - This will only work on your machine, this cannot be used to generate an SSL certificate for a live website
- - This will never work for `.dev` domains, Google have preloaded Chrome with security policies, and Firefox has followed suit. These cannot be dismissed. Since the `.dev` TLD is owned and used by Google it isn't safe, switch to `.test` TLDs
-
-### Trusting the VVV root certificate on macOS / OS X
-
-* Import the `certificates/ca/ca.crt` file into Keychain Access.
-* Right-click the certificate and click Get Info.
-* Expand the Trust section at the top, and under `Secure Sockets Layer (SSL)`, select `Always Trust`.
-* Close the window. You'll be prompted to enter your password to save the changes.
