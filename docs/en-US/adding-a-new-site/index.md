@@ -31,6 +31,6 @@ If you're migrating a site from VVV 1, read this page, then visit the [migration
 
 You may also find that the default sites created by VVV are enough for what you need. [Read about the default sites here](../references/default-sites.md)
 
-At this point, mysql or PHPMyAdmin can be used to upload a database for content, and plugins/themes/uploads can be copied. The installation of WP will be in `www/example/public_html`, and a PHP error log will be located at `www/example/logs/`.
+At this point, mysql or phpMyAdmin can be used to upload a database for content, and plugins/themes/uploads can be copied. The installation of WP will be in `www/example/public_html`, and a PHP error log will be located at `www/example/logs/`.
 
 {% include always_reprovision.html %}
