@@ -15,7 +15,7 @@ To get a site template working with https, we need to do 2 things:
 
 Most provisioner scripts will be fine, but if they specify the URL that gets used, they should use `https` specifically. Additionally, they should also specify `define('FORCE_SSL_ADMIN', true);` in `wp-config.php`, though this isn't necessary.
 
-Keep in mind that just because VVV is capable of serving via HTTPS, doesn't mean the software is going to make use of it. Existing sites installed via `http://` will need to be told their site url should contain `https;//`, and the database search replaced to swap links in post content for `https` versions.
+Keep in mind that just because VVV is capable of serving via HTTPS, doesn't mean the software is going to make use of it. Existing sites installed via `http://` will need to be told their site url should contain `https://`, and the database search replaced to swap links in post content for `https` versions.
 
 If you've reached that point however, then any generic instructions for migrating will work, no further steps are needed for VVV.
 
