@@ -14,7 +14,7 @@ You can find the central certificate in `certificates/ca/ca.crt`. There are some
  - This will only work on your machine, this cannot be used to generate an SSL certificate for a live website.
  - This will never work for `.dev` domains, Google have preloaded Chrome with security policies, and Firefox has followed suit. These cannot be dismissed. Since the `.dev` TLD is owned and used by Google it isn't safe, switch to `.test` TLDs.
 
-### Trusting The VVV Root Certificate On MacOS / OS X
+### Trusting the VVV Root Certificate On MacOS / OS X
 
 * Import the `certificates/ca/ca.crt` file into Keychain Access by double-clicking on the file in finder.
 * Right-click the certificate and click Get Info.
@@ -74,7 +74,7 @@ Android 8/N and later require changes to an app manifest, greatly limiting the u
 > 
 > In order to configure your app to trust Charles, you need to add a Network Security Configuration File to your app. This file can override the system default, enabling your app to trust user installed CA certificates (e.g. the Charles Root Certificate). You can specify that this only applies in debug builds of your application so that production builds use the default trust profile.
 
-### Trusting the VVV Root Certificate on other operating systems
+### Trusting the VVV Root Certificate on Other Operating Systems
 
 If you are running a different operating system than the ones listed above then you will need to find the instructions. Installing a Root Certificate is not specific to VVV, it is a system operation. 
 
