@@ -132,13 +132,13 @@ hosts:
 
 ## vm_config
 
-These settings control the Virtual Machine that Vagrant creates. By default this is 1024MB of RAM and 1 core.
+These settings control the Virtual Machine that Vagrant creates. By default this is 2048MB of RAM and 1 core.
 
-This configuration would tell VVV to create a virtual machine with 2GB of RAM and a single CPU core:
+This configuration would tell VVV to create a virtual machine with 4GB of RAM and a single CPU core:
 
 ```yaml
 vm_config:
-  memory: 2048
+  memory: 4096
   cores: 1
 ```
 
