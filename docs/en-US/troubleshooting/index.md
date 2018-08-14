@@ -25,7 +25,7 @@ vagrant destroy
 # Make sure we use the latest version of the base box§
 vagrant box update
 # Make sure the recommended vagrant plugins are installed
-vagrant plugin install vagrant-triggers vagrant-vbguest vagrant-hostsupdater
+vagrant plugin install vagrant-hostsupdater
 # And that they're all up to date
 vagrant plugin update
 # Start VVV and create the VM from scratch
@@ -48,15 +48,15 @@ This is a generic error that can indicate multiple things, including:
 If this happens, do the following, and provide the results when asking for help.
 
  - Run `vagrant ssh`, if this works and you're able to get inside the VVV machine and run commands that is useful information, and may allow you to manually run the commands to bring up nginx and PHP
- - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `vagrant up --provision --debug &> vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
+ - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `vagrant up --provision --debug > vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
 
 ### Vagrant Plugin Install Issues and Broken Vagrant Upgrades 
 
 When updating from Vagrant 1.x to 2.x, Vagrants bundler can throw errors, here's an example:
 
 ```shell
-$ vagrant plugin install vagrant-triggers vagrant-vbguest vagrant-hostsupdater
-Installing the 'vagrant-triggers' plugin. This can take a few minutes...
+$ vagrant plugin install vagrant-hostsupdater
+Installing the 'vagrant-hostsupdater' plugin. This can take a few minutes...
 Bundler, the underlying system Vagrant uses to install plugins,
 reported an error. The error is shown below. These errors are usually
 caused by misconfigured plugin installations or transient network
@@ -82,7 +82,7 @@ conflicting dependencies ffi (= 1.9.18) and ffi (= 1.9.14)
 
 It's possible that the Virtual Machine file system may become corrupted. This might happen if your VM didn't shut down correctly, perhaps there was a power cut or your laptop ran out of power unexpectedly.
 
-In this scenario, your files should be safe on the host filesystem. If the Vagrant triggers plugin is installed, a database backup will be available. Using these, the site can be recovered from a fresh VVV box.
+In this scenario, your files should be safe on the host filesystem. If you have ran `vagrant halt` recently, a database backup will be available. Using these, the site can be recovered from a fresh VVV box.
 
 Run `vagrant halt; vagrant destroy` to delete the Virtual Machine, followed by `vagrant up --provision` to recreate the machine. When the process is finished, restore the database from backups.
 

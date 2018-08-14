@@ -18,7 +18,7 @@ For most WordPress sites, this NGINX configuration will suffice:
 server {
   listen 80;
   listen 443 ssl;
-  server_name {vvv_site_name}.local;
+  server_name {vvv_site_name}.test;
   root {vvv_path_to_site}/public_html;
 
   error_log {vvv_path_to_site}/log/error.log;

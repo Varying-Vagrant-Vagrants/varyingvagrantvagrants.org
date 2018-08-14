@@ -31,4 +31,4 @@ The [documentation](docs/en-US/index.md) area of this site is in progress. The [
 
 ## Copyright / License
 
-The code powering [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) and this [website](https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org) is copyright (c) 2014-2017, the contributors of the VVV project under the [MIT License](https://opensource.org/licenses/MIT).
+The code powering [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) and this [website](https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org) is copyright (c) 2014, the contributors of the VVV project under the [MIT License](https://opensource.org/licenses/MIT).
