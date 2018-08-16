@@ -20,16 +20,19 @@ Sometimes a clean, fresh start fixes things.
 To do a fresh start, run the following commands:
 
 ```shell
+# If you need a fresh start it's probably sensible to make sure you are on the stable branch
+git checkout master
 # Make sure this is the latest VVV
 git pull
-# Turn off the machine
-vagrant halt
+# Turn the machine on (so destroy can run its cleanup)
+vagrant up
 # Destroy the machine
 vagrant destroy
 # Make sure we use the latest version of the base box
 vagrant box update
 # Make sure the recommended vagrant plugins are installed
 vagrant plugin install vagrant-hostsupdater
+vagrant plugin uninstall vagrant-triggers
 # And that they're all up to date
 vagrant plugin update
 # Start VVV and create the VM from scratch
