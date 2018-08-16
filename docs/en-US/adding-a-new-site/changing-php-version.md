@@ -33,7 +33,7 @@ sites:
       - local.wordpress.test
 
   wordpress-develop:
-    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop.git
     nginx_upstream: php56
     hosts:
       - src.wordpress-develop.test
@@ -45,6 +45,8 @@ utilities:
     - opcache-status
     - phpmyadmin
     - webgrind
+    - trusted-hosts
+    - tls-ca
     - php56
     - php71
 ```
@@ -65,4 +67,4 @@ To this:
  set $upstream php71;
 ```
 
-That site is now using PHP 7.1, remember to reprovision using `vagrant reload --provision` for changes to take effect
+That site is now using PHP 7.1, remember to reprovision using `vagrant reload --provision` for changes to take effect.
