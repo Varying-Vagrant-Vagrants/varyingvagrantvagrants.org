@@ -6,7 +6,7 @@ description: Update VVV from time to time to keep pace with new fixes and improv
 permalink: /docs/en-US/installation/keeping-up-to-date/
 ---
 
-Your VVV install will hopefully serve you many years, but in order to keep pace with new fixes and improvements, you'll need to update it from time to time.
+Your VVV install will hopefully serve you for many years, but in order to keep pace with new fixes and improvements, you'll need to update it from time to time.
 
 ## Updating VVV
 
