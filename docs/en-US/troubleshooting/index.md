@@ -20,21 +20,46 @@ Sometimes a clean, fresh start fixes things.
 To do a fresh start, run the following commands:
 
 ```shell
+# If you need a fresh start it's probably sensible to make sure you are on the stable branch
+git checkout master
 # Make sure this is the latest VVV
 git pull
-# Turn off the machine
-vagrant halt
+# Turn the machine on (so destroy can run its cleanup)
+vagrant up
 # Destroy the machine
 vagrant destroy
 # Make sure we use the latest version of the base box
 vagrant box update
 # Make sure the recommended vagrant plugins are installed
 vagrant plugin install vagrant-hostsupdater
+vagrant plugin uninstall vagrant-triggers
 # And that they're all up to date
 vagrant plugin update
 # Start VVV and create the VM from scratch
 vagrant up --provision
 ```
+
+If your `vagrant up --provision` fails with an error like this:
+
+```
+VirtualBox error:
+
+VBoxManage.exe: error: Could not rename the directory 'C:\Users\<username>\VirtualBox VMs\ubuntu-cloudimg-trusty-vagrant-amd64_1534242157844_99798' to 'C:\Users\<username>\VirtualBox VMs\localdev_306449ed646' to save the settings file (VERR_ALREADY_EXISTS)
+VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component SessionMachine, interface IMachine, callee IUnknown
+VBoxManage.exe: error: Context: "SaveSettings()" at line 3111 of file VBoxManageModifyVM.cpp
+```
+
+Then the `vagrant destroy` command didn't manage to clean things up properly. 
+
+The default location for these files is: 
+
+    C:\Users\<username>\VirtualBox VMs
+
+Delete the folder name that matches the path in error above. In the example aboves case it would be:
+
+    C:\Users\<username>\VirtualBox VMs\localdev_306449ed646\
+
+Then go back and run `vagrant up --provision` again.
 
 ## Common Problems
 
@@ -52,7 +77,8 @@ This is a generic error that can indicate multiple things, including:
 If this happens, do the following, and provide the results when asking for help.
 
  - Run `vagrant ssh`, if this works and you're able to get inside the VVV machine and run commands that is useful information, and may allow you to manually run the commands to bring up nginx and PHP
- - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `vagrant up --provision --debug > vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
+ - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `
+ vagrant up --provision --debug > vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
 
 ### Vagrant Plugin Install Issues and Broken Vagrant Upgrades 
 
