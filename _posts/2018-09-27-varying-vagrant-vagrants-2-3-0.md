@@ -5,7 +5,7 @@ date:   2018-09-27 22:00:00 -0000
 author: tomjn
 ---
 
-Hi! Welcome to the release post for <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/releases/tag/2.3.0">Varying Vagrant Vagrants 2.2.1</a>. For help updating, see the documentation on [keeping VVV up to date](https://varyingvagrantvagrants.org/docs/en-US/installation/keeping-up-to-date/).
+Hi! Welcome to the release post for <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/releases/tag/2.3.0">Varying Vagrant Vagrants 2.3.0</a>. For help updating, see the documentation on [keeping VVV up to date](https://varyingvagrantvagrants.org/docs/en-US/installation/keeping-up-to-date/).
 
 Here's what's happening...
 
@@ -39,9 +39,15 @@ Logs are now owned by the `vagant` user not the `ubuntu` user, which should impr
 
 
 
-## Vagrant Triggers and Vagrant 2.1
+## A Reminder, Uninstall Vagrant Triggers and  upgrade Vagrant to 2.1.5+
 
 Since v2.2.x VVV now requires Vagrant 2.1 to run. The Vagrant triggers plugin is also no longer required, as it was merged into Vagrant 2.1.
+
+Remember:
+
+ - **VirtualBox** creates the VM
+ - **Vagrant** manages the VM, turning it on and off, configuring it
+ - **VVV** tels vagrant how to configure it, and how to install things
 
 This does mean that users with the triggers plugin installed will get a warning when using vagrant commands. Read the warning for a parameter that can be added to silence the warning if you still need vagrant triggers for pre-2.1 vagrant environments. Otherwise, uninstall vagrant triggers with the following command:
 
