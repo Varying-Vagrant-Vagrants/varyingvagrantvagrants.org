@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Varying Vagrant Vagrants 2.3.0"
-date:   2018-09-27 22:00:00 -0000
+date:   2018-09-30 18:00:00 -0000
 author: tomjn
 ---
 
