@@ -32,7 +32,7 @@ vagrant destroy
 vagrant box update
 # Make sure the recommended vagrant plugins are installed
 vagrant plugin install vagrant-hostsupdater
-vagrant plugin uninstall vagrant-triggers
+vagrant plugin install vagrant-triggers
 # And that they're all up to date
 vagrant plugin update
 # Start VVV and create the VM from scratch
