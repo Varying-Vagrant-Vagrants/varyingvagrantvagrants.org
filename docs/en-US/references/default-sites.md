@@ -21,7 +21,7 @@ Multiple projects can be developed at once in the same environment.
 
 * Use `wp-content/themes` in either the `www/wordpress-default` or `www/wordpress-develop/public_html/src` directories to develop themes.
 * Use `wp-content/plugins` in either the `www/wordpress-default` or `www/wordpress-develop/public_html/src` directories to develop plugins.
-* Take advantage of VVV's [auto site configuration](https://github.com/varying-vagrant-vagrants/vvv/wiki/Auto-site-Setup) to provision additional instances of WordPress in `www/`. The [Variable VVV](https://github.com/bradp/vv) project helps to automate this process.
+* Take advantage of VVV's [auto site configuration](https://github.com/varying-vagrant-vagrants/vvv/wiki/Auto-site-Setup) to provision additional instances of WordPress in `www/`.
 * Use the `www/wordpress-develop` directory to participate in [WordPress core](https://make.wordpress.org/core/) development.
 
 VVV's `config`, `database`, `log` and `www` directories are shared with the virtualized server.
