@@ -12,13 +12,13 @@ Some sites use Apache or IIS to serve pages, but VVV uses the popular Nginx. VVV
 
 ## A Standard WordPress Nginx Configuration
 
-For most WordPress sites, this NGINX configuration will suffice:
+For most WordPress sites, this NGINX configuration in `provision/vvv-nginx.conf` will suffice:
 
 ```Nginx
 server {
   listen 80;
   listen 443 ssl;
-  server_name {vvv_site_name}.test;
+  server_name {vvv_hosts};
   root {vvv_path_to_site}/public_html;
 
   error_log {vvv_path_to_site}/log/error.log;
@@ -33,8 +33,8 @@ server {
 This will give you:
 
  - a webroot folder `public_html`
- - that serves sitename.local, where sitename is the name of your site in `vvv-custom.yml`
- - Error and access logs in `log/error.log` and `log/access.log`
+ - that serves a from the `hosts` defined in the site section of `vvv-custom.yml`
+ - Gives Nginx error and access logs in `log/error.log` and `log/access.log`
 
 You will need to create the `public_html` and `log` folders if they don't exist
 
