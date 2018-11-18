@@ -10,7 +10,7 @@ Some sites use Apache or IIS to serve pages, but VVV uses the popular Nginx. VVV
 
 {% include always_reprovision.html %}
 
-## A Standard WordPress Nginx Configuration
+## An Example VVV WordPress Nginx Configuration
 
 For most WordPress sites, this NGINX configuration in `provision/vvv-nginx.conf` will suffice:
 
@@ -31,13 +31,13 @@ server {
 
 This will give you:
 
- - a webroot folder `public_html`
+ - a webroot in the  `public_html` subfolder
  - that serves a from the `hosts` defined in the site section of `vvv-custom.yml`
  - Gives Nginx error and access logs in `log/error.log` and `log/access.log`
 
 You will need to create the `public_html` and `log` folders if they don't exist
 
-## nginx-wp-common.conf
+## What does `nginx-wp-common.conf` Do?
 
 This is an Nginx config file provided by VVV. Including it pulls in a number of useful rules, such as PHP Fast CGI and rules for using Nginx with permalinks.
 
