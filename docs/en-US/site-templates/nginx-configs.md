@@ -25,7 +25,7 @@ server {
 
   set $upstream {upstream}; # which PHP to use
 
-  include /etc/nginx/nginx-wp-common.conf; # Makes WP paths adn rewrite rules work
+  include /etc/nginx/nginx-wp-common.conf; # Makes WP paths and rewrite rules work
 }
 ```
 
