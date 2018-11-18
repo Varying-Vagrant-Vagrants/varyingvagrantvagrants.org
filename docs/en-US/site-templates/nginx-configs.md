@@ -17,16 +17,15 @@ For most WordPress sites, this NGINX configuration in `provision/vvv-nginx.conf`
 ```Nginx
 server {
   listen 80;
-  listen 443 ssl;
   server_name {vvv_hosts};
   root {vvv_path_to_site}/public_html;
 
-  error_log {vvv_path_to_site}/log/error.log;
-  access_log {vvv_path_to_site}/log/access.log;
+  error_log {vvv_path_to_site}/log/error.log; # nginx error log
+  access_log {vvv_path_to_site}/log/access.log; # nginx access log
 
-  set $upstream {upstream};
+  set $upstream {upstream}; # which PHP to use
 
-  include /etc/nginx/nginx-wp-common.conf;
+  include /etc/nginx/nginx-wp-common.conf; # Makes WP paths adn rewrite rules work
 }
 ```
 
@@ -62,7 +61,9 @@ The `{upstream}` variable is set from `vvv-custom.yml`, and is used to determine
 
 It may be desirable to force a site to use a particular version of PHP, for details see the [changing PHP versions](changing-php-version.md) documentation.
 
-## PHP Error Logs
+## Error Logs
+
+PHP error logs are all logged to the main VVV logs folder, separated by PHP version. Per site logs are not currently available. Nginx on the other hand provides per site error and access logs:
 
 ```Nginx
 error_log {vvv_path_to_site}/log/error.log;
@@ -79,3 +80,7 @@ mkdir -p ${VVV_PATH_TO_SITE}/log
 touch ${VVV_PATH_TO_SITE}/log/error.log
 touch ${VVV_PATH_TO_SITE}/log/access.log
 ```
+
+## Reference Implementation
+
+Refer to the custom site template for a reference implementation that also includes TLS/SSL support
