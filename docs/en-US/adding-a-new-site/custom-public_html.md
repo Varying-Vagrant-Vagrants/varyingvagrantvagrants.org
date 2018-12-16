@@ -8,7 +8,7 @@ permalink: /docs/en-US/adding-a-new-site/custom-public_html/
 
 The default site provisioners will generate a `public_html` sub folder that acts as the sites webroot. This is different from custom paths and folders, as move the entire site, including error logs, provisioners, etc.
 
-If you want to change which folder gets served to the browser, this is what you want. you might do this because the server you're replicating uses `htdocs` instead of `public_Html`
+If you want to change which folder gets served to the browser, this is what you want. you might do this because the server you're replicating uses `htdocs` instead of `public_html`
 
 
 ## How It Gets Set
