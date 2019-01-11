@@ -11,9 +11,6 @@
 		<link rel="apple-touch-icon" href="{{ site.baseurl }}/images/vvv.png">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/vvv.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/vvv.png">
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:title" content="{{page.title}}" />
-		<meta name="twitter:image" content="{{ site.baseurl }}/images/vvv.png" />
 
 		{% feed_meta %}
 		{% seo %}
@@ -66,6 +63,12 @@
 					<li class="nav-item top-level {% if page.url == '/blog/' %}current{% endif %}">
 						{% assign changelog = site.html_pages | where: 'url', '/blog/' | first %}
 						<a href="{{ site.baseurl }}/blog/">News &amp; Changelog</a>
+					</li>
+					<li class="nav-item top-level">
+						<a href="https://github.com/Varying-Vagrant-Vagrants">VVV on GitHub</a>
+					</li>
+					<li class="nav-item top-level">
+						<a href="https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org">VVV Docs on GitHub</a>
 					</li>
 				</ul>
 			</nav>

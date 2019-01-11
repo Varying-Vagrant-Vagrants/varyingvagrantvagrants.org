@@ -32,6 +32,9 @@ show_full_navigation: false
 logo: /images/vvv.png
 description: "Documentation for the open source Vagrant configuration for developing with WordPress."
 
+twitter:
+  card: summary
+
 # -----
 # Build
 
