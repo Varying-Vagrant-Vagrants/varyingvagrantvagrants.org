@@ -14,7 +14,7 @@ There are 3 ways to define hosts
 
 The recommended way is to use the `vvv-custom.yml` file. `vvv-hosts` is supported for backwards compatibility, and `vvv-init.sh` can be used for edge circumstances.
 
-When changing hosts, the Nginx config will need updating so that Nginx knows to listen for requests on those domains. If this isn't done, the VVV dashboard will appear instead of the desired site.
+When changing hosts, the Nginx config will need updating so that Nginx knows to listen for requests on those domains. If this isn't done, the VVV dashboard will appear instead of the desired site. If the `vagrant-hostsupdater` plugin is installed ([See the requirements](../installation/software-requirements.md)), this will also add the domain to your machine's HOST file.
 
 {% include always_reprovision.html %}
 

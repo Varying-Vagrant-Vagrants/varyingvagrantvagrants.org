@@ -39,7 +39,7 @@ Additionally, the `src.` subdomain is going away due to changes in the WP core d
 
 ## Logs
 
-Logs are now in the `/var/logs` folder, which is mounted on to the `logs` folder in your install. In particular, the default Nginx log, and the MariaDB logs are now in `/var/logs`
+Logs are now in the `/var/log` folder, which is mounted on to the `log` folder in your install. In particular, the default Nginx log, and the MariaDB logs are now in `/var/log`
 
 ## Dashboard
 

@@ -8,29 +8,58 @@ permalink: /docs/en-US/troubleshooting/
 
 Need help?
 
-* Let us have it! Don't hesitate to open a new issue on GitHub if you run into trouble or have any tips that we need to know.
-* The [VVV Wiki](https://github.com/varying-vagrant-vagrants/vvv/wiki) also contains documentation that may help.
+* Let us have it! Don't hesitate to open a [new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV/issues) if you run into trouble or have any tips that we need to know.
+* The [VVV Wiki](https://github.com/varying-vagrant-vagrants/vvv/wiki) also contains VVV1 focused documentation that may still be of help.
 
 ## Starting from Fresh
 
-Sometimes, a clean fresh start fixes things, to do this, run the following commands:
+Sometimes a clean, fresh start fixes things. 
+
+> Note: before doing this you should review the [News &amp; Changelog](/blog/) blog. Sometimes you will also need to update the underlying software such as Vagrant or its plugins in order for this process to be successful.
+
+To do a fresh start, run the following commands:
 
 ```shell
-# make sure this is the latest VVV
+# If you need a fresh start it's probably sensible to make sure you are on the stable branch
+git checkout master
+# Make sure this is the latest VVV
 git pull
-# Turn off the machine
-vagrant halt
+# Turn the machine on (so destroy can run its cleanup)
+vagrant up
 # Destroy the machine
 vagrant destroy
-# Make sure we use the latest version of the base box§
+# Make sure we use the latest version of the base box
 vagrant box update
 # Make sure the recommended vagrant plugins are installed
 vagrant plugin install vagrant-hostsupdater
+vagrant plugin install vagrant-triggers
 # And that they're all up to date
 vagrant plugin update
 # Start VVV and create the VM from scratch
 vagrant up --provision
 ```
+
+If your `vagrant up --provision` fails with an error like this:
+
+```
+VirtualBox error:
+
+VBoxManage.exe: error: Could not rename the directory 'C:\Users\<username>\VirtualBox VMs\ubuntu-cloudimg-trusty-vagrant-amd64_1534242157844_99798' to 'C:\Users\<username>\VirtualBox VMs\localdev_306449ed646' to save the settings file (VERR_ALREADY_EXISTS)
+VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component SessionMachine, interface IMachine, callee IUnknown
+VBoxManage.exe: error: Context: "SaveSettings()" at line 3111 of file VBoxManageModifyVM.cpp
+```
+
+Then the `vagrant destroy` command didn't manage to clean things up properly. 
+
+The default location for these files is: 
+
+    C:\Users\<username>\VirtualBox VMs
+
+Delete the folder name that matches the path in error above. In the example aboves case it would be:
+
+    C:\Users\<username>\VirtualBox VMs\localdev_306449ed646\
+
+Then go back and run `vagrant up --provision` again.
 
 ## Common Problems
 
@@ -39,7 +68,7 @@ vagrant up --provision
 This is a generic error that can indicate multiple things, including:
 
  - An unexpected error in the provisioner
- - Failure to setup the connection between Vagrant and the running VM ( a handful of versions of Vagrant failed to install the necessary keys inside the VM, updating Vagrant, destroying the box, and doing a clean provision should resolve this )
+ - Failure to set up the connection between Vagrant and the running VM ( a handful of versions of Vagrant failed to install the necessary keys inside the VM, updating Vagrant, destroying the box, and doing a clean provision should resolve this )
  - Local network IP clashes
  - Firewalls
  - Unusual network configurations
@@ -48,7 +77,8 @@ This is a generic error that can indicate multiple things, including:
 If this happens, do the following, and provide the results when asking for help.
 
  - Run `vagrant ssh`, if this works and you're able to get inside the VVV machine and run commands that is useful information, and may allow you to manually run the commands to bring up nginx and PHP
- - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `vagrant up --provision --debug &> vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
+ - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `
+ vagrant up --provision --debug > vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
 
 ### Vagrant Plugin Install Issues and Broken Vagrant Upgrades 
 
@@ -76,15 +106,15 @@ conflicting dependencies ffi (= 1.9.18) and ffi (= 1.9.14)
     ffi-1.9.18-x64-mingw32
  ```
  
- When this happens, the solution is to completely uninstall Vagrant, then reinstall. Do this either using the uninstall tool in the DMG on MacOS, or the standard uninstaller on Windows.
+When this happens, the solution is to completely uninstall Vagrant, then reinstall. Do this either using the uninstall tool in the DMG on MacOS, or the standard uninstaller on Windows.
 
 ## Corrupt VM
 
 It's possible that the Virtual Machine file system may become corrupted. This might happen if your VM didn't shut down correctly, perhaps there was a power cut or your laptop ran out of power unexpectedly.
 
-In this scenario, your files should be safe on the host filesystem. If you have ran `vagrant halt` recently, a database backup will be available. Using these, the site can be recovered from a fresh VVV box.
+In this scenario, your files should be safe on the host filesystem. If you have run `vagrant halt` recently, a database backup will be available. Using these, the site can be recovered from a fresh VVV box.
 
-Run `vagrant halt; vagrant destroy` to delete the Virtual Machine, followed by `vagrant up --provision` to recreate the machine. When the process is finished, restore the database from backups.
+Follow the [starting from fresh](#starting-from-fresh) instructions at the top of this document to recover.
 
 For more information on backups, see the [backups](#backups) section below.
 
@@ -97,11 +127,15 @@ If there's a typo or syntax error in `vvv-custom.yml` the provisioner will fail.
 
 ### Out of Date VVV
 
-VVV is an active project, but if it isn't up to date you might suffer from bugs that have already been fixed. Do a `git pull` and restart/reprovision VVV. If you download a zip instead, you can go to the install instructions for commands to convert your install to use git.
+VVV is an active project, but if it isn't up to date you might suffer from bugs that have already been fixed. 
+
+Updating is often as simple as doing a `git pull` and restarting/reprovisioning VVV with `vagrant reload --provision`. However, occasionally a new version of VVV may require the underlying software to be updated first, so it is wise to check the [News &amp; Changelog](/blog/) before doing this.
+
+If you downloaded a zip originally, you can [convert your install to use git](../installation/converting-zip-install-to-git.md) and then perform the update process above.
 
 ### Out of Date Software
 
-Mismatched Virtualbox and Guest additions can cause problems, as can older versions of Vagrant. When troubleshooting a problem, update to the latest versions of software, then verify the problem still exists after a `vagrant halt;vagrant up --provision`
+Mismatched Virtualbox and Guest additions can cause problems, as can older versions of Vagrant. When troubleshooting a problem, update to the latest versions of software, then verify the problem still exists after a `vagrant halt; vagrant up --provision`
 
 ### Local Network IP Clashes
 
@@ -117,7 +151,7 @@ VVV relies on the stability of both Vagrant and VirtualBox. These caveats are co
 
 ### Memory Allotment
 
-The default memory allotment for the VVV virtual machine is 1024MB. If you would like to raise or lower this value to better match your system requirements, a [you can do so with the vm_config section of `vvv-custom.yml`](vm_config.md) is in the wiki.
+The default memory allotment for the VVV virtual machine is 2048MB. If you would like to raise or lower this value to better match your system requirements, a [you can do so with the vm_config section of `vvv-custom.yml`](../vm_config.md) is in the wiki.
 
 ### 64bit Ubuntu and Older CPUs
 

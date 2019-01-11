@@ -65,3 +65,6 @@ Community utilities are independently developed and contributed by interested me
 
 * **VVV Solr Utilities**: Installs Solr and Java.  
   [https://github.com/ocean90/vvv-solr-utilities](https://github.com/ocean90/vvv-solr-utilities)
+  
+* **VVV GMP Utility**: Installs GMP.
+  [https://github.com/denisyilmaz/vvv-gmp-utility](https://github.com/denisyilmaz/vvv-gmp-utility)
