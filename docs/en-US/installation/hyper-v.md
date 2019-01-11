@@ -3,7 +3,7 @@ category: 2. Getting Started
 order: 3
 title: Hyper-V
 description: Using VVV with Hyper-V on Windows.
-permalink: /docs/en-US/installation/keeping-up-to-date/
+permalink: /docs/en-US/installation/hyper-v/
 ---
 
 VVV recommends using VirtualBox, but some Windows users have Hyper-V turned on preventing VirtualBox from running. As a result, VVV needs to be provisioned with slightly different settings.
