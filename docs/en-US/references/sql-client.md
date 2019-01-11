@@ -2,6 +2,7 @@
 category: 6. Reference
 order: 8
 title: Using an SQL Client
+description: How to set up an SQL client such as Sequel Pro for working with the VVV database
 permalink: /docs/en-US/references/sql-client/
 ---
 
