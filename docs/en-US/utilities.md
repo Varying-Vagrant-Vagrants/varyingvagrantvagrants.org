@@ -38,7 +38,9 @@ utilities:
   java:
     - java7
 utility-sources:
-  java: https://github.com/example/java-utilities.git
+  java:
+    repo: https://github.com/example/java-utilities.git
+    branch: master
 ```
 
 My hypothetical utility defines how to install different versions of Java, and is located in a git repository. I might have defined how to install java 8, or java 6, but here I used java 7.
