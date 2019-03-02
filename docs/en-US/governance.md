@@ -81,7 +81,3 @@ The `varyingvagrantvagrants.org` domain is assigned to a virtual machine, hosted
 #### S3 account
 
 Documentation from VVV's repositories is deployed directly to an S3 bucket. That bucket is managed and paid for by Jeremy Felt.
-
-#### Google Analytics
-
-Google Analytics is used to track visitors on the `varyingvagrantvagrants.org` domain. That account is managed by Jeremy Felt.
