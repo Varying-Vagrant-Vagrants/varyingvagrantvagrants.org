@@ -32,7 +32,6 @@ vagrant destroy
 vagrant box update
 # Make sure the recommended vagrant plugins are installed
 vagrant plugin install vagrant-hostsupdater
-vagrant plugin install vagrant-triggers
 # And that they're all up to date
 vagrant plugin update
 # Start VVV and create the VM from scratch
@@ -62,6 +61,12 @@ Delete the folder name that matches the path in error above. In the example abov
 Then go back and run `vagrant up --provision` again.
 
 ## Common Problems
+
+### VirtualBox Failing to Install on MacOS the first time around
+
+On recent versions of MacOS, you need to go into the system preferences to the security panel. Here it will be complaining that an unverified piece of software from Oracle named VirtualBox tried to install things. Unlock the settings pane and approve this, then re-run the installer and all should be fine.
+
+For whatever reason, MacOS doesn't pop up the usual dialog notifying you when the VirtualBox installer attempts this for the first time, and the VirtualBox installer doesn't tell you what to do.
 
 ### SSH Timeout During Provision
 
