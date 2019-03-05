@@ -54,7 +54,7 @@ The default location for these files is:
 
     C:\Users\<username>\VirtualBox VMs
 
-Delete the folder name that matches the path in error above. In the example aboves case it would be:
+Delete the folder name that matches the path in error above. In the example aboves case it would look **similar** to this:
 
     C:\Users\<username>\VirtualBox VMs\localdev_306449ed646\
 
