@@ -33,4 +33,14 @@ You may also find that the default sites created by VVV are enough for what you 
 
 At this point, mysql or phpMyAdmin can be used to upload a database for content, and plugins/themes/uploads can be copied. The installation of WP will be in `www/example/public_html`, and a PHP error log will be located at `www/example/logs/`.
 
+All the default parameters are:
+```
+  nginx_upstream: php72 # Specific the PHP version of the website
+  branch: your-branch # Git branch to use for the provisioner
+  repo: # Repository
+  hosts: # Multiline parameter to specificy the various hosts
+  vm_dir: /path/ # Specify the custom path in your machine to use it
+  custom: # Multiline parameter to specificy the various custom parameters of the provisioner
+```
+
 {% include always_reprovision.html %}
