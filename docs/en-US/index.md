@@ -10,7 +10,6 @@ permalink: /docs/en-US/
 
 Support for custom init scripts and site configurations allows for some great extensions of VVV core.
 
-* [Variable VVV](https://github.com/bradp/vv) for VVV 1.x automates setting up new sites, setting up deployments, and more.
 * [WordPress Meta Environment](https://github.com/WordPress/meta-environment) is a "collection of scripts that provision the official WordPress.org websites into a Varying Vagrant Vagrants installation."
 
 ## Custom Dashboards
