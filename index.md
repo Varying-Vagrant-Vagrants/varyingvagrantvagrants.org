@@ -27,7 +27,7 @@ In addition to VirtualBox, provider support is also included for Parallels, Hype
 
 ## Documentation
 
-The [documentation](docs/en-US/index.md) area of this site is in progress. Open a [new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV) if you run into trouble or have any tips that we need to know.
+The [documentation](docs/en-US/index.md) area of this site is in progress. [Click here to open new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV),  if you run into trouble, or have any tips that we need to know.
 
 ## Copyright / License
 
