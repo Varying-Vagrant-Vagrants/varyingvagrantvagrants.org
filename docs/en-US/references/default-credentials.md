@@ -28,16 +28,20 @@ Vagrant Box Ubuntu Root:
 __User:__ `root`
 __Password:__ `vagrant`
 
-#### WordPress Stable
-* LOCAL PATH: vagrant-local/www/wordpress-default
-* VM PATH: /srv/www/wordpress-default
-* URL: `http://local.wordpress.test`
-* DB Name: `wordpress_default`
+#### WordPress Stable One
+* LOCAL PATH: www/wordpress-one
+* VM PATH: /srv/www/wordpress-one
+* URL: `http://one.wordpress.test`
+* DB Name: `wordpress-one`
 
-#### WordPress Develop
-* LOCAL PATH: vagrant-local/www/wordpress-develop
-* VM PATH: /srv/www/wordpress-develop
-* /src URL: `http://src.wordpress-develop.test`
-* /build URL: `http://build.wordpress-develop.test`
+#### WordPress Stable Two
+* LOCAL PATH: www/wordpress-two
+* VM PATH: /srv/www/wordpress-two
+* URL: `http://two.wordpress.test`
+* DB Name: `wordpress-two`
+
+#### WordPress Trunk  
+* LOCAL PATH: www/wordpress-trunk
+* VM PATH: /srv/www/wordpress-trunk
 * DB Name: `wordpress_develop`
 * DB Name: `wordpress_unit_tests`
