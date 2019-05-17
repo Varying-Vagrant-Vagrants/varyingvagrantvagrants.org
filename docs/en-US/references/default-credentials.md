@@ -32,16 +32,16 @@ __Password:__ `vagrant`
 * LOCAL PATH: www/wordpress-one
 * VM PATH: /srv/www/wordpress-one
 * URL: `http://one.wordpress.test`
-* DB Name: `wordpressone`
+* DB Name: `wordpress-one`
 
 #### WordPress Stable Two
 * LOCAL PATH: www/wordpress-two
 * VM PATH: /srv/www/wordpress-two
 * URL: `http://two.wordpress.test`
-* DB Name: `wordpresstwo`
+* DB Name: `wordpress-two`
 
 #### WordPress Trunk  
 * LOCAL PATH: www/wordpress-trunk
 * VM PATH: /srv/www/wordpress-trunk
-* DB Name: `wordpresstrunk`
+* DB Name: `wordpress_develop`
 * DB Name: `wordpress_unit_tests`
