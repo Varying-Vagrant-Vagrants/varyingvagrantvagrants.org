@@ -25,7 +25,7 @@ utilities:
     #- php71
     #- php72
     #- php73
-    - trusted-hosts
+
 utility-sources:
   core:
     repo: https://github.com/Varying-Vagrant-Vagrants/vvv-utilities.git
