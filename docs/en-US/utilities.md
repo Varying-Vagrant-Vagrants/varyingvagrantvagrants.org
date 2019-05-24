@@ -13,12 +13,19 @@ Here are the default utilities as they would be defined in `vvv-custom.yml` in f
 ```YAML
 utilities:
   core:
-    - memcached-admin
-    - opcache-status
-    - phpmyadmin
-    - webgrind
+    - memcached-admin # Object cache management
+    - opcache-status # opcache management
+    - phpmyadmin # Web based database client
+    - webgrind # PHP Debugging
+    - tls-ca # SSL/TLS certificates
+    - mongodb # needed for Tideways/XHGui
+    - tideways # PHP profiling tool, also installs xhgui
+    #- php56
+    #- php70
+    #- php71
+    #- php72
+    #- php73
     - trusted-hosts
-    - tls-ca
 utility-sources:
   core:
     repo: https://github.com/Varying-Vagrant-Vagrants/vvv-utilities.git
