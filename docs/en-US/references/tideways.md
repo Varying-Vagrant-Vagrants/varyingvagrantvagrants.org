@@ -15,6 +15,8 @@ Tideways is a PHP module for PHP 7.0+ that enable to profile everything happened
 To use it is required to execute specific PHP code that gather this data and also visualize them.  
 We added [XHGui](https://github.com/perftools/xhgui) that is a graphical interface for Tideways that is a complete tool to analyze this data.  
 
+> PHPStorm can have issues with xDebug and Tideways together, following this guide is possible to fix the error https://medium.com/takeaway-tech/skipping-files-outside-phpstorm-project-in-xdebug-sessions-b563612b2a0d
+
 ## How to enable it
 
 XHGui need a php file that is prepended to all of them (by a global php config) to turn on the profiling and save this information.  
