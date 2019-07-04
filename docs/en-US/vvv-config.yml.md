@@ -48,6 +48,12 @@ utilities:
     - tls-ca
 utility-sources:
   core: https://github.com/Varying-Vagrant-Vagrants/vvv-utilities.git
+# General VVV options
+general:
+  db_backup: true
+  db_restore: true
+  db_share_type: false
+  #github_token: xxxxxx
 ```
 
 ## Anatomy of a Site config
@@ -144,6 +150,26 @@ vm_config:
   memory: 4096
   cores: 1
 ```
+
+## general
+
+This section is used for general options for the suite.
+
+### db_backup
+
+Backup the databases to the database/backups subfolder on halt/suspend/destroy, set to false to disable.
+
+### db_restore
+
+Import the databases if they're missing from backups, set to false to disable.
+
+### db_share_type
+
+Set to true to use a synced shared folder for MariaDB database storage, could create issues on different systems.
+
+### github_token
+
+Composer can use a GitHub token to speed up the download and avoid issues on downloading packages.
 
 ## Utilities
 
