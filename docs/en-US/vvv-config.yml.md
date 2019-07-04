@@ -161,7 +161,7 @@ Backup the databases to the database/backups subfolder on halt/suspend/destroy, 
 
 ### db_restore
 
-Import the databases if they're missing from backups, set to false to disable.
+Imports the databases if they're missing from backups, set to false to disable.
 
 ### db_share_type
 
@@ -169,10 +169,10 @@ Set to true to use a synced shared folder for MariaDB database storage, could cr
 
 ### github_token
 
-Composer can use a GitHub token to speed up the download and avoid issues on downloading packages.
+Tells composer can use a GitHub token to speed up download and avoid rate limiting issues when downloading packages.
 
 ## Utilities
 
-These are repositories and packages VVV pulls in to provide services, such as MySQL, PHPMyAdmin, or Memcached. 
+These are repositories and packages VVV pulls in to provide additional services, such as PHPMyAdmin, TLS certificate authorities or MemcachedAdmin. 
 
 [Additional versions of PHP](adding-a-new-site/changing-php-version.md) may also be added here.
