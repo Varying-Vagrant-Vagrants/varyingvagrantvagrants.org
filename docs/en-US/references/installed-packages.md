@@ -32,4 +32,4 @@ These packages are installed by default in VVV:
 1. [Webgrind](https://github.com/jokkedk/webgrind)
 1. [NodeJs](https://nodejs.org/)
 1. [grunt-cli](https://github.com/gruntjs/grunt-cli)
-1. [Mailcatcher](http://mailcatcher.me/)
+1. [Mailhog](https://github.com/mailhog/MailHog)
