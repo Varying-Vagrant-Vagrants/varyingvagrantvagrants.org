@@ -18,7 +18,7 @@ We added [XHGui](https://github.com/perftools/xhgui) that is a graphical interfa
 ## How to enable it
 
 XHGui need a php file that is prepended to all of them (by a global php config) to turn on the profiling and save this information.  
-XHGui will be executed in headless mode ff Tideways is available for the PHP version used in the website that you are profiling.  
+XHGui will be executed in headless mode if Tideways is available for the PHP version used in the website that you are profiling.  
 To profile a page add `?enable-tideways` to your URL and check to `xhgui.vvv.test` the result from profile.
 
 ## Our custom implementation
@@ -30,5 +30,5 @@ We added the support for a custom config file that can change the values of XHGu
 ## XHGui
 There are already a lot of guides about XHGui:
 
-  * [https://engineyard.com/blog/profiling-with-xhprof-xhgui-part-2](https://engineyard.com/blog/profiling-with-xhprof-xhgui-part-2)
-  * [https://engineyard.com/blog/profiling-with-xhprof-xhgui-part-3](https://engineyard.com/blog/profiling-with-xhprof-xhgui-part-3)
+  * [https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-2](https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-2)
+  * [https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-3](https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-3)
