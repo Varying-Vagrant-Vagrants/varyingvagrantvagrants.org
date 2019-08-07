@@ -37,6 +37,7 @@ sites:
 vm_config:
   memory: 2048
   cores: 1
+  #box: custom-box # Override the vagrant box with a custom one
 
 utilities:
   core:
@@ -53,7 +54,7 @@ general:
   db_backup: true
   db_restore: true
   db_share_type: false
-  #github_token: xxxxxx
+  #github_token: xxxxxx # For Composer
 ```
 
 ## Anatomy of a Site config
