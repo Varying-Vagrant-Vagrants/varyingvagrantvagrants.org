@@ -17,13 +17,11 @@ Your script might:
 
 {% include always_reprovision.html %}
 
-## An Example
 
-Check on [GitHub](https://github.com/Varying-Vagrant-Vagrants/custom-site-template/blob/master/provision/vvv-init.sh) the original `custom-site-template` code that is upadted to the latest revision.
+You can find [an example of a site provisioner here](https://github.com/Varying-Vagrant-Vagrants/custom-site-template/blob/master/provision/vvv-init.sh).
 
-This script will:
+That script will:
 
- - Associate the VVV `/etc/hosts` file with your domain
  - Check if a mysql database exists, if it doesn't, create one and grant the needed priviledges
  - Make sure the NGINX error logs are created
  - Download, configure and install a fresh copy of WordPress or update the currently installed version of WordPress.
