@@ -18,8 +18,21 @@ We added [XHGui](https://github.com/perftools/xhgui) that is a graphical interfa
 ## How to enable it
 
 XHGui need a php file that is prepended to all of them (by a global php config) to turn on the profiling and save this information.  
-XHGui will be executed in headless mode ff Tideways is available for the PHP version used in the website that you are profiling.  
-To profile a page add `?enable-tideways` to your URL and check to `xhgui.vvv.test` the result from profile.
+XHGui will be executed in headless mode if Tideways is available for the PHP version used in the website that you are profiling.  
+To profile a page you need to enable the tideways module and disable xDebug, you can do it running the `xdebug_off` command inside the Vagrant machine.  
+Now Tideways is globally enabled and you can enable it in 2 ways:
+
+* Specific URL: Add `?enable-tideways` to your URL
+* For the domain: Create a new parameter `tideways: true` in your `vvv-config.yml` and run a provision, like:
+
+```
+sites:
+  wordpress-default:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    tideways: true
+```
+
+Later you can check to `xhgui.vvv.test` the result from profiling.
 
 ## Our custom implementation
 
@@ -30,5 +43,5 @@ We added the support for a custom config file that can change the values of XHGu
 ## XHGui
 There are already a lot of guides about XHGui:
 
-  * [https://engineyard.com/blog/profiling-with-xhprof-xhgui-part-2](https://engineyard.com/blog/profiling-with-xhprof-xhgui-part-2)
-  * [https://engineyard.com/blog/profiling-with-xhprof-xhgui-part-3](https://engineyard.com/blog/profiling-with-xhprof-xhgui-part-3)
+  * [https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-2](https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-2)
+  * [https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-3](https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-3)
