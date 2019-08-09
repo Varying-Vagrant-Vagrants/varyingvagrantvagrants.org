@@ -25,5 +25,5 @@ That script will:
  - Check if a mysql database exists, if it doesn't, create one and grant the needed priviledges
  - Make sure the NGINX error logs are created
  - Download, configure and install a fresh copy of WordPress or update the currently installed version of WordPress.
- - Do other miscellaneous tasks like certificate creations, set locale, install plugins check multisite and so on
+ - Do other miscellaneous tasks like SSL certificate setup, setting locale, installing plugins, checking for multisite, etc
  
