@@ -162,6 +162,10 @@ The default memory allotment for the VVV virtual machine is 2048MB. If you would
 
 Since version 1.2.0, VVV has used a 64bit version of Ubuntu. Some older CPUs (such as the popular *Intel Core 2 Duo* series) do not support this. Changing the line `config.vm.box = "ubuntu/trusty64"` to `"ubuntu/trusty32"` in the `Vagrantfile` before `vagrant up` will provision a 32bit version of Ubuntu that will work on older hardware.
 
+### Strange letters (like accented) in Windows user name
+
+It is a [bug confirmed in Vagrant](https://github.com/hashicorp/vagrant/issues/2113#issuecomment-480650634) but there is a workaround in the original bug report. 
+
 ## Backups
 
 In the event that you're stuck or at a loss, VVV tries to generate database backups at `VVV/database/backups/*.sql`, with a file for each database.
