@@ -8,6 +8,8 @@ permalink: /docs/en-US/vvv-config/
 
 `vvv-config.yml` is the default config file that VVV uses to set itself up. Copy this file to `vvv-custom.yml` to make changes and add your own site.
 
+This file use different provisionesr, updated differently from VVV, so it always better to check the documentation of them like for the default ones: [custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template/blob/master/README.md) and [custom-site-template-develop](https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop/blob/master/README.md).
+
 Here's the full default config file, with every key and option that VVV supports:
 
 ```yaml
