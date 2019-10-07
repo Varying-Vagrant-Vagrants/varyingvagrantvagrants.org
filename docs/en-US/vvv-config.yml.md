@@ -80,7 +80,7 @@ When defining a site, the only required item is the name of the site. This singl
 ```yaml
 example-site:
 ```
-
+Note that site provisioners may add their own custom values, see the [custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template/blob/master/README.md) documentation on GitHub for information on what is supported.
 
 ### repo
 
@@ -166,7 +166,7 @@ Imports the databases if they're missing from backups, set to false to disable.
 
 ### db_share_type
 
-Set to true to use a synced shared folder for MariaDB database storage, could create issues on different systems.
+Set to true to use a synced shared folder for MariaDB database storage, could create issues on different systems. This is `false`/off by default
 
 ### github_token
 
