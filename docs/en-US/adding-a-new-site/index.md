@@ -21,6 +21,16 @@ sites:
     repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
     hosts:
       - example.test
+      
+  .... other sites...
+
+  multisite-example:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - multisite.test
+      - subsite.multisite.test
+    custom:
+      wp_type: subdomain # or subdirectory
 ```
 
 Then, save `vvv-custom.yml` and run `vagrant reload --provision` to update VVV with the new site. **Always reprovision after making changes to `vvv-custom.yml`**. Be sure to indent correctly as whitespace matters in YAML files, VVV prefers to indent using 2 spaces.
@@ -45,7 +55,7 @@ All the default parameters for all the templates are:
 
 The custom template supported by VVV project are (check the GitHub repo for all the various parameters and documentation):
 
-* https://github.com/Varying-Vagrant-Vagrants/custom-site-template - For when you just need a simple dev site 
-* https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop - For working with WP Core development 
+* [https://github.com/Varying-Vagrant-Vagrants/custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template) - For when you just need a simple dev site 
+* [https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop](https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop) - For working with WP Core development 
 
 {% include always_reprovision.html %}
