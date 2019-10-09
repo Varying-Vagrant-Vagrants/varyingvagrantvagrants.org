@@ -12,7 +12,7 @@ VVV creates and sets up several WordPress installs for you automatically, these 
 
  - [http://one.wordpress.test](http://one.wordpress.test) - A standard WP install, useful for building plugins, testing things, etc
  - [http://two.wordpress.test](http://two.wordpress.test) - A standard WP install, useful for building plugins, testing things, etc
- - [http://trunk.wordpress.test](http://trunk.wordpress.test) - An svn based WP Core trunk dev setup, useful for contributor days, Trac tickets, patches
+ - [http://trunk.wordpress.test](http://trunk.wordpress.test) - An svn based WP Core trunk dev setup, useful for contributor days, Trac tickets, patches (as default this site is skipped during provisioning)
 
 You can see these in your VVV config, allowing you to make new sites, or remove the built in sites if you so choose.
 
