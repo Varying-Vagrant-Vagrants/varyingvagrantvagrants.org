@@ -38,7 +38,6 @@ Commands to run to update to this version:
 ```
 Also critical bugfixes are released as major releases!
 
-
 ## Thoroughly Updating VVV
 
 But if you want to be thorough, follow these steps:
