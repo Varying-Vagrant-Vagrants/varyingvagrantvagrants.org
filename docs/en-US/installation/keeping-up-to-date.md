@@ -18,25 +18,26 @@ While VVV uses semantic versioning, other git repos such as the site templates, 
 ### Major versions
 
 Each major version, e.g. 1.x.x or 2.x.x, requires a `vagrant destroy` to download a new VM image, and reinstall everything.
-Commands to run to update to this version:
+Commands to run to update to this version (remember to do a backup):
 
+```
     git pull # update to latest git version
     vagrant destroy # destroy or delete the VM image (not your files!)
     vagrant up # download the new VM image and reinstall everything with a provision
-
-Also critical bugfixes are released as major releases!
+```
 
 ### Minor versions
 
-Minor versions, e.g.  1.1.x or 2.3.x, contain bug fixes, and sometimes new features. It's strongly recommended that you update to these versions.
+Minor versions, e.g. 1.1.x or 2.3.x, contain bug fixes, and sometimes new features. It's strongly recommended that you update to these versions.
 Commands to run to update to this version:
+
+```
     git pull # update to latest git version
     vagrant up # launch the VM
     vagrant provision # updates everything inside the VM
+```
+Also critical bugfixes are released as major releases!
 
-## Updating VVV
-
-Keep in mind that if you regularly update, `git pull; vagrant reload --provision` should do just fine.
 
 ## Thoroughly Updating VVV
 
