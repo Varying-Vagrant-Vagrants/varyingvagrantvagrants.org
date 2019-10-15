@@ -28,7 +28,7 @@ Also critical bugfixes are released as major releases!
 
 ### Minor versions
 
-With minor version we are talking of 1.1.x or 2.3.x that in the VVV case require only a `vagrant provision`.  
+Minor versions, e.g.  1.1.x or 2.3.x, contain bug fixes, and sometimes new features. It's strongly recommended that you update to these versions.
 Commands to run to update to this version:
     git pull # update to latest git version
     vagrant up # launch the VM
