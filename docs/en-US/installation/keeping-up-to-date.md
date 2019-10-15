@@ -13,7 +13,7 @@ Your VVV install will hopefully serve you for many years, but in order to keep p
 The VVV project uses the [semver/semantic versioning](http://semver.org/) system.
 WordPress for example doesn't use semver for their releases, so every release can have different changes or backward compatibility changes.
 For any other issues don't forget to check the [troubleshooting page](https://varyingvagrantvagrants.org/docs/en-US/troubleshooting/).
-This versioning is used only for VVV and for the various repo is based this suite!
+While VVV uses semantic versioning, other git repos such as the site templates, or core utilities, run on a continuous deployment process. These git repos don't have set versions.
 
 ### Major versions
 
