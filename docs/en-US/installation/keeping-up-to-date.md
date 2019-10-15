@@ -13,7 +13,7 @@ Your VVV install will hopefully serve you for many years, but in order to keep p
 The VVV project uses the [semver](http://semver.org/) system for versioning because is a suite of different tools that let you to manage different websites automatically with the various needs.  
 Keep everything updated and aligned is not an easy task so to simplify the environment management the semver standard helps you and the contributors to the project.  
 WordPress as example doesn't use the semver for their releases so every release can have different changes or backward compatibilities.
-For any other kind of issues don't forget to check at [Troubleshooting page](https://varyingvagrantvagrants.org/docs/en-US/troubleshooting/).
+For any other issues don't forget to check the [troubleshooting page](https://varyingvagrantvagrants.org/docs/en-US/troubleshooting/).
 This versioning is used only for VVV and for the various repo is based this suite!
 
 ### Major versions
