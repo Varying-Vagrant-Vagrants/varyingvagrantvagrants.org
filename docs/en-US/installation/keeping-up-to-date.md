@@ -17,7 +17,7 @@ This versioning is used only for VVV and for the various repo is based this suit
 
 ### Major versions
 
-With major version we are talking of 1.x.x or 2.x.x that in the VVV case require a `vagrant destroy` to download new virtual image and reinstall everything.  
+Each major version, e.g. 1.x.x or 2.x.x, requires a `vagrant destroy` to download a new VM image, and reinstall everything.
 Commands to run to update to this version:
 
     git pull # update to latest git version
