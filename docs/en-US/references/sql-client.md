@@ -8,12 +8,17 @@ permalink: /docs/en-US/references/sql-client/
 
 You can work with the database from inside the VM with WP CLI or `mysql`, and even from [PHPMyAdmin](http://vvv.test/phpmyadmin), but some users prefer software such as HeidiSQL, or Sequel Pro.
 
-To connect using an external sql client, there are 2 methods:
+To connect using an external sql client, there are 3 methods:
 
+ - Sequel Pro config file
  - Direct
  - SSH tunnel
 
 We'll be using Sequel Pro to demonstrate, but the same goes for any other software you might prefer to use.
+
+### Predefined Sequel Pro Config
+
+A Sequel Pro config can be found at `database/sequelpro.spf`, importing this will configure Sequel Pro automatically.
 
 ### Direct Connections
 

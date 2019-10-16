@@ -6,14 +6,11 @@ description: Find help on GitHub and the wiki or check how to resolve common pro
 permalink: /docs/en-US/troubleshooting/
 ---
 
-Need help?
-
-* Let us have it! Don't hesitate to open a [new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV/issues) if you run into trouble or have any tips that we need to know.
-* The [VVV Wiki](https://github.com/varying-vagrant-vagrants/vvv/wiki) also contains VVV1 focused documentation that may still be of help.
+Need help? **Let us know on GitHub! Don't hesitate to open a [new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV/issues)** if you run into trouble or have any tips that we need to know. There's no need to spend hours trying to fix a local install when a VVV contributor can point you in the right direction
 
 ## Starting from Fresh
 
-Sometimes a clean, fresh start fixes things. 
+Sometimes a clean, fresh start fixes things.
 
 > Note: before doing this you should review the [News &amp; Changelog](/blog/) blog. Sometimes you will also need to update the underlying software such as Vagrant or its plugins in order for this process to be successful.
 
@@ -48,9 +45,9 @@ VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component SessionMachi
 VBoxManage.exe: error: Context: "SaveSettings()" at line 3111 of file VBoxManageModifyVM.cpp
 ```
 
-Then the `vagrant destroy` command didn't manage to clean things up properly. 
+Then the `vagrant destroy` command didn't manage to clean things up properly.
 
-The default location for these files is: 
+The default location for these files is:
 
     C:\Users\<username>\VirtualBox VMs
 
@@ -85,7 +82,7 @@ If this happens, do the following, and provide the results when asking for help.
  - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `
  vagrant up --provision --debug > vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
 
-### Vagrant Plugin Install Issues and Broken Vagrant Upgrades 
+### Vagrant Plugin Install Issues and Broken Vagrant Upgrades
 
 When updating from Vagrant 1.x to 2.x, Vagrants bundler can throw errors, here's an example:
 
@@ -110,7 +107,7 @@ conflicting dependencies ffi (= 1.9.18) and ffi (= 1.9.14)
   Gems matching ffi (= 1.9.18):
     ffi-1.9.18-x64-mingw32
  ```
- 
+
 When this happens, the solution is to completely uninstall Vagrant, then reinstall. Do this either using the uninstall tool in the DMG on MacOS, or the standard uninstaller on Windows.
 
 ## Corrupt VM
@@ -126,13 +123,13 @@ For more information on backups, see the [backups](#backups) section below.
 
 ## Common Causes of Problems
 
-### Typos in `vvv-custom.yml`
+### Typos in your config file
 
 If there's a typo or syntax error in `vvv-custom.yml` the provisioner will fail. Make sure the file is valid YAML when making changes to this file.
 
 ### Out of Date VVV
 
-VVV is an active project, but if it isn't up to date you might suffer from bugs that have already been fixed. 
+VVV is an active project, but if it isn't up to date you might suffer from bugs that have already been fixed.
 
 Updating is often as simple as doing a `git pull` and restarting/reprovisioning VVV with `vagrant reload --provision`. However, occasionally a new version of VVV may require the underlying software to be updated first, so it is wise to check the [News &amp; Changelog](/blog/) before doing this.
 
@@ -164,7 +161,7 @@ Since version 1.2.0, VVV has used a 64bit version of Ubuntu. Some older CPUs (su
 
 ### Strange letters (like accented) in Windows user name
 
-It is a [bug confirmed in Vagrant](https://github.com/hashicorp/vagrant/issues/2113#issuecomment-480650634) but there is a workaround in the original bug report. 
+It is a [bug confirmed in Vagrant](https://github.com/hashicorp/vagrant/issues/2113#issuecomment-480650634) but there is a workaround in the original bug report.
 
 ## Backups
 

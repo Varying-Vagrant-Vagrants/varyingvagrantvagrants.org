@@ -21,6 +21,12 @@ You can find the central certificate in `certificates/ca/ca.crt`. There are some
 * Expand the Trust section at the top, and under `Secure Sockets Layer (SSL)`, select `Always Trust`.
 * Close the window. You'll be prompted to enter your password to save the changes.
 
+The certificate can also be added via a terminal command from inside the VVV folder:
+
+```sh
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain certificates/ca/ca.cert
+```
+
 ### Trusting the VVV Root Certificate in Firefox
 
 Firefox uses its own root certificate list, to access it:
@@ -33,6 +39,14 @@ Firefox uses its own root certificate list, to access it:
  - You should now see the `VVV INTERNAL` certificate authority in the list.
 
 ### Trusting the VVV Root Certificate on Windows 10
+
+To do this via a command line with admin priviledges, run this command in the VVV folder:
+
+```sh
+certutil -enterprise -f -v -AddStore "Root" "certificates/ca/ca.cert"
+```
+
+To do it via the user interface:
 
  - Press the windows key + R, to bring up the run dialogue.
  - Enter `secpol.msc` and press Ok.
