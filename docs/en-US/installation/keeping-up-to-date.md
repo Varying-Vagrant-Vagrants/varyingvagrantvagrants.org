@@ -8,9 +8,35 @@ permalink: /docs/en-US/installation/keeping-up-to-date/
 
 Your VVV install will hopefully serve you for many years, but in order to keep pace with new fixes and improvements, you'll need to update it from time to time.
 
-## Updating VVV
+## What is the Semantic Versioning standard and how VVV used it
 
-Keep in mind that if you regularly update, `git pull; vagrant reload --provision` should do just fine.
+The VVV project uses the [semver/semantic versioning](http://semver.org/) system.
+WordPress for example doesn't use semver for their releases, so every release can have different changes or backward compatibility changes.
+For any other issues don't forget to check the [troubleshooting page](https://varyingvagrantvagrants.org/docs/en-US/troubleshooting/).
+While VVV uses semantic versioning, other git repos such as the site templates, or core utilities, run on a continuous deployment process. These git repos don't have set versions.
+
+### Major versions
+
+Each major version, e.g. 1.x.x or 2.x.x, requires a `vagrant destroy` to download a new VM image, and reinstall everything.
+Commands to run to update to this version (remember to do a backup):
+
+```
+    git pull # update to latest git version
+    vagrant destroy # destroy or delete the VM image (not your files!)
+    vagrant up # download the new VM image and reinstall everything with a provision
+```
+
+### Minor versions
+
+Minor versions, e.g. 1.1.x or 2.3.x, contain bug fixes, and sometimes new features. It's strongly recommended that you update to these versions.
+Commands to run to update to this version:
+
+```
+    git pull # update to latest git version
+    vagrant up # launch the VM
+    vagrant provision # updates everything inside the VM
+```
+Also critical bugfixes are released as major releases!
 
 ## Thoroughly Updating VVV
 
