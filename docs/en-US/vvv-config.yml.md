@@ -174,6 +174,6 @@ Tells composer can use a GitHub token to speed up download and avoid rate limiti
 
 ## Utilities
 
-These are repositories and packages VVV pulls in to provide additional services, such as PHPMyAdmin, TLS certificate authorities or MemcachedAdmin. 
+These are repositories and packages VVV pulls in to provide additional services, such as PHPMyAdmin, TLS certificate authorities or MemcachedAdmin.
 
 [Additional versions of PHP](adding-a-new-site/changing-php-version.md) may also be added here.
