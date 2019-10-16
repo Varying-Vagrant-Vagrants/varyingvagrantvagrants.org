@@ -10,4 +10,4 @@ We have a slack workspace available at https://vvv-local.slack.com. This is wher
 
 [Use the invite page here to gain access to the VVV slack workspace](https://vvv-baymax-bot.herokuapp.com/)
 
-<iframe src="https://vvv-baymax-bot.herokuapp.com/" style="min-width: 400px;min-height:500px;" />
+<iframe src="https://vvv-baymax-bot.herokuapp.com/" style="min-width: 400px;min-height:600px; width:100%;" />
