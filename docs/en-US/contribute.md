@@ -4,14 +4,14 @@ order: 5
 title: How to contribute
 description: The VVV core project is built by volunteers that help on adding new features, improve documentation and also fix new bugs.
 permalink: /docs/en-US/contribute/
---- 
+---
 
 ## Development
 
 VVV is built with multiple repositories, but [we track tickets on the main VVV repositorys issues](https://github.com/Varying-Vagrant-Vagrants/VVV/).
 
-Every ticket is labelled by the project that involves, like the provision for the [custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template) or the [dashboard](https://github.com/Varying-Vagrant-Vagrants/dashboard).  
-Pick an issue that is interesting for you, and don't hesitate to ask for hints on the tickets itself, so we can track openly every feedback to achieve better results. 
+Every ticket is labelled by the project that involves, like the provision for the [custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template) or the [dashboard](https://github.com/Varying-Vagrant-Vagrants/dashboard).
+Pick an issue that is interesting for you, and don't hesitate to ask for hints on the tickets itself, so we can track openly every feedback to achieve better results.
 
 The [CD-USB-Generator](https://github.com/Varying-Vagrant-Vagrants/CD-USB-Generator) is the exception to the rule of the issue in the main repo. This repo contains scripts to genertae USB sticks with copies of VVV for WordCamp contributor days.
 
@@ -31,6 +31,6 @@ Example:
 * `vagrant provision` to test if the provision will works without any errors
 * `vagrant halt` to test if the halt of the machine doesn't have any issue
 
-That's it!  
+That's it!
 
 Another suggestion is to check the pull request ticket for other things to verify like commands or features to do a better test.
