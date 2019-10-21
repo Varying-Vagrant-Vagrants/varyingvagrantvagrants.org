@@ -32,7 +32,7 @@ Lead developers are trusted to make changes to all project code by merging their
 
 Current lead developers:
 
-* [Lorelei Aurora](https://github.com/lorelieaurora)
+* [Lorelei Aurora](https://github.com/loreleiaurora)
 
 Lead developers are selected by the project lead.
 
