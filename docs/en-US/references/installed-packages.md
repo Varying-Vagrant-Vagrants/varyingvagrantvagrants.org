@@ -1,5 +1,5 @@
 ---
-category: 5. Reference
+category: 6. Reference
 order: 1
 title: Packages installed in VVV
 description: VVV uses Ubuntu 14.04 LTS (Trusty Tahr) and comes with a few packages installed by default.
@@ -8,7 +8,7 @@ permalink: /docs/en-US/installed-packages/
 
 These packages are installed by default in VVV:
 
-1. [Ubuntu](http://www.ubuntu.com/) 14.04 LTS (Trusty Tahr)
+1. [Ubuntu](http://www.ubuntu.com/) 18.04 LTS (Bionic Beaver)
 1. [WordPress Develop](https://develop.svn.wordpress.org/trunk/)
 1. [WordPress Stable](https://wordpress.org/)
 1. [WP-CLI](http://wp-cli.org/) (master branch)
@@ -32,4 +32,4 @@ These packages are installed by default in VVV:
 1. [Webgrind](https://github.com/jokkedk/webgrind)
 1. [NodeJs](https://nodejs.org/)
 1. [grunt-cli](https://github.com/gruntjs/grunt-cli)
-1. [Mailcatcher](http://mailcatcher.me/)
+1. [Mailhog](https://github.com/mailhog/MailHog)

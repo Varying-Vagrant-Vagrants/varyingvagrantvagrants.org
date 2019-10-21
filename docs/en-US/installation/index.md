@@ -1,6 +1,6 @@
 ---
 category: 2. Getting Started
-order: 1
+order: 2
 title: Installation
 description: VVV can be installed with git by cloning the main VVV repo into a local directory or by downloading a zip file. Start VVV with 'vagrant up'.
 permalink: /docs/en-US/installation/
@@ -31,20 +31,6 @@ There are 2 methods, both involve downloading a zip file:
 
 **Note:** We strongly recommend using the `git` method, it makes updating VVV to get new features and fixes significantly easier.
 
-#### Converting a Zip Install to a `git` Install
-
-Navigate in the terminal to the VVV folder, and run the following commands:
-
-```
-git init
-git remote add origin https://github.com/Varying-Vagrant-Vagrants/VVV.git
-git fetch
-git reset origin/master
-git checkout -tf origin/master
-```
-
-Once this is done, run `vagrant reload --provision` to update. Remember to copy your config from `vvv-config.yml` to `vvv-custom.yml` before doing this or your configs changes will be overwritten.
-
 ## Post installation
 
 Once you've installed everything, copy `vvv-config.yml` to `vvv-custom.yml`. Any changes to `vvv-config.yml` will get overwritten when you update VVV, so always make changes to `vvv-custom.yml`.
@@ -53,6 +39,7 @@ Once you've installed everything, copy `vvv-config.yml` to `vvv-custom.yml`. Any
 
 1. In a command prompt, change into the new directory with `cd vagrant-local`.
 1. Start the Vagrant environment with `vagrant up`.
+    * Windows users must use a command prompt started with administrator priviledges. If you do not do this you won't get custom host names, and `vvv.test` will not resolve in a browser
     * Be patient as the magic happens. This could take a while on the first run as your local machine downloads the required files.
     * Watch as the script ends, as an administrator or `su` ***password may be required*** to properly modify the hosts file on your local machine.
 1. Visit [the VVV Dashboard at http://vvv.test](http://vvv.test) to view your new WordPress sites.

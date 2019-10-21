@@ -8,114 +8,94 @@ permalink: /docs/en-US/adding-a-new-site/
 
 Adding a new site is as simple as adding it under the sites section of `vvv-custom.yml`. If `vvv-custom.yml` does not exist, you can create it by copying `vvv-config.yml` to `vvv-custom.yml`.
 
-To do this there are five steps:
+First we need to tell VVV about the site. I'm going to give the site the name `example`, with the URL `example.test`, and we'll tell VVV to use the custom site template. The custom site template will tell VVV how to download and install WordPress, think of it as a recipe or manual for how to install WordPress.
 
- - `vvv-custom.yml` and the root folder ( the VVV folder )
- - Files
- - Provisioner files
- - Restart/reprovision VVV
- - Database
+### Adding a Single Site
 
-I'm going to walk through setting up a blog named vvvtest.com locally using VVV, but this could be a site currently hosted in MAMP.
+To do this, we will update the sites list by editing the file `vvv-custom.yml` in the main VVV folder like this:
+
+```YAML
+sites:
+
+  .... other sites...
+
+  example:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - example.test
+
+  .... other sites...
+
+  multisite-example:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - multisite.test
+      - subsite.multisite.test
+    custom:
+      wp_type: subdomain # or subdirectory
+```
+
+Then, save `vvv-custom.yml` and run `vagrant up --provision` to update VVV with the new site. **Always reprovision after making changes to the config files**. Be sure to indent correctly as whitespace matters in YAML files, VVV prefers to indent using 2 spaces.
+
+Once `vagrant reload --provision` finishes, you will have a brand new WordPress install! We can now visit http://example.test to view our site, or open the `www/example` folder in an editor to start making changes to our site. To log in, use `admin` and `password`.
+
+### Adding a Multisite
+
+To add a multisite we follow the same steps, but with an additional parameter:
+
+```yaml
+sites:
+
+  .... other sites...
+
+  multisite:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+    hosts:
+      - multisite.test
+    custom:
+      wp_type: subdirectory
+
+  .... other sites...
+
+```
+
+This creates a subdirectory based multisite. Changing `wp_type` to `subdomain` will give a subdomain multisite, just remember to add subdomains in the hosts section.
+
+### Additional Options
+
+The custom site template supports options such as changing the version of WordPress, database names, site titles, and more. [For a full list of what the official site template supports,  check the readme on Github](https://github.com/Varying-Vagrant-Vagrants/custom-site-template).
+
+### Migrating from VVV 1.x
 
 If you're migrating a site from VVV 1, read this page, then visit the [migration page](migrating-vvv1.md) for further details.
 
-You may also find that the default sites created by VVV are enough for what you need. [Read about the default sites here](../references/default-sites.md)
+### Default Sites
 
-**Remember: Always reprovision after making changes to `vvv-custom.yml`**
+VVV provides a number of default sites, and some that are disabled by default. If you can repurpose these then no config modification is necessary.
 
-## `vvv-custom.yml` and the Root Folder
+You may also find that the default sites created by VVV are enough for what you need. [Read about the default sites here](../references/default-sites.md).
 
-First we need to tell VVV about the site. I'm going to give the site the name `vvvtest`, and update the sites list in `vvv-custom.yml`:
+### Importing a Production Database
 
-```YAML
-vvvtest:
+At this point, mysql or phpMyAdmin can be used to upload a database for content, and plugins/themes/uploads can be copied. The installation of WP will be in `www/example/public_html`, and a PHP error log will be located at `www/example/logs/`.
+
+All the default parameters for all the templates are:
+```
+  nginx_upstream: php72 # Specific the PHP version of the website
+  branch: your-branch # Git branch to use for the provisioner
+  repo: # Repository
+  hosts: # Multiline parameter to specificy the various hosts
+  vm_dir: /path/ # Specify the custom path in your machine to use it
+  custom: # Multiline parameter to specificy the various custom parameters of the provisioner
 ```
 
-We also want to specify the host as `vvvtest.com`:
+### Official Site Templates
 
-```YAML
-vvvtest:
-  hosts:
-    - vvvtest.com
-```
+The site templates officially supported by VVV project are:
 
-Read here for [more information about Domains and hosts](custom-domains-hosts.md)
+* [https://github.com/Varying-Vagrant-Vagrants/custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template) - For when you just need a simple dev site
+* [https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop](https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop) - For working with WP Core development
 
-## Files
+These can also be forked for custom provisioners. If you want to fork the site template, be sure to change the `repo` value to point to your knew location.
 
-Now that VVV knows about our site with the name `vvvtest`, it's going to look inside the `www/vvvtest` folder for our site. We need to create and fill this folder. If I had named the site `testables`, the folder would be `www/testables`.
-
-After creating the folder, create a `provision` subfolder, e.g. `www/testables/provision`. See more below about what goes in this folder.
-
-If you'd like to change the folders VVV uses, [read here for more information](custom-paths-and-folders.md)
-
-### Copying In Site Files
-
-If you have an existing site you want to work with, you will be able to manually copy the site files into the `public_html` or equivalent subdirectory created when the site is provisioned.
-
-As an alternative, rather than manually copying files into the folder, copy them into a git repository, and use the `repo` key to tell VVV where to find it.
-
-With this, you can automate a large chunk of the work for new users when working in a team, and encourage healthy version control workflows!
-
-For example:
-
-```YAML
-vvvtest:
-  repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
-  hosts:
-    - vvvtest.com
-```
-
-We **strongly** recommend this.
-
-## Provisioner Files
-
-The following files should be created within the `provision` folder created above:
-
- - vvv-init.sh
- - vvv-nginx.conf
-
-`vvv-init.sh` determines how VVV will download, install, and setup WordPress. [Read about `vvv-init.sh` and find an example to copy/paste here](setup-script.md).
-
-### Nginx config
-
-VVV uses Nginx as a web server, but Nginx needs to know how to serve a WP site. Luckily VVV provides those rules, requiring only a small config file that works for 99% of WP sites.
-
-For our example below, we only need to change the domain/host and copy paste the result into `provision/vvv-nginx.conf`:
-
-```nginx
-server {
-  listen 80;
-  listen 443 ssl;
-  server_name vvvtest.com;
-  root {vvv_path_to_site};
-
-  error_log {vvv_path_to_site}/log/error.log;
-  access_log {vvv_path_to_site}/log/access.log;
-
-  set $upstream {upstream};
-
-  include /etc/nginx/nginx-wp-common.conf;
-}
-```
-
-For more information about Nginx and VVV, read the [Nginx Configs page](nginx-configs.md) of adding a new site.
-
-## Reprovision
-
-Any time we make changes to `vvv-custom.yml` or the provisioner files of a site, we need to restart VVV. This allows VVV to catch up with the latest changes and activates your new site.
-
-To do this, run `vagrant reload --provision`.
-
-## Database
-
-Now our site is active and running in VVV, but there's no content. We need to transfer the database contents into the database running inside VVV.
-
-There are several ways to do this:
-
- - Do the 5 minute install of WordPress and use the importer plugin
- - Use the PHPMyAdmin install that comes with VVV, by visiting [http://vvv.test](http://vvv.test)
- - Connect directly to the MySQL server using the default credentials
- - Restore a backup via a plugin
- - Automatically import an sql file in `vvv-init.sh` if the database is empty using the `mysql` command
+{% include always_reprovision.html %}

@@ -20,7 +20,6 @@ exclude:
   - Gemfile*
   - LICENCE
 github_repository_url: "https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org"
-google_analytics_key: "UA-57670102-1"
 
 
 # ----
@@ -31,6 +30,9 @@ show_full_navigation: false
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /images/vvv.png
 description: "Documentation for the open source Vagrant configuration for developing with WordPress."
+
+twitter:
+  card: summary
 
 # -----
 # Build

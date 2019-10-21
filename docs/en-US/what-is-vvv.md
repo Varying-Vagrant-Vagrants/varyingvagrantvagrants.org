@@ -24,7 +24,7 @@ A bunch of stuff!
 1. [WP-CLI](http://wp-cli.org/) (master branch)
 1. [nginx](http://nginx.org/) ([mainline](http://nginx.com/blog/nginx-1-6-1-7-released/) version)
 1. [MariaDB](https://mariadb.org/) 10.1
-1. [php-fpm](http://php-fpm.org/) 7.0.x
+1. [php-fpm](http://php-fpm.org/) 7.2.x
 1. [memcached](http://memcached.org/)
 1. PHP [memcache extension](https://pecl.php.net/package/memcache)
 1. PHP [xdebug extension](https://pecl.php.net/package/xdebug/)

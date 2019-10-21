@@ -1,5 +1,5 @@
 ---
-category: 5. Reference
+category: 7. Utilities
 order: 1
 title: Utilities
 description: Utilities are packages for VVV that install system level functionality. The core utilities package installs phpMyAdmin, webgrind, and other versions of PHP.
@@ -13,12 +13,23 @@ Here are the default utilities as they would be defined in `vvv-custom.yml` in f
 ```YAML
 utilities:
   core:
-    - memcached-admin
-    - opcache-status
-    - phpmyadmin
-    - webgrind
+    - memcached-admin # Object cache management
+    - opcache-status # opcache management
+    - phpmyadmin # Web based database client
+    - webgrind # PHP Debugging
+    - tls-ca # SSL/TLS certificates
+    - mongodb # needed for Tideways/XHGui
+    - tideways # PHP profiling tool, also installs xhgui
+    #- php56
+    #- php70
+    #- php71
+    #- php72
+    #- php73
+
 utility-sources:
-  core: https://github.com/Varying-Vagrant-Vagrants/vvv-utilities.git
+  core:
+    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-utilities.git
+    branch: master
 ```
 
 Utilities are defined at the end of the file, outside of the sites section. The `utility-sources` section defines the name of a utility and where it can be found.
@@ -34,7 +45,9 @@ utilities:
   java:
     - java7
 utility-sources:
-  java: https://github.com/example/java-utilities.git
+  java:
+    repo: https://github.com/example/java-utilities.git
+    branch: master
 ```
 
 My hypothetical utility defines how to install different versions of Java, and is located in a git repository. I might have defined how to install java 8, or java 6, but here I used java 7.
@@ -61,3 +74,6 @@ Community utilities are independently developed and contributed by interested me
 
 * **VVV Solr Utilities**: Installs Solr and Java.  
   [https://github.com/ocean90/vvv-solr-utilities](https://github.com/ocean90/vvv-solr-utilities)
+  
+* **VVV GMP Utility**: Installs GMP.
+  [https://github.com/denisyilmaz/vvv-gmp-utility](https://github.com/denisyilmaz/vvv-gmp-utility)

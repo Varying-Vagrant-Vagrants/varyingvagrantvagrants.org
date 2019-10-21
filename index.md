@@ -27,8 +27,8 @@ In addition to VirtualBox, provider support is also included for Parallels, Hype
 
 ## Documentation
 
-The [documentation](docs/en-US/index.md) area of this site is in progress. The [VVV Wiki](https://github.com/varying-vagrant-vagrants/vvv/wiki) contains documentation that may help. Open a [new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV) if you run into trouble or have any tips that we need to know.
+The [documentation](docs/en-US/index.md) area of this site is in progress. [Click here to open new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV),  if you run into trouble, or have any tips that we need to know.
 
 ## Copyright / License
 
-The code powering [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) and this [website](https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org) is copyright (c) 2014-2017, the contributors of the VVV project under the [MIT License](https://opensource.org/licenses/MIT).
+The code powering [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) and this [website](https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org) is copyright (c) 2014, the contributors of the VVV project under the [MIT License](https://opensource.org/licenses/MIT).

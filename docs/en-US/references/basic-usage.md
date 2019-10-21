@@ -18,8 +18,6 @@ Note: Until you provision VVV for the first time, Vagrant Manager will not pick 
 vagrant up
 ```
 
-If Vagrant triggers are installed, and the VVV machine is turned off, this will also run the provisioner.
-
 ## Turning VVV Off
 
 ```shell

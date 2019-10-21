@@ -1,4 +1,4 @@
-# varyingvagrantvagrants.org
+# varyingvagrantvagrants.org [![Build Status](https://travis-ci.org/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org.svg?branch=master)](https://travis-ci.org/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org)
 
 This repository provides the code and content for [varyingvagrantvagrants.org](https://varyingvagrantvagrants.org), [VVV](https://github.com/Varying-Vagrant-Vagrants/vvv)'s official website.
 
