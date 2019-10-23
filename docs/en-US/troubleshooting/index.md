@@ -6,62 +6,21 @@ description: Find help on GitHub and the wiki or check how to resolve common pro
 permalink: /docs/en-US/troubleshooting/
 ---
 
-Need help? **Let us know on GitHub! Don't hesitate to open a [new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV/issues)** if you run into trouble or have any tips that we need to know. There's no need to spend hours trying to fix a local install when a VVV contributor can point you in the right direction
-
-## Starting from Fresh
-
-Sometimes a clean, fresh start fixes things.
-
-> Note: before doing this you should review the [News &amp; Changelog](/blog/) blog. Sometimes you will also need to update the underlying software such as Vagrant or its plugins in order for this process to be successful.
-
-To do a fresh start, run the following commands:
-
-```shell
-# If you need a fresh start it's probably sensible to make sure you are on the stable branch
-git checkout master
-# Make sure this is the latest VVV
-git pull
-# Turn the machine on (so destroy can run its cleanup)
-vagrant up
-# Destroy the machine
-vagrant destroy
-# Make sure we use the latest version of the base box
-vagrant box update
-# Make sure the recommended vagrant plugins are installed
-vagrant plugin install vagrant-hostsupdater
-# And that they're all up to date
-vagrant plugin update
-# Start VVV and create the VM from scratch
-vagrant up --provision
-```
-
-If your `vagrant up --provision` fails with an error like this:
-
-```
-VirtualBox error:
-
-VBoxManage.exe: error: Could not rename the directory 'C:\Users\<username>\VirtualBox VMs\ubuntu-cloudimg-trusty-vagrant-amd64_1534242157844_99798' to 'C:\Users\<username>\VirtualBox VMs\localdev_306449ed646' to save the settings file (VERR_ALREADY_EXISTS)
-VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component SessionMachine, interface IMachine, callee IUnknown
-VBoxManage.exe: error: Context: "SaveSettings()" at line 3111 of file VBoxManageModifyVM.cpp
-```
-
-Then the `vagrant destroy` command didn't manage to clean things up properly.
-
-The default location for these files is:
-
-    C:\Users\<username>\VirtualBox VMs
-
-Delete the folder name that matches the path in error above. In the example aboves case it would look **similar** to this:
-
-    C:\Users\<username>\VirtualBox VMs\localdev_306449ed646\
-
-Then go back and run `vagrant up --provision` again.
+Need help? **Let us know on GitHub! Don't hesitate to open a [new issue on GitHub](https://github.com/Varying-Vagrant-Vagrants/VVV/issues)** if you run into trouble or have any tips that we need to know. There's no need to spend hours trying to fix a local install when a VVV contributor can point you in the right direction in minutes. Also, check out our slack workspace in the menu.
 
 ## Common Problems
 
+### Missing Hosts/vvv.test
+
+You need to the hosts updater plugin before you can provision VVV, but if you already have this installed and you're on Windows, you must use command prompt with elevated administrator priviledges. If you don't do this, the hostsupdater plugin won't be able to modify the hosts file, and the browser won't understand `vvv.test`
+
+### SSL/TLS Issues
+
+For your browser to accept `https://` addresses on VVV sites, it needs to trust the VVV root certificate. [This article will explain how to add the VVV root certificate on your computer.](../https/index.md).
+
 ### VirtualBox Failing to Install on MacOS the first time around
 
-On recent versions of MacOS, you need to go into the system preferences to the security panel. Here it will be complaining that an unverified piece of software from Oracle named VirtualBox tried to install things. Unlock the settings pane and approve this, then re-run the installer and all should be fine.
+On recent versions of MacOS, you need to **go into the system preferences to the security panel**. Here it will be complaining that an unverified piece of software from Oracle named VirtualBox tried to install things. Unlock the settings pane and approve/allow this, then re-run the installer and all should be fine.
 
 For whatever reason, MacOS doesn't pop up the usual dialog notifying you when the VirtualBox installer attempts this for the first time, and the VirtualBox installer doesn't tell you what to do.
 
@@ -79,8 +38,7 @@ This is a generic error that can indicate multiple things, including:
 If this happens, do the following, and provide the results when asking for help.
 
  - Run `vagrant ssh`, if this works and you're able to get inside the VVV machine and run commands that is useful information, and may allow you to manually run the commands to bring up nginx and PHP
- - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `
- vagrant up --provision --debug > vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting problems.
+ - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `vagrant up --provision --debug > vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting this problem.
 
 ### Vagrant Plugin Install Issues and Broken Vagrant Upgrades
 
@@ -141,19 +99,22 @@ Mismatched Virtualbox and Guest additions can cause problems, as can older versi
 
 ### Local Network IP Clashes
 
-The network configuration picks an IP of 192.168.50.4. It could cause conflicts on your existing network if you *are* on a 192.168.50.x subnet already. You can configure any IP address in the `Vagrantfile` and it will be used on the next `vagrant up --provision`
+The network configuration picks an IP of `192.168.50.4`. It could cause conflicts on your existing network if you *are* on a `192.168.50.x` subnet already. You can configure any IP address in the `Vagrantfile` and it will be used on the next `vagrant up --provision`.
 
 ### Vagrant and VirtualBox
 
 VVV relies on the stability of both Vagrant and VirtualBox. These caveats are common to Vagrant environments and are worth noting:
-* If the directory VVV is inside of is moved once provisioned (`vagrant-local`), it may break.
-    * If `vagrant destroy` is used before moving, this should be fine.
-* If VirtualBox is uninstalled, VVV will break.
-* If Vagrant is uninstalled, VVV will break.
+
+ - If the directory VVV is inside of is moved once provisioned (`vagrant-local`), it may break.
+    - If `vagrant destroy` is used before moving, this should be fine.
+ - If VirtualBox is uninstalled, VVV will break.
+ - If Vagrant is uninstalled, VVV will break.
 
 ### Memory Allotment
 
 The default memory allotment for the VVV virtual machine is 2048MB. If you would like to raise or lower this value to better match your system requirements, a [you can do so with the vm_config section of `vvv-custom.yml`](../vm_config.md) is in the wiki.
+
+Keep in mind that if your system only has 2GB of RAM, then you won't be able to assign 2GB to VVV, you still need some spare for the operating system/browser/editor/etc to use. Reducing the RAM given the VVV might prevent some site templates from working, in particular the WP Core development site template.
 
 ### 64bit Ubuntu and Older CPUs
 
@@ -163,8 +124,61 @@ Since version 1.2.0, VVV has used a 64bit version of Ubuntu. Some older CPUs (su
 
 It is a [bug confirmed in Vagrant](https://github.com/hashicorp/vagrant/issues/2113#issuecomment-480650634) but there is a workaround in the original bug report.
 
+### VirtualBox Cleanup Issues When Destroying and Recreating VVV
+
+If your `vagrant up --provision` fails with an error like this:
+
+```
+VirtualBox error:
+
+VBoxManage.exe: error: Could not rename the directory 'C:\Users\<username>\VirtualBox VMs\ubuntu-cloudimg-trusty-vagrant-amd64_1534242157844_99798' to 'C:\Users\<username>\VirtualBox VMs\localdev_306449ed646' to save the settings file (VERR_ALREADY_EXISTS)
+VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component SessionMachine, interface IMachine, callee IUnknown
+VBoxManage.exe: error: Context: "SaveSettings()" at line 3111 of file VBoxManageModifyVM.cpp
+```
+
+Then the `vagrant destroy` command didn't manage to clean things up properly.
+
+The default location for these files is:
+
+ - Windows: `C:\Users\<username>\VirtualBox VMs`
+ - Mac/*nix: `~/VirtualBox VMs`
+
+Delete the folder name that matches the path in error above. In the example aboves case it would look **similar** to this:
+
+    ....VirtualBox VMs\localdev_306449ed646\
+
+Then go back and run `vagrant up --provision` again.
+
 ## Backups
 
 In the event that you're stuck or at a loss, VVV tries to generate database backups at `VVV/database/backups/*.sql`, with a file for each database.
 
 This coupled with the uploads in the file system should allow the VVV environment to be recreated from a clean slate.
+
+
+## Starting from Fresh
+
+Sometimes a clean, fresh start fixes things.
+
+> Note: before doing this you should review the [News &amp; Changelog](/blog/) blog. Sometimes you will also need to update the underlying software such as Vagrant or its plugins in order for this process to be successful.
+
+To do a fresh start, run the following commands:
+
+```shell
+# If you need a fresh start it's probably sensible to make sure you are on the stable branch
+git checkout master
+# Make sure this is the latest VVV
+git pull
+# Turn the machine on (so destroy can run its cleanup)
+vagrant up
+# Destroy the machine
+vagrant destroy
+# Make sure we use the latest version of the base box
+vagrant box update
+# Make sure the recommended vagrant plugins are installed
+vagrant plugin install vagrant-hostsupdater
+# And that they're all up to date
+vagrant plugin update
+# Start VVV and create the VM from scratch
+vagrant up --provision
+```
