@@ -1,12 +1,14 @@
 ---
 category: 6. Reference
 order: 1
-title: vvv-config.yml
-description: vvv-config.yml is the default config file that VVV uses to set itself up. Use vvv-custom.yml to make changes and add your own site.
-permalink: /docs/en-US/vvv-config/
+title: config.yml
+description: default-config.yml is the default config file that VVV uses to set itself up. Use config.yml to make changes and add your own site.
+permalink: /docs/en-US/config/
 ---
 
-`vvv-config.yml` is the default config file that VVV uses to set itself up. Copy this file to `vvv-custom.yml` to make changes and add your own site.
+`config/default-config.yml` is the default config file that VVV uses to set itself up. Copy this file to `config/config.yml` to make changes and add your own site.
+
+**Before VVV 3.2 the file was `vvv-config.yml` and `vvv-custom.yml` in the VVV root.**
 
 Here's the full default config file, with every key and option that VVV supports:
 
@@ -177,3 +179,7 @@ Tells composer can use a GitHub token to speed up download and avoid rate limiti
 These are repositories and packages VVV pulls in to provide additional services, such as PHPMyAdmin, TLS certificate authorities or MemcachedAdmin.
 
 [Additional versions of PHP](adding-a-new-site/changing-php-version.md) may also be added here.
+
+## vagrant-plugins
+
+This section is used for settings for the plugin supported by VVV, use as reference the config.yml file.

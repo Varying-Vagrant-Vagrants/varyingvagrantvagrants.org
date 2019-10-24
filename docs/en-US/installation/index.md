@@ -33,7 +33,7 @@ There are 2 methods, both involve downloading a zip file:
 
 ## Post installation
 
-Once you've installed everything, copy `vvv-config.yml` to `vvv-custom.yml`. Any changes to `vvv-config.yml` will get overwritten when you update VVV, so always make changes to `vvv-custom.yml`.
+Once you've installed everything, copy `config/default-config.yml` to `config/config.yml`. Any changes to `default-config.yml` will get overwritten when you update VVV, so always make changes to `config.yml`.
 
 ## Starting VVV
 

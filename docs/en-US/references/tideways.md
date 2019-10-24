@@ -26,7 +26,7 @@ To profile a page you need to enable the tideways module and disable xDebug, you
 Now Tideways is globally enabled and you can enable it in 2 ways:
 
 * Specific URL: Add `?enable-tideways=1` to your URL
-* For the domain: Create a new parameter `tideways: true` in your `vvv-config.yml` and run a provision, like:
+* For the domain: Create a new parameter `tideways: true` in your `config.yml` and run a provision, like:
 
 ```yaml
 sites:

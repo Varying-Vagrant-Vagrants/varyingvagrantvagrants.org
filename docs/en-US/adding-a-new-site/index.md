@@ -2,11 +2,11 @@
 category: 3. Adding a New Site
 order: 1
 title: Adding a New Site
-description: Adding a new site in VVV is as simple as adding it under the sites section of vvv-custom.yml. Create it by copying vvv-config.yml to vvv-custom.yml.
+description: Adding a new site in VVV is as simple as adding it under the sites section of vvv-custom.yml. Create it by copying `config/default-config.yml` to `config/config.yml`.
 permalink: /docs/en-US/adding-a-new-site/
 ---
 
-Adding a new site is as simple as adding it under the sites section of `vvv-custom.yml`. If `vvv-custom.yml` does not exist, you can create it by copying `vvv-config.yml` to `vvv-custom.yml`.
+Adding a new site is as simple as adding it under the sites section of `config.yml`. If `config/config.yml` does not exist, you can create it by copying `config/default-config.yml` to `config/config.yml`.
 
 First we need to tell VVV about the site. I'm going to give the site the name `example`, with the URL `example.test`, and we'll tell VVV to use the custom site template. The custom site template will tell VVV how to download and install WordPress, think of it as a recipe or manual for how to install WordPress.
 

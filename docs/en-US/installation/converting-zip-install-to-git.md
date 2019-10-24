@@ -8,7 +8,7 @@ permalink: /docs/en-US/installation/convert-to-git/
 
 If you installed VVV via a `zip` download rather than using `git`, you can still convert your install without reinstalling from scratch. This way you can keep your copy of VVV updated. 
 
-Before doing this though, make sure you've copied `vvv-config.yml` to `vvv-custom.yml`, any changes to that file will be overwritten.
+Before doing this though, make sure you've copied `config/default-config.yml` to `config/config.yml`, any changes to that file will be overwritten.
 
 > Note: You should review the [News &amp; Changelog](/blog/) blog. Sometimes you will also need to update the underlying software such as Vagrant, its plugins or VirtualBox in order for this process to be successful.
 
@@ -26,5 +26,3 @@ git pull
 ```
 
 Once this is done, run `vagrant reload --provision` to update.
-
-Remember to copy your config from `vvv-config.yml` to `vvv-custom.yml` before doing this or your configs changes will be overwritten.
