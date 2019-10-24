@@ -77,3 +77,9 @@ Community utilities are independently developed and contributed by interested me
   
 * **VVV GMP Utility**: Installs GMP.
   [https://github.com/denisyilmaz/vvv-gmp-utility](https://github.com/denisyilmaz/vvv-gmp-utility)
+  
+* **VVV Browscap Utility**: Installs browscap module for PHP.  
+  [https://github.com/dingo-d/browscap-vvv-utility](https://github.com/dingo-d/browscap-vvv-utility)
+  
+* **VVV Redis Utility**: Installs Redis.
+  [https://github.com/dingo-d/redis-vvv-utility](https://github.com/dingo-d/redis-vvv-utility)
