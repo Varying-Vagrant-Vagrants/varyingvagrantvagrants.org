@@ -20,6 +20,8 @@ utilities:
     - tls-ca # SSL/TLS certificates
     - mongodb # needed for Tideways/XHGui
     - tideways # PHP profiling tool, also installs xhgui
+    - wpcli-dev # Install a dev environment to use and contribute to WP-CLI
+    - php # Install all the php utilities available automatically
     #- php56
     #- php70
     #- php71
