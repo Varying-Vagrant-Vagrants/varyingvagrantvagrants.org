@@ -12,4 +12,4 @@ All users of the slack workspace agree to abide by our [code of conduct](code-of
 
 [Use the invite page here to gain access to the VVV slack workspace](https://vvv-baymax-bot.herokuapp.com/), or use the embed below:
 
-<iframe src="https://vvv-baymax-bot.herokuapp.com/" style="min-width: 400px;min-height:600px; width:100%;" />
+<iframe src="https://vvv-baymax-bot.herokuapp.com/" style="min-width: 400px; border: 2px solid lightgray; border-radius:5px;min-height:600px; width:100%;" />
