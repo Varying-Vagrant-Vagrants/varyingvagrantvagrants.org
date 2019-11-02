@@ -38,6 +38,7 @@ Once you've installed everything, will be copied automatically `config/default-c
 ## Starting VVV
 
 1. In a command prompt, change into the new directory with `cd vagrant-local`.
+1. Update vagrant box using `vagrant box update`.
 1. Start the Vagrant environment with `vagrant up`.
     * Windows users must use a command prompt started with administrator priviledges. If you do not do this you won't get custom host names, and `vvv.test` will not resolve in a browser
     * Be patient as the magic happens. This could take a while on the first run as your local machine downloads the required files.
