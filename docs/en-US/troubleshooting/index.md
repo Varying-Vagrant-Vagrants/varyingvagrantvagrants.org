@@ -24,7 +24,29 @@ On recent versions of MacOS, you need to **go into the system preferences to the
 
 For whatever reason, MacOS doesn't pop up the usual dialog notifying you when the VirtualBox installer attempts this for the first time, and the VirtualBox installer doesn't tell you what to do.
 
-### SSH Timeout During Provision
+### How Do I work with Private Gitlab/GitHub repositories?
+
+VVV turns on SSH forwarding, so if you can access it on the host, so can VVV. This might not work though, so:
+
+ - Make sure you're using the SSH URLs for your git repos, not the HTTPS versions, e.g. `git@github.com:Varying-Vagrant-Vagrants/VVV.git`
+ - Run `ssh -T git@github.com` on your host to verify you can SSH to GitHub, use `ssh -T git@gitlab.net` for GitLab, etc
+   - If this fails, you need to fix it on your host machine before trying to fix VVV, look up how to set up SSH keys on GitHub docs
+   - [GitHub has articles here on how to use/add/setup SSH keys](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh), GitLab/BitBucket will have similar instructions that are mostly identical
+ - Use `vagrant ssh` to enter the VM and run the above command to test if the VM can SSH to GitHub/GitLab
+   - If this fails, but it works on the host, then perhaps SSH Agent forwarding isn't turned on, or some other step needs to happen
+   - [Visit this super useful article from GitHub on debugging/setting up SSH Forwarding on your host](https://developer.github.com/v3/guides/using-ssh-agent-forwarding/)
+
+You might also find it helpful to set up `~/.ssh/config` with the following on MacOS:
+
+```
+Host *
+   UseKeychain yes
+   AddKeysToAgent yes
+```
+
+Windows users will need an SSH client installed, luckily [installing Git](https://git-scm.com/) does this for most users.
+
+### SSH Timeout During a Vagrant Provision
 
 This is a generic error that can indicate multiple things, including:
 
@@ -39,6 +61,7 @@ If this happens, do the following, and provide the results when asking for help.
 
  - Run `vagrant ssh`, if this works and you're able to get inside the VVV machine and run commands that is useful information, and may allow you to manually run the commands to bring up nginx and PHP
  - Halt the machine with `vagrant halt` and turn it back on in debugging mode using `vagrant up --provision --debug > vagrant.log`. The log file may then reveal errors that might not show in the terminal. Send this file when reporting this problem.
+ - In a worst case scenario you can use the VirtualBox GUI to stop the virtual machine and delete it, you may get useful debug information if you open the VM with a visual interface.
 
 ### Vagrant Plugin Install Issues and Broken Vagrant Upgrades
 
