@@ -24,7 +24,7 @@ The fix is simple, switch to `.test`, here, you'll find instructions on converti
 
 ### Change The Hosts VVV uses
 
-Modify your VVV config in `vvv-custom.yml` by replacing the hosts for each site with `.test` versions. Once this is done, reprovision using `vagrant reload --provision` for the change to take effect.
+Modify your VVV config in `config/config.yml` by replacing the hosts for each site with `.test` versions. Once this is done, reprovision using `vagrant reload --provision` for the change to take effect.
 
 This will make VVV serve the site at the correct domain, and update the dashboard site list
 
