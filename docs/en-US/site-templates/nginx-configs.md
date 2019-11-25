@@ -32,7 +32,7 @@ server {
 This will give you:
 
  - a webroot in the  `public_html` subfolder
- - that serves a from the `hosts` defined in the site section of `vvv-custom.yml`
+ - that serves a from the `hosts` defined in the site section of `config/config.yml`
  - Gives Nginx error and access logs in `log/error.log` and `log/access.log`
 
 You will need to create the `public_html` and `log` folders if they don't exist
@@ -57,7 +57,7 @@ You may have noticed this line in the example above:
 set $upstream {upstream};
 ```
 
-The `{upstream}` variable is set from `vvv-custom.yml`, and is used to determine the version of PHP to use. Removing this will disable that functionality.
+The `{upstream}` variable is set from `config/config.yml`, and is used to determine the version of PHP to use. Removing this will disable that functionality.
 
 It may be desirable to force a site to use a particular version of PHP, for details see the [changing PHP versions](changing-php-version.md) documentation.
 
