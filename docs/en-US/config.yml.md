@@ -110,7 +110,7 @@ For example, a site named `test` would be inside the `www/test` folder.
 
 ### skip_provisioning
 
-If there are a lot of sites in `vvv-custom.yml`, you may want to skip several sites that aren't in use. To do this, set the `skip_provisioning` key, for example:
+If there are a lot of sites in `config/config.yml`, you may want to skip several sites that aren't in use. To do this, set the `skip_provisioning` key, for example:
 
 ```yaml
 sites:
