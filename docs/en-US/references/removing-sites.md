@@ -14,7 +14,7 @@ You have 3 options:
 
 ## Skip Provisioning
 
-By setting `skip_provisioning` to true in `vvv-custom.yml`, VVV will pretend the site does not exist. It will not attempt to provision the site, set up its hosts, etc.
+By setting `skip_provisioning` to true in `config/config.yml`, VVV will pretend the site does not exist. It will not attempt to provision the site, set up its hosts, etc.
 
 This is very useful if you want to disable a site to speed up provisioning, or because you aren't working on it, while preserving the ability to come back to it at a later date.
 
@@ -60,9 +60,9 @@ There are multiple steps to doing this:
  
  ### Why not Automatically Remove Sites?
  
- We could auto-remove sites when they're removed from `vvv-custom.yml`, but this leads to several problems:
+ We could auto-remove sites when they're removed from `config/config.yml`, but this leads to several problems:
  
-  - Any typos or mistakes in `vvv-custom.yml` would lead to bulk site removal, and accidental destruction of data
+  - Any typos or mistakes in `config/config.yml` would lead to bulk site removal, and accidental destruction of data
   - DB's are created by provisioner scripts, so VVV core has no insight to know which databases it can remove. This also becomes a problem for shared databases
   - Commenting out a site would delete all of its files and content
  
