@@ -2,7 +2,7 @@
 category: 3. Adding a New Site
 order: 7
 title: Migrating from VVV 1.4.x
-description: For continuing support of VVV 1 sites you now have to add your sites to the sites section of vvv-custom.yml.
+description: For continuing support of VVV 1 sites you now have to add your sites to the sites section of config/config.yml.
 permalink: /docs/en-US/adding-a-new-site/migrating-from-vvv-1-4-x/
 ---
 
@@ -12,7 +12,7 @@ VVV 1 sites still work, but they require an additional step.
 
 VVV 2 uses a config file to discover sites. Adding your site to this file will allow VVV 2 to provision and host it.
 
-If, for example, you have a site at `www/my-test-site`, you can migrate it to VVV2 by adding this to the `sites` section of `vvv-custom.yml`:
+If, for example, you have a site at `www/my-test-site`, you can migrate it to VVV2 by adding this to the `sites` section of `config/config.yml`:
 
 ```YAML
 my-test-site:
@@ -55,6 +55,6 @@ But this caused performance problems. Folder scans could be very slow with some 
 
 ### How VVV 2 Detects Sites
 
-VVV 2 did away with site auto-detection. Instead VVV uses a config file named `vvv-custom.yml` that lists all the sites. This way a user can set the folder used via the `vm_dir` option, or skip provisioning via the `skip_provisioning` option.
+VVV 2 did away with site auto-detection. Instead VVV uses a config file named `config/config.yml` that lists all the sites. This way a user can set the folder used via the `vm_dir` option, or skip provisioning via the `skip_provisioning` option.
 
 This also makes provisioning significantly faster, and allows for additional options.
