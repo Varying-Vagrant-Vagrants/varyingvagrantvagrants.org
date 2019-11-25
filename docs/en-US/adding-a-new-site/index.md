@@ -12,7 +12,7 @@ First we need to tell VVV about the site. I'm going to give the site the name `e
 
 ### Adding a Single Site
 
-To do this, we will update the sites list by editing the file `vvv-custom.yml` in the main VVV folder like this:
+To do this, we will update the sites list by editing the file `config/config.yml` in the main VVV folder like this:
 
 ```YAML
 sites:
@@ -35,9 +35,11 @@ sites:
       wp_type: subdomain # or subdirectory
 ```
 
-Then, save `vvv-custom.yml` and run `vagrant up --provision` to update VVV with the new site. **Always reprovision after making changes to the config files**. Be sure to indent correctly as whitespace matters in YAML files, VVV prefers to indent using 2 spaces.
+Then, save `config/config.yml` and run `vagrant up --provision` to update VVV with the new site. **Always reprovision after making changes to the config files**. Be sure to indent correctly as whitespace matters in YAML files, VVV prefers to indent using 2 spaces.
 
 Once `vagrant reload --provision` finishes, you will have a brand new WordPress install! We can now visit http://example.test to view our site, or open the `www/example` folder in an editor to start making changes to our site. To log in, use `admin` and `password`.
+
+{% include always_reprovision.html %}
 
 ### Adding a Multisite
 
