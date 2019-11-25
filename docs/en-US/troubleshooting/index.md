@@ -106,7 +106,7 @@ For more information on backups, see the [backups](#backups) section below.
 
 ### Typos in your config file
 
-If there's a typo or syntax error in `vvv-custom.yml` the provisioner will fail. Make sure the file is valid YAML when making changes to this file.
+If there's a typo or syntax error in `config/config.yml` the provisioner will fail. Make sure the file is valid YAML when making changes to this file.
 
 ### Out of Date VVV
 
@@ -135,7 +135,7 @@ VVV relies on the stability of both Vagrant and VirtualBox. These caveats are co
 
 ### Memory Allotment
 
-The default memory allotment for the VVV virtual machine is 2048MB. If you would like to raise or lower this value to better match your system requirements, a [you can do so with the vm_config section of `vvv-custom.yml`](../vm_config.md) is in the wiki.
+The default memory allotment for the VVV virtual machine is 2048MB. If you would like to raise or lower this value to better match your system requirements, a [you can do so with the vm_config section of `config/config.yml`](../vm_config.md) is in the wiki.
 
 Keep in mind that if your system only has 2GB of RAM, then you won't be able to assign 2GB to VVV, you still need some spare for the operating system/browser/editor/etc to use. Reducing the RAM given the VVV might prevent some site templates from working, in particular the WP Core development site template.
 
