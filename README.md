@@ -1,4 +1,6 @@
-# varyingvagrantvagrants.org [![Build Status](https://travis-ci.org/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org.svg?branch=master)](https://travis-ci.org/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org)
+# varyingvagrantvagrants.org
+
+[![Build Status](https://travis-ci.org/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org.svg?branch=master)](https://travis-ci.org/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/84e6230107ec4970af18a9d43b418a60)](https://www.codacy.com/gh/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Varying-Vagrant-Vagrants/varyingvagrantvagrants.org&amp;utm_campaign=Badge_Grade)
 
 This repository provides the code and content for [varyingvagrantvagrants.org](https://varyingvagrantvagrants.org), [VVV](https://github.com/Varying-Vagrant-Vagrants/vvv)'s official website.
 
