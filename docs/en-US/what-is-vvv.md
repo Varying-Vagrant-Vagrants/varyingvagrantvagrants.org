@@ -18,7 +18,7 @@ VVV is ideal for developing themes and plugins as well as for [contributing to W
 
 A bunch of stuff!
 
-1. [Ubuntu](http://www.ubuntu.com/) 14.04 LTS (Trusty Tahr)
+1. [Ubuntu](http://www.ubuntu.com/) 18.04 LTS (Bionic Beaver)
 1. [WordPress Develop](https://develop.svn.wordpress.org/trunk/)
 1. [WordPress Stable](https://wordpress.org/)
 1. [WP-CLI](http://wp-cli.org/) (master branch)
