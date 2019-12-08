@@ -42,4 +42,4 @@ A bunch of stuff!
 1. [Webgrind](https://github.com/jokkedk/webgrind)
 1. [NodeJs](https://nodejs.org/)
 1. [grunt-cli](https://gruntjs.com/)
-1. [Mailcatcher](http://mailcatcher.me/)
+1. [Mailhog](https://github.com/mailhog/MailHog)
