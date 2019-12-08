@@ -21,7 +21,7 @@ Refer to your machines manufacturer for how to access your BIOS. [This article m
 1. Start with any local operating system such as Mac OS X, Linux, or Windows.
     * For Windows 8 or higher it is recommended that you run the cmd window as Administrator.
 1. Install [VirtualBox 5.x](https://www.virtualbox.org/wiki/Downloads)
-1. Install [Vagrant 2.1+](https://www.vagrantup.com/downloads.html)
+1. Install [Vagrant 2.2.4+](https://www.vagrantup.com/downloads.html)
     * [Vagrant](https://www.vagrantup.com) is a "tool for building and distributing development environments". It works with [virtualization](https://en.wikipedia.org/wiki/X86_virtualization) software such as [VirtualBox](https://www.virtualbox.org/) to provide a virtual machine sandboxed from your local environment.
     * `vagrant` will now be available as a command in your terminal, try it out.
     * Provider support is included for VirtualBox, Parallels, Hyper-V, VMWare Fusion, and VMWare Workstation.

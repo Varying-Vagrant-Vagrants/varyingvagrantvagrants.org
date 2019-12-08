@@ -7,9 +7,9 @@ permalink: /docs/en-US/references/wp-cli/
 
 [WP-CLI](https://wp-cli.org/) is the command-line interface for WordPress. You can update plugins, configure multisite installations and much more, without using a web browser. 
 
-With this tool is possible to manage the websites installed, like changing the password of the users or export the database. This tool is used inside VVV from the default provisioners and internals and is very powerful.
+With this tool it is possible to manage the websites installed, like changing the password of users or exporting the database. This tool is used inside VVV from the default provisioners and internals and is very powerful.
 
-VVV includes the nightly version of WP-CLI, but if you want to contribute to WP CLI development, you can install the `wpcli-dev utility.
+VVV includes the nightly version of WP-CLI, but if you want to contribute to WP CLI development, you can install the `wpcli-dev utility`.
 
 ## Examples
 
@@ -22,9 +22,9 @@ wp post generate --count=10 # Create posts with dummy content
 
 ## Contribute to WP-CLI
 
-VVV include an utility to install the official dev environment with all the various repo from [https://github.com/wp-cli/wp-cli-dev/](https://github.com/wp-cli/wp-cli-dev/). To use this new instance replace `wp` with `wp-dev`.
+VVV include a utility to install the official dev environment with all the various repositories from [https://github.com/wp-cli/wp-cli-dev/](https://github.com/wp-cli/wp-cli-dev/). To use this new instance replace `wp` with `wp-dev`.
 
-Right now to use this, SSH into the virtual machine using `vagrant ssh`.
+To use this, SSH into the virtual machine with `vagrant ssh`.
 
 From the WP-CLI dev folder it is possible to run the unit tests of the various commands:
 
@@ -35,7 +35,7 @@ composer behat # all the unit tests of a command
 composer behat -- ./features/yourtest.feature # for a specific test
 ```
 
-WP-CLI has exhaustive [documentation](https://make.wordpress.org/cli/handbook/) on about [how to contribute](https://make.wordpress.org/cli/handbook/contributing/).
+WP-CLI has exhaustive [documentation](https://make.wordpress.org/cli/handbook/) on how to utilize and on [how to contribute](https://make.wordpress.org/cli/handbook/contributing/).
 
 We recommend adding a new git remote to the repository, so that you can push changes to GitHub for pull requests.
 
