@@ -25,7 +25,7 @@ See: [Connecting to MariaDB/MySQL](https://github.com/Varying-Vagrant-Vagrants/V
 
 Vagrant Box Ubuntu Root:
 
-__User:__ `root`
+__User:__ `vagrant`
 __Password:__ `vagrant`
 
 #### WordPress Stable One
