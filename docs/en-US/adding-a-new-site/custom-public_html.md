@@ -15,13 +15,13 @@ You can also change the public webroot to another folder. You might do this beca
 
 This is set in the Nginx config file. Specifically, on a line that looks like this:
 
-\```Nginx
-\  root {vvv_path_to_site}/public_html;
-\```
+```Nginx
+  root {vvv_path_to_site}/public_html;
+```
 
 `{vvv_path_to_site}` gets replaced with the location of your site on the filesystem, and to change to `htdocs`, simply replace `public_html` with `htdocs`, save, then reprovision. Likewise, you can go deeper down if your git repository has a more complex structure.
 
-[See here for more information on custom Nginx config files](https://varyingvagrantvagrants.org/docs/en-US/adding-a-new-site/custom-nginx/).
+[See here for more information on custom Nginx config files and other placeholders](https://varyingvagrantvagrants.org/docs/en-US/adding-a-new-site/custom-nginx/).
 
 **Once you've done this, reprovision for the change to take effect.**
 
