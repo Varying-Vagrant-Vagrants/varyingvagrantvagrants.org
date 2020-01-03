@@ -12,7 +12,9 @@ This is useful if you wish to implement or change Nginx rules. For example, usin
 
 It may also be necessary to replace the nginx wp common rules. VVV does this using an include statement, but you could replace this with the contents of that file. It can be found in `config/nginx-config/nginx-wp-common.conf`. Note that VVV will only copy the final Nginx config file, it won't copy over includes.
 
-## About the Nginx generation
+## VVV Nginx Substitutions
+
+The default nginx configuration files has some placeholders that will be replaced with specific parameters or values.
 
 ```Nginx
   root {vvv_path_to_site}/public_html;
