@@ -43,7 +43,7 @@ Firefox uses its own root certificate list, to access it:
 To do this via a command line with admin priviledges, run this command in the VVV folder:
 
 ```sh
-certutil -enterprise -f -v -AddStore "Root" "certificates/ca/ca.cert"
+certutil -enterprise -f -v -AddStore "Root" "certificates/ca/ca.crt"
 ```
 
 To do it via the user interface:
