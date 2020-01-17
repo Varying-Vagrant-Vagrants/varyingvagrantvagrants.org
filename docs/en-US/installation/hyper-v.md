@@ -32,7 +32,7 @@ As a result, Vagrant cannot enforce an IP, you will need to note down the IP tha
 
 ### Streamlining Commands
 
-You can also remove the `--provider=hyperv` part by modifying `vvv-custom.yml` so that the provider parameter is uncommented and set to hyperv, e.g.:
+You can also remove the `--provider=hyperv` part by modifying `config/custom.yml` so that the provider parameter is uncommented and set to hyperv, e.g.:
 
 ```yaml
 vm_config:
