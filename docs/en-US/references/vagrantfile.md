@@ -30,7 +30,7 @@ This file is another Ruby file that is included inside the Vagrantfile and let t
 
 Community resources:
 
-* [2 new commands for VVV](https://gist.github.com/Mte90/9810f7c2775f1fd79ee049b3d259dff0) - `vagrant command wordpress-develop "ls -l"` or `vagrant script xdebug_off"
+* [2 new commands for VVV](https://gist.github.com/Mte90/9810f7c2775f1fd79ee049b3d259dff0) - `vagrant command wordpress-develop "grunt watch"` or `vagrant script xdebug_off"`
 
 #### provision-custom.sh
 
