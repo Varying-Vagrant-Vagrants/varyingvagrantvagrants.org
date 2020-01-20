@@ -33,7 +33,9 @@ There are 2 methods, both involve downloading a zip file:
 
 ## Post installation
 
-Once you've installed everything, will be copied automatically `config/default-config.yml` from `config/config.yml`. Any changes to `default-config.yml` will get overwritten when you update VVV, so always make changes to `config.yml`.  VVV will do this automatically after the first `vagrant up`.
+After installation, a configuration file will be generated: `config/default-config.yml`. **Do not make any changes to this file.** All alterations to the configuration files must go in `config/config.yml` which **WILL BE GENERATED ONLY AFTER RUNNING THE FIRST `vagrant up`.** 
+
+Any changes to `default-config.yml` will get overwritten when you update VVV, so always make changes to `config.yml`.  VVV will do this automatically after the first `vagrant up`.
 
 ## Starting VVV
 
