@@ -10,10 +10,11 @@ permalink: /docs/en-US/contribute/
 
 VVV is built with multiple repositories, but [we track tickets on the main VVV repositorys issues](https://github.com/Varying-Vagrant-Vagrants/VVV/).
 
-Every ticket is labelled by the project that involves, like the provision for the [custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template) or the [dashboard](https://github.com/Varying-Vagrant-Vagrants/dashboard).
+Every ticket is labelled by the project that it involves, like the provision for the [custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template) or the [dashboard](https://github.com/Varying-Vagrant-Vagrants/dashboard).
+
 Pick an issue that is interesting for you, and don't hesitate to ask for hints on the tickets itself, so we can track openly every feedback to achieve better results.
 
-The [CD-USB-Generator](https://github.com/Varying-Vagrant-Vagrants/CD-USB-Generator) is the exception to the rule of the issue in the main repo. This repo contains scripts to genertae USB sticks with copies of VVV for WordCamp contributor days.
+The [CD-USB-Generator](https://github.com/Varying-Vagrant-Vagrants/CD-USB-Generator) is the exception to the rule of the issue in the main repo. This repo contains scripts to generate USB sticks with copies of VVV for WordCamp contributor days.
 
 ## Testing
 
@@ -22,6 +23,7 @@ The workflow is simple, a contributor opens a pull request, and the VVV testers 
 We suggest to install in your machine [hub](https://hub.github.com/) globally because simplify a lot the workflow of creating a new branch with the code of the pull request.
 
 Hub is a wrapper for git that extend his features without noticing it, so you can use it without any issues in other projects.
+
 Example:
 
 * There is a new pull request (e.g. https://github.com/Varying-Vagrant-Vagrants/VVV/pull/1686)
