@@ -85,3 +85,6 @@ Community utilities are independently developed and contributed by interested me
   
 * **VVV Redis Utility**: Installs Redis.
   [https://github.com/dingo-d/redis-vvv-utility](https://github.com/dingo-d/redis-vvv-utility)
+  
+* **VVV php-ldap Utility**: Installs php-ldap.
+  [https://github.com/olipayne/vvv-php-ldap](https://github.com/olipayne/vvv-php-ldap)
