@@ -23,11 +23,6 @@ __Password:__ `root`
 
 See: [Connecting to MariaDB/MySQL](https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Connecting-to-MySQL-MariaDB) from your local machine
 
-Vagrant Box Ubuntu Root:
-
-__User:__ `root`
-__Password:__ `vagrant`
-
 #### WordPress Stable One
 * LOCAL PATH: www/wordpress-one
 * VM PATH: /srv/www/wordpress-one
