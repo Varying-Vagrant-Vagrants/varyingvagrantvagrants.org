@@ -31,20 +31,22 @@ There are 2 methods, both involve downloading a zip file:
 
 **Note:** We strongly recommend using the `git` method, it makes updating VVV to get new features and fixes significantly easier.
 
-## Post installation
+## Making Configuration Changes Before Starting For The First Time
 
-Once you've installed everything, will be copied automatically `config/default-config.yml` from `config/config.yml`. Any changes to `default-config.yml` will get overwritten when you update VVV, so always make changes to `config.yml`.  VVV will do this automatically after the first `vagrant up`.
+This step is optional.
+
+If you need to modify the config file before starting VVV for the first time, you can run `vagrant status` in the VVV folder, and VVV will create `config/config.yml` for you by copying the default config at `config/default-config.yml`. Modify and save `config/config.yml` with any adjustments you might want then proceed to start VVV. Remember, if you ever need to change this file, you need to reprovision to apply the changes.
+
+You might do this in order to change the provider vagrant uses to Hyper-V instead of VirtualBox, or to provision additional sites the first time the VM is created to save time.
 
 ## Starting VVV
 
-1. In a command prompt, change into the new directory with `cd vagrant-local`.
+1. In a terminal, or an administrator command prompt, change into the new directory with `cd vagrant-local`.
 1. Start the Vagrant environment with `vagrant up`.
     * Windows users must use a command prompt started with administrator priviledges. If you do not do this you won't get custom host names, and `vvv.test` will not resolve in a browser
     * Be patient as the magic happens. This could take a while on the first run as your local machine downloads the required files.
-    * Watch as the script ends, as an administrator or `su` ***password may be required*** to properly modify the hosts file on your local machine.
+    * Watch as the script ends, as an administrator or `su` ***password may be required*** to properly modify the hosts file on your local machine. You will know it's completed when you see the VVV logo and the teddy bear artwork.
 1. Visit [the VVV Dashboard at http://vvv.test](http://vvv.test) to view your new WordPress sites.
-
-Fancy, yeah?
 
 ## What Did That Do?
 
