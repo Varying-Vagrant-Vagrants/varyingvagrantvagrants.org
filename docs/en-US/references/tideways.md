@@ -9,44 +9,67 @@ VVV has different utilities available for developers, one of them is [Tideways](
 
 > Tideways saves you time by taking the guesswork out of your app's backend performance. Gain detailed insights, spot performance bottlenecks, and get real-time error detection alerts.
 
-## Suite
+## What Is It?
 
 Tideways is a PHP module for PHP 7.0+ that enables profiling everything that happens in a page.
 One must execute specific PHP code to use Tideways, this code gathers data and visualizes it.
 We added [XHGui](https://github.com/perftools/xhgui),a graphical interface for Tideways, that provides a complete ability to analyze the gathered data.
 
-## How to enable it
+## Installing Tideways
 
-XHGui needs a php file that is prepended to all PHP files (by a global php config) to turn on the profiling and save this information.
+By default VVV does not install Tideways to keep the VM lightweight, but if you look for this line in `config/config.yml`:
 
-XHGui will be executed in headless mode if Tideways is available for the PHP version used in the website that you are profiling.
+```yml
+    #- tideways # PHP profiling tool, also installs xhgui check https://varyingvagrantvagrants.org/docs/en-US/references/tideways-xhgui/
+```
 
-To profile a page you need to enable the Tideways module and disable xDebug. This can be done by running the `xdebug_off` command inside the Vagrant machine (this turns xDebug off and ensures Tideways is turned on).
+And remove the comment so it looks like this:
 
-Now Tideways is globally enabled and you can enable it in 2 ways:
+```yml
+    - tideways # PHP profiling tool, also installs xhgui check https://varyingvagrantvagrants.org/docs/en-US/references/tideways-xhgui/
+```
 
-* Specific URL: Add `?enable-tideways=1` to your URL
-* For the domain: Create a new parameter `tideways: true` in your `config.yml` and run a provision, like:
+Then Tideways will be installed when you reprovision using `vagrant up --provision`
+
+## How Enable Tideways
+
+To enable tideways, SSH into the VM and run `tideways_on`. This will turn off XDebug and turn on Tideways. Turning on XDebug will turn off tideways as the two cannot run at the same time. You can also use `tideways_off` to disable Tideways.
+
+## How To Profile A Page
+
+You can profile a page with tideways by adding `?enable-tideways=1` to the URL.
+
+## Profiling All Pages On A Site
+
+Create a new parameter `tideways: true` in your `config.yml` and reprovision. Now all pages on that sites domains will be profiled automatically. For example:
 
 ```yaml
 sites:
-  wordpress-default:
+  wordpress-one:
     repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
     tideways: true
+    hosts:
+      - one.wordpress.test
 ```
 
-Later you can check `xhgui.vvv.test` for the result of the profiling.
-The provisioning will generate a file with all the domains enabled in `/srv/config/tideways.json`.
+Now after reprovisioning, all requests to one.wordpress.test will be profiled and appear in XHGui.
+
+## Viewing Profile Results
+
+To see the results of profiling, visit `http://xhgui.vvv.test` where you will find an install of XHGui.
+
+### How To Use XHGui
+
+Here are some guides on using XHGui:
+
+  * [https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-2](https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-2)
+  * [https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-3](https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-3)
+
 
 ## Our custom implementation
 
 To improve the data quality we added support to suspend `Query Monitor` plugin activities when Tideways is enabled.
-We also implemented support for a custom PHP `custom-header.php` file in `VVV/www/default/xhgui/config` that will be prepended if it is avalaible.
+We also implemented support for a custom PHP `custom-header.php` file in `VVV/www/default/xhgui/config` that will be prepended if it is available.
 
 We added support for a custom config file `custom-config.php` in the same folder that can change the values of XHGui that will be merged with the VVV default. This can be helpful to filter via other methods, such as from the list like from specific plugins and so on.
 
-## XHGui
-There are already a lot of guides about XHGui:
-
-  * [https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-2](https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-2)
-  * [https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-3](https://www.engineyard.com/blog/profiling-with-xhprof-xhgui-part-3)
