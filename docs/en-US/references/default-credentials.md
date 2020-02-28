@@ -79,3 +79,8 @@ ssh vagrant@vvv.test
 
 Note that no password is used.
 
+## SFTP
+
+SFTP uses the same details as SSH, but, keep in mind that all these folders are available on your filesystem.
+
+Using SFTP to modify files is slower, and would likely result in you replacing a file with itself making no meaningful change. The `www` folder and the `/srv/www` folders are the same folder, not clones/duplicates. It's expected that the `www` folder would contain the local copy you intend to upload from. If this is not the case, I recommend looking into the `vm_dir` and `local_dir` options for defining sites.
