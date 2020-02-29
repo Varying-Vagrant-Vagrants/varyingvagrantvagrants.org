@@ -51,7 +51,7 @@ E.g.
 
 There are multiple steps to doing this:
 
- - Remove the site from `vvv-custom.yml` and save
+ - Remove the site from `config/config.yml` and save
  - Reprovision
  - Delete its folder
  - Delete its database
