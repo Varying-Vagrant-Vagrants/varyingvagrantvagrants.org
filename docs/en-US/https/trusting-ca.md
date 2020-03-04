@@ -24,7 +24,7 @@ You can find the central certificate in `certificates/ca/ca.crt`. There are some
 The certificate can also be added via a terminal command from inside the VVV folder:
 
 ```sh
-sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain certificates/ca/ca.cert
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain certificates/ca/ca.crt
 ```
 
 ### Trusting the VVV Root Certificate in Firefox
