@@ -6,42 +6,81 @@ description: Default usernames and passwords for databases and WordPress install
 permalink: /docs/en-US/default-credentials/
 ---
 
-All database usernames and passwords for WordPress installations included by default are:
+## Default Database Users
 
-__User:__ `wp`
-__Password:__ `wp`
+All sites provisioned via the custom site templates use the `wp` user by default:
 
-All WordPress admin usernames and passwords for WordPress installations included by default are:
+| Field    	| Value    	|
+|----------	|----------	|
+| username 	| wp 	|
+| password 	| wp 	|
 
-__User:__ `admin`
-__Password:__ `password`
+If you manually create a database via the root MySQL user in PHPMyAdmin or by other means, you will need to grant the `wp` user access to that database. A custom site template will do this for you automatically.
 
-MySQL Root:
+The MariaDB root user should have the following credentials:
 
-__User:__ `root`
-__Password:__ `root`
+| Field    	| Value    	|
+|----------	|----------	|
+| username 	| root 	|
+| password 	| root 	|
 
-See: [Connecting to MariaDB/MySQL](https://github.com/Varying-Vagrant-Vagrants/VVV/wiki/Connecting-to-MySQL-MariaDB) from your local machine
+However, the `root` user password may need to be set. To do this, SSH into the VM with `vagrant ssh` and run `sudo mysqladmin -u root password root`. If this doesn't work you will need to follow the standard MariaDB instructions for resetting the `root` password.
+
+If you're using the `root` user to create a database for a WordPress installation, it's easier to use the custom site template which will create the database for you.
+
+### External Client Connections
+
+For external MySQL clients  you need to use the `external` user:
+
+| Field    	| Value    	|
+|----------	|----------	|
+| host     	| vvv.test 	|
+| username 	| external 	|
+| password 	| external 	|
+
+---
+
+See: [Connecting to MariaDB/MySQL](sql-client.md) from your local machine for more information
+
+##  Default WordPress Login
+
+By default, the site templates use the following username and password unless specified:
+
+| Field    	| Value    	|
+|----------	|----------	|
+| username 	| admin 	|
+| password 	| password 	|
+
+## The Root User
 
 Vagrant Box Ubuntu Root:
 
-__User:__ `root`
-__Password:__ `vagrant`
+| Field    	| Value    	|
+|----------	|----------	|
+| username 	| root 	|
+| password 	| vagrant 	|
 
-#### WordPress Stable One
-* LOCAL PATH: www/wordpress-one
-* VM PATH: /srv/www/wordpress-one
-* URL: `http://one.wordpress.test`
-* DB Name: `wordpress-one`
+**Note that it is not possible to SSH directly into the VM as `root` for security reasons**. If you need to run commands as `root`, either use `sudo` or `sudo su`, both of which do not require a password when ran as the `vagrant` user
 
-#### WordPress Stable Two
-* LOCAL PATH: www/wordpress-two
-* VM PATH: /srv/www/wordpress-two
-* URL: `http://two.wordpress.test`
-* DB Name: `wordpress-two`
+## SSH
 
-#### WordPress Trunk  
-* LOCAL PATH: www/wordpress-trunk
-* VM PATH: /srv/www/wordpress-trunk
-* DB Name: `wordpress_develop`
-* DB Name: `wordpress_unit_tests`
+You can SSH into the VM via the `vagrant` user with the command `vagrant ssh`. Running `vagrant ssh-config` will dump out an SSH config you can use to SSH directly into that VM without use of the `vagrant` command.
+
+Otherwise it is enough to run this command:
+
+```shell
+ssh vagrant@vvv.test
+```
+
+| Field    	| Value    	|
+|----------	|----------	|
+| host 	| vvv.test 	|
+| username 	| vagrant 	|
+
+Note that no password is used.
+
+## SFTP
+
+SFTP uses the same details as SSH, but, keep in mind that all these folders are available on your filesystem.
+
+Using SFTP to modify files is slower, and would likely result in you replacing a file with itself making no meaningful change. The `www` folder and the `/srv/www` folders are the same folder, not clones/duplicates. It's expected that the `www` folder would contain the local copy you intend to upload from. If this is not the case, I recommend looking into the `vm_dir` and `local_dir` options for defining sites.

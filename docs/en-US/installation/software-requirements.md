@@ -1,40 +1,38 @@
 ---
 category: 2. Getting Started
 order: 1
-title: Software Requirements
+title: System Requirements
 description: VVV requires recent versions of both Vagrant and VirtualBox to be installed, along with some vagrant plugins.
 permalink: /docs/en-US/installation/software-requirements/
 ---
 
 VVV requires recent versions of both Vagrant and VirtualBox to be installed, along with some vagrant plugins.
 
-## Preparing Your Machine
+## Software Requirements
 
-If you aren't using a Mac, you may need to turn on virtualization in your computers BIOS, some computers have it turned off by default. On Intel machines this is called Intel VT-x, and AMD calls it AMD-V.
+You will need the following software:
 
-Refer to your machines manufacturer for how to access your BIOS. [This article may be helpful for enabling Intel VT-x](https://www.howtogeek.com/213795/how-to-enable-intel-vt-x-in-your-computers-bios-or-uefi-firmware/)
+| Software                     |  Minimum Version   | Recommended    | Download Link                             |
+|------------------------------|--------------------|----------------|-------------------------------------------|
+| VirtualBox*                  | 5.x                | Latest version | https://www.virtualbox.org/wiki/Downloads |
+| Vagrant                      | 2.2.7              | Latest version | https://www.vagrantup.com/downloads.html  |
+| Vagrant Hosts Updater Plugin | n/a                | n/a            | The [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) plugin will modify your hosts file so that provisioned domains such as `http://vvv.test` works. To install it, run `vagrant plugin install vagrant-hostsupdater`   |
+| Git                          | n/a                | latest version | For Windows: https://gitforwindows.org/   |
 
-**Note**: If you have turned Hyper-V on, VirtualBox will not work
+_* On Windows, VirtualBox can be substituted for [Hyper-V](hyper-v.md) if Docker is also being used. The same is true if you choose to use Parallels or VMWare instead of VirtualBox, but, we recommend using VirtualBox as it's both well tested, free, and widely available. Your mileage with alternative VM providers may vary. If Hyper-V is turned on in any form, VirtualBox may not work, or suffer major performance penalties._
 
-## Installing Vagrant and VirtualBox
+## Hardware Requirements
 
-1. Start with any local operating system such as Mac OS X, Linux, or Windows.
-    * For Windows 8 or higher it is recommended that you run the cmd window as Administrator.
-1. Install [VirtualBox 5.x](https://www.virtualbox.org/wiki/Downloads)
-1. Install [Vagrant 2.2.4+](https://www.vagrantup.com/downloads.html)
-    * [Vagrant](https://www.vagrantup.com) is a "tool for building and distributing development environments". It works with [virtualization](https://en.wikipedia.org/wiki/X86_virtualization) software such as [VirtualBox](https://www.virtualbox.org/) to provide a virtual machine sandboxed from your local environment.
-    * `vagrant` will now be available as a command in your terminal, try it out.
-    * Provider support is included for VirtualBox, Parallels, Hyper-V, VMWare Fusion, and VMWare Workstation.
-    * ***Note:*** If Vagrant is already installed, use `vagrant -v` to check the version. You may want to consider upgrading if a much older version is in use.
+|                      | Minimum | Recommended | Notes                                                                                                                                                                                  |
+|----------------------|---------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| RAM                  | 4GB     | 8GB+        | The RAM given to the VM can be changed as low as 1GB in the config, but you still need memory for the browser and OS. Don't attempt to work on WordPress Core on less than 6GB of RAM. |
+| CPU Cores            | 2       | 4+          | VVV asks for 2 CPU cores in the config, but more cores will speed things up                                                                                                            |
+| BIOS Virtualisation* | on      |             | On Intel machines this is called Intel VT-x, and AMD calls it AMD-V. For some reason, some Laptop makers turn this off by default. Macs have it turned on out of the box.              |
+| Free Disk Space      | 2GB     | 4GB+        | All those sites take up space, make sure you have enough room                                                                                                                          |
+| Disk Type            | HD      | SSD         | Mechanical spinning drives will be unbearably slow, we strongly recommend faster solid state drives for VMs                                                                            |
 
-### Installing Vagrant Hosts Updater
+_* Refer to your machines manufacturer for how to access your BIOS. [This article may be helpful for enabling Intel VT-x](https://www.howtogeek.com/213795/how-to-enable-intel-vt-x-in-your-computers-bios-or-uefi-firmware/)_
 
-The [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) plugin will modify your hosts file so that provisioned domains such as `http://vvv.test` works. To install it, run;
+## Rebooting
 
-```
-vagrant plugin install vagrant-hostsupdater
-```
-
-## Reboot
-
-If you don't reboot your machine after installing/updating Vagrant and VirtualBox, there can be networking issues. A full power cycle will ensure all components are fully installed and loaded
+You might need to reboot your machine after installing VirtualBox, particularly on Windows but sometimes on MacOS too. This can manifest as networking issues. A full power cycle will ensure all components are fully installed and loaded
