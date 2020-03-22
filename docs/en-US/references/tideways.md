@@ -21,6 +21,14 @@ XHGui needs a php file that is prepended to all PHP files (by a global php confi
 
 XHGui will be executed in headless mode if Tideways is available for the PHP version used in the website that you are profiling.
 
+To make Tideways and XHGui work, you need to make sure `tideways` is added to the utilities in your `config.yml`:
+
+```yaml
+utilities:
+  core: # The core VVV utility
+    - tideways # PHP profiling tool, also installs XHGui
+```
+
 To profile a page you need to enable the Tideways module and disable xDebug. This can be done by running the `xdebug_off` command inside the Vagrant machine (this turns xDebug off and ensures Tideways is turned on).
 
 Now Tideways is globally enabled and you can enable it in 2 ways:
