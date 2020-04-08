@@ -7,7 +7,7 @@ permalink: /docs/en-US/references/xdebug/
 
 VVV installs the XDebug extension, a useful tool for development, here's how their website describes it:
 
-> Xdebug is an extension for PHP to assist with debugging and development. It contains a [single step debugger](https://xdebug.org/docs/remote) to use with IDEs; it upgrades PHP's [`var_dump()`](https://xdebug.org/docs/display) function; it adds [stack traces](https://xdebug.org/docs/stack_trace) for Notices, Warnings, Errors and Exceptions; it features functionality for [recording every function call and variable assignment](https://xdebug.org/docs/execute_trace') to disk; it contains a [profiler](https://xdebug.org/docs/profiler); and it provides [code coverage](https://xdebug.org/docs/code_coverage) functionality for use with [PHPUnit](https://phpunit.de/).
+> Xdebug is an extension for PHP to assist with debugging and development. It contains a [single step debugger](https://xdebug.org/docs/remote) to use with IDEs; it upgrades PHP's [`var_dump()`](https://xdebug.org/docs/display) function; it adds [stack traces](https://xdebug.org/docs/stack_trace) for Notices, Warnings, Errors and Exceptions; it features functionality for [recording every function call and variable assignment](https://xdebug.org/docs/execution_trace) to disk; it contains a [profiler](https://xdebug.org/docs/profiler); and it provides [code coverage](https://xdebug.org/docs/code_coverage) functionality for use with [PHPUnit](https://phpunit.de/).
 
 ## Turning XDebug On and Off
 

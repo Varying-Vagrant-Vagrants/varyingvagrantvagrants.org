@@ -31,7 +31,15 @@ And remove the comment so it looks like this:
 
 Then Tideways will be installed when you reprovision using `vagrant up --provision`
 
-## How Enable Tideways
+## How To Enable Tideways
+
+To make Tideways and XHGui work, you need to make sure `tideways` is added to the utilities in your `config.yml` for example:
+
+```yaml
+utilities:
+  core: # The core VVV utility
+    - tideways # PHP profiling tool, also installs XHGui
+```
 
 To enable tideways, SSH into the VM and run `tideways_on`. This will turn off XDebug and turn on Tideways. Turning on XDebug will turn off tideways as the two cannot run at the same time. You can also use `tideways_off` to disable Tideways.
 
