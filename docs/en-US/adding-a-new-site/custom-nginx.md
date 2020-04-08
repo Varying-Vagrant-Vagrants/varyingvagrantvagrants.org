@@ -14,23 +14,22 @@ It may also be necessary to replace the nginx wp common rules. VVV does this usi
 
 ## VVV Nginx Substitutions
 
-The default nginx configuration files has some placeholders that will be replaced with specific parameters or values.
+When processing site Nginx files VVV will perform some substitutions before installing the config. These are wrapped in squigly brackets `{` and `}`, for example:
 
 ```Nginx
   root {vvv_path_to_site}/public_html;
 ```
 
-`{vvv_path_to_site}` gets replaced with the location of your site, and to change to `htdocs`, simply replace `public_html` with `htdocs`, save, then reprovision. Likewise, you can go deeper down if your git repository has a more complex structure.
+Here's a list:
 
-
-```Nginx
-  set          $upstream {upstream};
-```
-
-`{upstream}` gets replaced with the php version that this domain will use.
-
-```Nginx
-  {{LIVE_URL}}
-```
-
-In case the `live_url` parameter is set as defined in the [provisioner readme](https://github.com/Varying-Vagrant-Vagrants/custom-site-template) will add support for redirects any uploads not found locally to this domain.
+ - `{vvv_path_to_folder}`: this is the path of the nginx config file, before substitutions and install 
+ - `{vvv_path_to_site}`: this is the path to the sites folder inside the virtual machine
+ - `{vvv_site_name}`: the name of the site in the config file
+ - `{vvv_hosts}`: a list of the host names for this site separated by spaces
+ - `{upstream}`: set to `php` by default, is used to set the upstream value and control the version of PHP FPM
+ - `{vvv_tls_cert}`: the full file/folder path to the TLS certificate for this sites hosts
+ - `{vvv_tls_key}`: the full file/folder path to the TLS key for this sites hosts
+ 
+## Site Template Substitutions
+ 
+Site templates might add new substitutions. For example the custom site template adds `{{LIVE_URL}}`. These are implemented using `sed` inside the site provisioner script. For details of these extra options, check the [ site template provisioner readme](https://github.com/Varying-Vagrant-Vagrants/custom-site-template).
