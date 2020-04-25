@@ -12,7 +12,7 @@ Need help? **Let us know on GitHub! Don't hesitate to open a [new issue on GitHu
 
 ### Missing Hosts/vvv.test
 
-You need to the hosts updater plugin before you can provision VVV, but if you already have this installed and you're on Windows, you must use command prompt with elevated administrator priviledges. If you don't do this, the hostsupdater plugin won't be able to modify the hosts file, and the browser won't understand `vvv.test`
+If you're having trouble reaching VVV hosts in the browser, [take a look at the hosts troubleshooting article](hosts.md)
 
 ### SSL/TLS Issues
 
