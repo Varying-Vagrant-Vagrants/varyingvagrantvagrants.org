@@ -11,6 +11,7 @@ You can work with the database from inside the VM with WP CLI or `mysql`, and ev
 To connect using an external sql client, there are 3 methods:
 
  - Sequel Pro config file
+ - TablePlus URL
  - Direct
  - SSH tunnel
 
@@ -19,6 +20,10 @@ We'll be using Sequel Pro to demonstrate, but the same goes for any other softwa
 ### Predefined Sequel Pro Config
 
 A Sequel Pro config can be found at `database/sequelpro.spf`, importing this will configure Sequel Pro automatically.
+
+### TablePro URL
+
+Add a new connection, and import this URL: `mariadb://external:external@vvv.test`
 
 ### Direct Connections
 
