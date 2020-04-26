@@ -21,7 +21,7 @@ We'll be using Sequel Pro to demonstrate, but the same goes for any other softwa
 
 A Sequel Pro config can be found at `database/sequelpro.spf`, importing this will configure Sequel Pro automatically.
 
-### TablePro URL
+### TablePlus URL
 
 Add a new connection, and import this URL: `mariadb://external:external@vvv.test`
 
