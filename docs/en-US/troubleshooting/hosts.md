@@ -36,7 +36,6 @@ Make sure that:
  - If you're on Windows, that you're using an elevated command prompt
    - If you do not, vagrant and the plugins will not have permission to alter the hosts file
 
-
 ## Check VPN Extensions and Security Software
 
 Some users find that even if everything was set up correctly, they're unable to load vvv.test. On closer inspection VPN extensions have interfered with things. Check for this by disabling VPNs and trying again. Make exceptions for VVV hosts if your networking provides that.
