@@ -40,10 +40,10 @@ For PhpStorm and xdebug to correctly hit breakpoints and talk to each other, we 
 
 There is a way to get the server going manually but there is an easier way: get PhpStorm to do the important bits for us. Here's how.
 
-1. [Turn on debugging in the VM](xdebug.md)
+1. [Turn on XDebug inside the VM](xdebug.md)
 2. Start listening for connections in PhpStorm by clicking the small telephone icon
 3. Load a VM page in your browser
-    - phpStorm will detect a request to connect, but will complain that path mappings are not set up. This is fine, we're about to do that. But what PhpStorm also does is set up the "Server" configuration for us. Sweet!
+    - PhpStorm will detect a request to connect, but will complain that path mappings are not set up. This is fine, we're about to do that. But what PhpStorm also does is set up the "Server" configuration for us. Sweet!
 4. When you see the "Incoming Connection from Xdebug" window, click "Manually choose local file or project" and then "Accept"
     - At this point, debugging will run and then stop because the mappings are not set up yet, and there are no break points. Time to fix that.
 5. In the toolbar, select "Edit Configurations..."
