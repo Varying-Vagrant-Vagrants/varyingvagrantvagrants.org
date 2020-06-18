@@ -36,7 +36,7 @@ VVV turns on SSH forwarding, so if you can access it on the host, so can VVV. Th
    - If this fails, but it works on the host, then perhaps SSH Agent forwarding isn't turned on, or some other step needs to happen
    - [Visit this super useful article from GitHub on debugging/setting up SSH Forwarding on your host](https://developer.github.com/v3/guides/using-ssh-agent-forwarding/)
 
-You might also find it helpful to set up `~/.ssh/config` with the following on MacOS:
+You might also find it helpful to set up the SSH config, normally found at `~/.ssh/config` with the following:
 
 ```
 Host *
