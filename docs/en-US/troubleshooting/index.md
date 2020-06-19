@@ -189,7 +189,7 @@ To do a fresh start, run the following commands:
 
 ```shell
 # If you need a fresh start it's probably sensible to make sure you are on the stable branch
-git checkout master
+git checkout stable
 # Make sure this is the latest VVV
 git pull
 # Turn the machine on (so destroy can run its cleanup)
