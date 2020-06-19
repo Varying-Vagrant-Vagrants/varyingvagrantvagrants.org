@@ -22,7 +22,7 @@ deploy:
   acl: public_read
   on:
     repo: Varying-Vagrant-Vagrants/varyingvagrantvagrants.org
-    branch: master
+    branch: main
   skip_cleanup: true
   region: us-west-2
   detect_encoding: true
