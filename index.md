@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Varying Vagrant Vagrants
+title: VVV
 category: 1. Introduction
 order: 1
 ---
 
-Varying Vagrant Vagrants is an open source [Vagrant](https://www.vagrantup.com) configuration focused on [WordPress](https://wordpress.org) development.
+VVV is an open source [Vagrant](https://www.vagrantup.com) configuration focused on [WordPress](https://wordpress.org) development.
 
 VVV is ideal for developing themes and plugins as well as for [contributing to WordPress core](https://make.wordpress.org/core/).
 
@@ -31,4 +31,4 @@ The [documentation](docs/en-US/index.md) area of this site is in progress. [Clic
 
 ## Copyright / License
 
-The code powering [Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV) and this [website](https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org) is copyright (c) 2014, the contributors of the VVV project under the [MIT License](https://opensource.org/licenses/MIT).
+The code powering [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV) and this [website](https://github.com/Varying-Vagrant-Vagrants/varyingvagrantvagrants.org) is copyright (c) 2014, the contributors of the VVV project under the [MIT License](https://opensource.org/licenses/MIT).
