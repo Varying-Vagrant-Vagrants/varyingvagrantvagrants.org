@@ -12,7 +12,7 @@ Need help? **Let us know on GitHub! Don't hesitate to open a [new issue on GitHu
 
 ### Missing Hosts/vvv.test
 
-You need to the hosts updater plugin before you can provision VVV, but if you already have this installed and you're on Windows, you must use command prompt with elevated administrator priviledges. If you don't do this, the hostsupdater plugin won't be able to modify the hosts file, and the browser won't understand `vvv.test`
+If you're having trouble reaching VVV hosts in the browser, [take a look at the hosts troubleshooting article](hosts.md)
 
 ### SSL/TLS Issues
 
@@ -36,7 +36,7 @@ VVV turns on SSH forwarding, so if you can access it on the host, so can VVV. Th
    - If this fails, but it works on the host, then perhaps SSH Agent forwarding isn't turned on, or some other step needs to happen
    - [Visit this super useful article from GitHub on debugging/setting up SSH Forwarding on your host](https://developer.github.com/v3/guides/using-ssh-agent-forwarding/)
 
-You might also find it helpful to set up `~/.ssh/config` with the following on MacOS:
+You might also find it helpful to set up the SSH config, normally found at `~/.ssh/config` with the following:
 
 ```
 Host *
@@ -189,7 +189,7 @@ To do a fresh start, run the following commands:
 
 ```shell
 # If you need a fresh start it's probably sensible to make sure you are on the stable branch
-git checkout master
+git checkout stable
 # Make sure this is the latest VVV
 git pull
 # Turn the machine on (so destroy can run its cleanup)

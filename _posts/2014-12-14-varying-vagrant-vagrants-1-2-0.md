@@ -8,9 +8,9 @@ Well hello. We're finally here.
 
 After a long 9 months of waiting, it's a happy moment to push a <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/releases/tag/1.2.0">tagged 1.2.0 release of Varying Vagrant Vagrants</a>.
 
-A full list of changes is available in the <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/blob/master/CHANGELOG.md">changelog</a>. Here are some important ones.
+A full list of changes is available in the <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/blob/stable/CHANGELOG.md">changelog</a>. Here are some important ones.
 
-First, VVV is now <a href="https://github.com/varying-vagrant-vagrants/vvv/blob/master/LICENSE">MIT Licensed</a>. This is a big deal and we waited entirely too long as an open source project before choosing one. In fact, you could say we weren't really an open source project at all until that point. Many many thanks to the <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/issues/346">near 50 contributors who were there to confirm</a> their previous contributions as MIT so that we could proceed.
+First, VVV is now <a href="https://github.com/varying-vagrant-vagrants/vvv/blob/stable/LICENSE">MIT Licensed</a>. This is a big deal and we waited entirely too long as an open source project before choosing one. In fact, you could say we weren't really an open source project at all until that point. Many many thanks to the <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/issues/346">near 50 contributors who were there to confirm</a> their previous contributions as MIT so that we could proceed.
 
 If there's any lesson I learned from this, it's to start with a license before anything else.
 
@@ -39,4 +39,4 @@ And now the future! We have plenty of open issues and many goals to keep us busy
  	<li>And in the process of doing the above, provide some sort of configuration file. YAML seems easy, but eyes and ears are wide open for the best approach on this.</li>
  	<li>Now that we've worked out a license, we should work out what versioning really means to us. I would happily move to semantic versioning—hinted at with this release number—though it would be nice to cover thoughts on that. It would also be nice to work out a proper release schedule, so that we aren't all waiting 9 months for the next one. :)</li>
 </ul>
-That's it, go get VVV 1.2.0 and have some fun. Thank you so much to the <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/blob/master/README.md">many, many contributors</a> that have made VVV what it is today. And stop in with any questions, all are welcome!
+That's it, go get VVV 1.2.0 and have some fun. Thank you so much to the <a href="https://github.com/Varying-Vagrant-Vagrants/VVV/blob/stable/README.md">many, many contributors</a> that have made VVV what it is today. And stop in with any questions, all are welcome!

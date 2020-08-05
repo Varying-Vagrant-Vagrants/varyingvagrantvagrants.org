@@ -17,9 +17,15 @@ The provisioners folder contains full log output for each provisioner, grouped i
 
 ## PHP Error Logs
 
-You can find PHP fpm and error logs in the `logs/php` folder, grouped by  PHP version. Unfortunately, it's not possible to have separate log files for each site, however each error contains the path ofthe file which can be used to seperate different sites.
+You can find PHP fpm and error logs in the `logs/php` folder, grouped by PHP version.
 
 Additionally, `WP_DEBUG_LOG` can be used in `wp-config.php` to control where a WordPress site logs its PHP errors to.
+
+### Per Site PHP error logs
+
+Unfortunately, it's not possible to have separate log files for each site using the same PHP-FPM, however each error contains the path of the file which can be used to seperate different sites.
+
+For more contextual error handling, look at using XDebug.
 
 ## Nginx Access Logs
 
@@ -36,8 +42,8 @@ By default, site and utility provisioners only show errors in the terminal when 
  - `log/provisioners/2020.04.07_15-48-16/provisioner-main.log`
  - `log/provisioners/2020.04.07_15-48-16/provisioner-site-wordpress-one.log`
  - `log/provisioners/2020.04.07_15-48-16/provisioner-utility-core-tls-ca.log`
- 
- ## Other Logs
- 
- Other logs may exist inside the virtual machine, e.g. MariaDB logs. You can SSH or SFTP into the virtual machine to view these.
- 
+
+## Other Logs
+
+Other logs may exist inside the virtual machine, e.g. MariaDB logs. You can SSH or SFTP into the virtual machine to view these.
+

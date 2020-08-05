@@ -18,10 +18,10 @@ First, navigate in the terminal to the VVV folder, and run the following command
 git init
 git remote add origin https://github.com/Varying-Vagrant-Vagrants/VVV.git
 git fetch
-git reset origin/master
-git checkout -f origin/master
-git checkout master
-git branch --set-upstream-to=origin/master master
+git reset origin/stable
+git checkout -f origin/stable
+git checkout stable
+git branch --set-upstream-to=origin/stable stable
 git pull
 ```
 

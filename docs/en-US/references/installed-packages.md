@@ -11,7 +11,7 @@ These packages are installed by default in VVV:
 1. [Ubuntu](http://www.ubuntu.com/) 18.04 LTS (Bionic Beaver)
 1. [WordPress Develop](https://develop.svn.wordpress.org/trunk/)
 1. [WordPress Stable](https://wordpress.org/)
-1. [WP-CLI](http://wp-cli.org/) (master branch)
+1. [WP-CLI](http://wp-cli.org/)
 1. [nginx](http://nginx.org/) ([mainline](http://nginx.com/blog/nginx-1-6-1-7-released/) version)
 1. [MariaDB](https://mariadb.org/) 10.1
 1. [php-fpm](http://php-fpm.org/) 7.0.x
