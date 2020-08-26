@@ -70,6 +70,12 @@ With this in mind, I would expect the java repository mentioned earlier to have 
 
 The name of the subfolder maps directly on to what is put in `vvv-custom.yml`. VVV will run the `provision.sh` file, at which point it can do as it pleases. This could be installing a package via `apt-get` or something else. Other files can be included in these folders for `provision.sh` to make use of.
 
+## Utility Provisioning
+
+It is possible to run a provision of an utility without run the whole VVV provision using a Vagrant command.  
+As example from the config.yml above `vagrant reload --provision-with=utility-core-php56`, where we are specifying the utility repo and the utility name.  
+This is helpful during the development or just to install/update a specific utility.
+
 ## Community Utilities
 
 Community utilities are independently developed and contributed by interested members of the community, provided on an 'as is' basis.
