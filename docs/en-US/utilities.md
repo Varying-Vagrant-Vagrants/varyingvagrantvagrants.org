@@ -72,7 +72,7 @@ The name of the subfolder maps directly on to what is put in `vvv-custom.yml`. V
 
 ## Utility Provisioning
 
-It is possible to run a provision of an utility without run the whole VVV provision using a Vagrant command.  
+It's possible to provision a single utility on its own, without provisioning the whole of VVV using the `--provision-with` parameter of vagrant.  
 As an example from the `config.yml` above we can run `vagrant provision --provision-with="utility-core-php56"` to provision only the PHP 5.6 utility.
 This is helpful during the development or just to install/update a specific utility.
 
