@@ -74,7 +74,7 @@ The name of the subfolder maps directly on to what is put in `vvv-custom.yml`. V
 
 It's possible to provision a single utility on its own, without provisioning the whole of VVV using the `--provision-with` parameter of vagrant.  
 As an example from the `config.yml` above we can run `vagrant provision --provision-with="utility-core-php56"` to provision only the PHP 5.6 utility.  
-To work this command require that the utility is enabled in the `config.yml` file, it won't add it automatically.
+To work this command requires that the utility is enabled in the `config.yml` file, it won't add it automatically.
 
 ## Community Utilities
 
