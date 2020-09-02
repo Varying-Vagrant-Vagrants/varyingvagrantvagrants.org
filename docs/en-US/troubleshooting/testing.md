@@ -18,7 +18,7 @@ Once the folder has the changes, run `vagrant halt && vagrant up --provision`.
 
 ## Utilities
 
-You can test a new utility by adding it to `config/config.yml` and reprovisioning.
+You can test a new utility by adding it to `config/config.yml` ([example file](https://github.com/Varying-Vagrant-Vagrants/VVV/blob/develop/config/default-config.yml)) and reprovisioning.
 
 To test changes to the core provisioner, delete the `provision/utilities/core` folder, then change the `config/config.yml` file to match the repo and branch you'd like to test:
 
@@ -39,6 +39,17 @@ Then, halt the VM and reprovision: `vagrant halt && vagrant up --provision`
 ## Custom Site Template
 
 ```yaml
+  wordpress-two:
+    skip_provisioning: false
+    description: "A standard WP install, useful for building plugins, testing things, etc"
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    custom:
+      # locale: it_IT
+      delete_default_plugins: true
+      install_plugins:
+        - query-monitor
+    hosts:
+      - two.wordpress.test
 ```
 
 If the pull request adds new parameters, check that they work as expected, and check that things still work if the parameter is missing/blank.
@@ -46,4 +57,10 @@ If the pull request adds new parameters, check that they work as expected, and c
 ## Custom Site Template Develop
 
 ```yaml
+  wordpress-trunk:
+    skip_provisioning: true # provisioning this one takes longer, so it's disabled by default
+    description: "An svn based WP Core trunk dev setup, useful for contributor days, Trac tickets, patches"
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop.git
+    hosts:
+      - trunk.wordpress.test
 ```
