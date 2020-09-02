@@ -64,3 +64,5 @@ If the pull request adds new parameters, check that they work as expected, and c
     hosts:
       - trunk.wordpress.test
 ```
+
+This template generate a log of different logs to simplify the debugging and the output in console, for a better testing is better to check the log in `VVV/log/provisioners/<datetime>/provisioner-site-wordpress-trunk.log` and the other files generated.
