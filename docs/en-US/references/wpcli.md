@@ -43,7 +43,7 @@ We recommend adding a new git remote to the repository, so that you can push cha
 
 SSH into the virtual machine with `vagrant ssh`.
 
-To run WP-CLI commands for a specific site change into the following directory: `cd ../../srv/www`.
+To run WP-CLI commands for a specific site change into the following directory: `cd /srv/www`.
 
 Then change into a directory for a specific site: `cd wordpress-one` to run WP-CLI commands for that site.
 
