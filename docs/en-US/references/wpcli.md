@@ -39,6 +39,14 @@ WP-CLI has exhaustive [documentation](https://make.wordpress.org/cli/handbook/) 
 
 We recommend adding a new git remote to the repository, so that you can push changes to GitHub for pull requests.
 
+## Using WP-CLI from the virutal machine 
+
+SSH into the virtual machine with `vagrant ssh`.
+
+To run WP-CLI commands for a specific site change into the following directory: `cd ../../srv/www`.
+
+Then change into a directory for a specific site: `cd wordpress-one` to run WP-CLI commands for that site.
+
 ## Resources
 
 There are already a lot of guides about WP CLI:
