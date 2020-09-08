@@ -39,7 +39,7 @@ WP-CLI has exhaustive [documentation](https://make.wordpress.org/cli/handbook/) 
 
 We recommend adding a new git remote to the repository, so that you can push changes to GitHub for pull requests.
 
-## Using WP-CLI from the virutal machine 
+## Using WP-CLI from the Virtual Machine 
 
 SSH into the virtual machine with `vagrant ssh`.
 
