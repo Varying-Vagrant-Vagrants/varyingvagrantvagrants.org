@@ -80,6 +80,10 @@ To work this command requires that the utility is enabled in the `config.yml` fi
 
 Community utilities are independently developed and contributed by interested members of the community, provided on an 'as is' basis.
 
+
+* **VVV Wordmove Utility**: Installs Wordmove (and Ruby).  
+  [https://github.com/welaika/vvv-wordmove/](https://github.com/welaika/vvv-wordmove/)
+
 * **VVV Solr Utilities**: Installs Solr and Java.  
   [https://github.com/ocean90/vvv-solr-utilities](https://github.com/ocean90/vvv-solr-utilities)
   
