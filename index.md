@@ -5,7 +5,7 @@ category: 1. Introduction
 order: 1
 ---
 
-VVV is an open source [Vagrant](https://www.vagrantup.com) configuration focused on [WordPress](https://wordpress.org) development.
+VVV is an open source local development environment focused on [WordPress](https://wordpress.org), powered by [Vagrant](https://www.vagrantup.com).
 
 VVV is ideal for developing themes and plugins as well as for [contributing to WordPress core](https://make.wordpress.org/core/).
 

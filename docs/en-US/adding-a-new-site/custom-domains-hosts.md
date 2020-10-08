@@ -1,6 +1,6 @@
 ---
 category: 3. Adding a New Site
-order: 2
+order: 3
 title: Custom Domains and Hosts
 description: Define custom domains in the sites section of config/config.yml. vvv-init.sh can be used for edge circumstances.
 permalink: /docs/en-US/adding-a-new-site/custom-domains-hosts/

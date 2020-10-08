@@ -1,6 +1,6 @@
 ---
 category: 3. Adding a New Site
-order: 3
+order: 5
 title: Custom public_html web roots
 description: How to change the folder that gets served to the web
 permalink: /docs/en-US/adding-a-new-site/custom-public_html/
@@ -10,6 +10,7 @@ The default site provisioners will generate a `public_html` sub folder that acts
 
 You can also change the public webroot to another folder. You might do this because the server you're replicating uses `htdocs` instead of `public_html`.
 
+If you are using the `custom-site-template`, use the `public_dir` parameter to change this. For everybody else, continue reading.
 
 ## How It Gets Set
 
@@ -23,7 +24,7 @@ This is set in the Nginx config file. Specifically, on a line that looks like th
 
 [See here for more information on custom Nginx config files and other placeholders](https://varyingvagrantvagrants.org/docs/en-US/adding-a-new-site/custom-nginx/).
 
-**Once you've done this, reprovision for the change to take effect.**
+{% include always_reprovision.html %}
 
 ### Troubleshooting Sites Using The Custom Site Templates
 

@@ -1,6 +1,6 @@
 ---
 category: 3. Adding a New Site
-order: 5
+order: 2
 title: Adding an Existing Site
 description: VVV needs to know a few things before you can hand it an existing site.
 permalink: /docs/en-US/adding-a-new-site/adding-an-existing-site/
@@ -15,7 +15,7 @@ sites:
       - mysite.test
 ```
 
-Only to find that mysite.test leads to the VVV dashboard, what's going on?
+Only to find that `mysite.test` leads to the VVV dashboard, what's going on?
 
 ## Provisioner Files and Site Templates
 

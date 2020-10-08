@@ -1,6 +1,6 @@
 ---
 category: 4. Site Templates
-order: 5
+order: 2
 title: Setup Script
 description: VVV runs vvv-init.sh when it sets up the site to give you an opportunity to execute shell commands.
 permalink: /docs/en-US/site-templates/setup-script/

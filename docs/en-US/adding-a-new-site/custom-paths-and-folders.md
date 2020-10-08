@@ -1,6 +1,6 @@
 ---
 category: 3. Adding a New Site
-order: 3
+order: 4
 title: Custom Paths and Folders
 description: VVV supports sites in a non-standard folder via the vm_dir and local_dir keys in the sites section of vvv-custom.yml.
 permalink: /docs/en-US/adding-a-new-site/custom-paths-and-folders/

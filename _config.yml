@@ -29,7 +29,7 @@ show_full_navigation: false
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /images/vvv.png
-description: "Documentation for the open source VVV project."
+description: "Documentation for the VVV local developer environment."
 
 twitter:
   card: summary

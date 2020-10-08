@@ -25,21 +25,15 @@ sites:
       - example.test
 
   .... other sites...
-
-  multisite-example:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
-    hosts:
-      - multisite.test
-      - subsite.multisite.test
-    custom:
-      wp_type: subdomain # or subdirectory
 ```
 
-Then, save `config/config.yml` and run `vagrant up --provision` to update VVV with the new site. **Always reprovision after making changes to the config files**. Be sure to indent correctly as whitespace matters in YAML files, VVV prefers to indent using 2 spaces.
+The `repo` parameter tells VVV we want a WordPress site and downloads install instructions. The `hosts` parameter tells VVV the domain to use for the site.
 
-Once `vagrant reload --provision` finishes, you will have a brand new WordPress install! We can now visit http://example.test to view our site, or open the `www/example` folder in an editor to start making changes to our site. To log in, use `admin` and `password`.
+Then, save `config/config.yml` and run `vagrant up --provision` to update VVV with the new site. Be sure to indent correctly as whitespace matters in YAML files, VVV prefers to indent using 2 spaces.
 
 {% include always_reprovision.html %}
+
+Once `vagrant reload --provision` finishes, you will have a brand new WordPress install! We can now visit http://example.test to view the site, or open the `www/example` folder in an editor to start making changes to our site. To log in, use `admin` and `password`.
 
 ### Adding a Multisite
 
@@ -61,7 +55,7 @@ sites:
 
 ```
 
-This creates a subdirectory based multisite. Changing `wp_type` to `subdomain` will give a subdomain multisite, just remember to add subdomains in the hosts section.
+This creates a subdirectory based multisite. Changing `wp_type` to `subdomain` will give a subdomain multisite, just remember to add ew subdomains to the hosts section.
 
 ### Additional Options
 
@@ -79,17 +73,12 @@ You may also find that the default sites created by VVV are enough for what you 
 
 ### Importing a Production Database
 
-At this point, mysql or phpMyAdmin can be used to upload a database for content, and plugins/themes/uploads can be copied. The installation of WP will be in `www/example/public_html`, and a PHP error log will be located at `www/example/logs/`.
+At this point, mysql or phpMyAdmin can be used to upload a database for content, and the plugins/themes/uploads folders can be copied. The installation of WP will be in `www/example/public_html`.
 
-All the default parameters for all the templates are:
-```
-  nginx_upstream: php72 # Specific the PHP version of the website
-  branch: your-branch # Git branch to use for the provisioner
-  repo: # Repository
-  hosts: # Multiline parameter to specificy the various hosts
-  vm_dir: /path/ # Specify the custom path in your machine to use it
-  custom: # Multiline parameter to specificy the various custom parameters of the provisioner
-```
+
+### PHP Error Logs
+
+PHP error logs are located in the main VVV folder in `logs/php/`. Note that if your site specified `WP_DEBUG_LOG` then WordPress will redirect PHP error logs to `wp-content/debug.log` by default.
 
 ### Official Site Templates
 
