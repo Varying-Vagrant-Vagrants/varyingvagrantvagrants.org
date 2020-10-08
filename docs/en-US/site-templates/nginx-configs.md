@@ -1,6 +1,6 @@
 ---
 category: 4. Site Templates
-order: 6
+order: 3
 title: Nginx Configuration
 description: VVV uses the popular Nginx to serve pages. Therefore VVV provides an include for setting up WordPress easily and a file for per site Nginx configurations.
 permalink: /docs/en-US/site-templates/nginx-configuration/
