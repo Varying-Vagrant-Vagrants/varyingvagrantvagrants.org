@@ -3,7 +3,8 @@ cache: bundler
 rvm:
 - 2.4.0
 before_script:
-- wget "https://github.com/Varying-Vagrant-Vagrants/VVV/archive/develop.zip" -P /tmp/vvv- wget "https://github.com/Varying-Vagrant-Vagrants/custom-site-template/archive/master.zip" -P /tmp/vvv-site-template
+- wget "https://github.com/Varying-Vagrant-Vagrants/VVV/archive/develop.zip" -P /tmp/vvv
+- wget "https://github.com/Varying-Vagrant-Vagrants/custom-site-template/archive/master.zip" -P /tmp/vvv-site-template
 - unzip /tmp/vvv/develop.zip -d /tmp/vvv/
 - unzip /tmp/vvv-site-template/master.zip -d /tmp/vvv-site-template/
 - cp /tmp/vvv/VVV-develop/.github/CONTRIBUTING.md ./docs/en-US/contributing.md
