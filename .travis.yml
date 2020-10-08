@@ -9,7 +9,7 @@ before_script:
 - unzip /tmp/vvv-site-template/master.zip -d /tmp/vvv-site-template/
 - cp /tmp/vvv/VVV-develop/.github/CONTRIBUTING.md ./docs/en-US/contributing.md
 - cp /tmp/vvv/VVV-develop/CHANGELOG.md ./docs/en-US/changelog.md
-- cat "/tmp/vvv/custom-site-template-master/README.md" >> ./docs/en-US/site-templates/custom-site-template-parameters.md
+- cat "/tmp/vvv-site-template/custom-site-template-master/README.md" >> ./docs/en-US/site-templates/custom-site-template-parameters.md
 script:
 - bundle exec jekyll --version
 - ls -lah
