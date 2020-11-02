@@ -18,7 +18,7 @@ Make sure you have your project folders already set up in phpStorm.
 3. Click *Languages & Frameworks*, PHP and fill it in like this
    - Set the PHP language level to match the site you're debugging.
    - CLI Interpreter: select one if you have it, leave it as `<no interpreter>` if you don't
-   - Include Path section: add the path to the locally-mapped `public_html` folder of the VM for you project
+   - Include Path section: add the path to the locally-mapped `public_html` folder of the VM for your project
 
 ## Set up the Server
 
