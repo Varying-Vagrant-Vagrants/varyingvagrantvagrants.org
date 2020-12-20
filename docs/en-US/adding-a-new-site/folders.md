@@ -6,7 +6,7 @@ description: Cloning git repositories and other folder options for a site
 permalink: /docs/en-US/adding-a-new-site/folders-and-custom-git/
 ---
 
-Additional software can be installed via `git` by using the `folders` parameter of a site. This lets you specify a subfolder, and clone a git repository into it. VVV can also keep that repository up to date.
+Additional software can be installed via `git` by using the `folders` parameter of a site. This lets you specify a subfolder, and clone a git repository into it. VVV can also keep that repository up to date. _This feature requires VVV 3.5.1 or higher._
 
 For example, here is a WP VIP site, with a platform plugin cloned into place and updated, and a custom `wp-content` folder:
 
