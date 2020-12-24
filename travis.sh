@@ -4,7 +4,9 @@ vvv_process_jekyll_shelldoc() {
 	local DOCFILE="${1}"
 	local TARGETFILE="${2//.sh/}"
 	local TITLE="${3}"
-	echo -e "---\ncategory: Function Reference\ntitle: ${TITLE}\ndescription: Shellscript documentation for ${TITLE}\n---\n\n$(shdoc < $DOCFILE)" > $TARGETFILE
+	local PERMALINK="${TARGETFILE//.md/}"
+	PERMALINK=${PERMALINK#.}
+	echo -e "---\ncategory: Function Reference\ntitle: ${TITLE}\ndescription: Shellscript documentation for ${TITLE}\npermalink: ${PERMALINK}/\n---\n\n$(shdoc < $DOCFILE)" > $TARGETFILE
 }
 
 vvv_process_sh() {
