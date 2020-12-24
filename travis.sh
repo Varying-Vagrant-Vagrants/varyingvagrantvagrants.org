@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/bash
 
 vvv_process_jekyll_shelldoc() {
 	local DOCFILE="${1}"
@@ -34,7 +34,6 @@ mkdir -p ./docs/en-US/function-reference
 
 #find /tmp/vvv/VVV-develop/provision -name '*.sh'
 
-vvv_process_sh "/tmp/vvv/VVV-develop/" "/tmp/vvv/VVV-develop/provision/provision.sh" ./docs/en-US/function-reference/
 vvv_process_sh "/tmp/vvv/VVV-develop/" "/tmp/vvv/VVV-develop/provision/provisioners.sh" ./docs/en-US/function-reference/
 vvv_process_sh "/tmp/vvv/VVV-develop/" "/tmp/vvv/VVV-develop/provision/provision-helpers.sh" ./docs/en-US/function-reference/
 vvv_process_sh "/tmp/vvv/VVV-develop/" "/tmp/vvv/VVV-develop/provision/provision-site.sh" ./docs/en-US/function-reference/
