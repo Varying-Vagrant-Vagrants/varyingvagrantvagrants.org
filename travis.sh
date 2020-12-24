@@ -19,3 +19,4 @@ cat "/tmp/vvv-site-template/custom-site-template-master/README.md" >> ./docs/en-
 mkdir -p ./docs/en-US/function-reference
 echo -e "---\ncategory: Function Reference\ntitle: provision/provision.sh\ndescription: Shellscript documentation for provision/provision.sh\n---\n\n$(shdoc < /tmp/vvv/VVV-develop/provision/provision.sh)" > ./docs/en-US/function-reference/provision-provision.sh.md
 echo -e "---\ncategory: Function Reference\ntitle: provision/provision-site.sh\ndescription: Shellscript documentation for provision/provision-site.sh\n---\n\n$(shdoc < /tmp/vvv/VVV-develop/provision/provision-site.sh)" > ./docs/en-US/function-reference/provision-provision-site.sh.md
+ls -lah ./docs/en-US/function-reference/
