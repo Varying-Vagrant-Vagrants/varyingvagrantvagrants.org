@@ -12,7 +12,7 @@ before_script:
 - cp /tmp/vvv/VVV-develop/CHANGELOG.md ./docs/en-US/changelog.md
 - 'cat "/tmp/vvv-site-template/custom-site-template-master/README.md" >> ./docs/en-US/site-templates/custom-site-template-parameters.md'
 - mkdir -p ./docs/en-US/function-reference
-- 'echo -e "---\ncategory: 10. Function Reference\ntitle: provision/provision-site.sh\ndescription: Shellscript documentation for provision/provision-site.sh\n---\n\n$(shdoc < /tmp/vvv/provision/provision-site.sh)" > ./docs/en-US/function-reference/provision-provision-site.sh.md'
+- 'echo -e "---\ncategory: 10. Function Reference\ntitle: provision/provision-site.sh\ndescription: Shellscript documentation for provision/provision-site.sh\n---\n\n$(shdoc < /tmp/vvv/VVV-develop/provision/provision-site.sh)" > ./docs/en-US/function-reference/provision-provision-site.sh.md'
 script:
 - bundle exec jekyll --version
 - ls -lah
