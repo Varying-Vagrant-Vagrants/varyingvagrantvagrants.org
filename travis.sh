@@ -4,7 +4,7 @@ vvv_process_jekyll_shelldoc() {
 	local DOCFILE="${1}"
 	local TARGETFILE="${2}"
 	local TITLE="${3}"
-	echo "---\ncategory: 10. Function Reference\ntitle: ${TITLE}\ndescription: Shellscript documentation for ${TITLE}\n---\n\n$(shdoc < $DOCFILE)" > $TARGETFILE
+	echo -e "---\ncategory: Function Reference\ntitle: ${TITLE}\ndescription: Shellscript documentation for ${TITLE}\n---\n\n$(shdoc < $DOCFILE)" > $TARGETFILE
 }
 
 vvv_process_sh() {
