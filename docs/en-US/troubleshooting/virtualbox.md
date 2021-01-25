@@ -2,17 +2,17 @@
 category: 5. Troubleshooting
 order: 9
 title: VirtualBox
-description: Common VirtualBox issuees.
+description: VirtualBox installation issues.
 permalink: /docs/en-US/troubleshooting/virtualbox
 ---
 
 ## Updating to MacOS Big Sur or Newer
 
-You need to update VirtualBox. Download the latest version of VirtualBox and install it.
+You need to update to a newer version of VirtualBox. Download the latest version of VirtualBox and install it.
 
 ## Apple Silicon
 
-VirtualBox does not support Apple Silicon, you will need to find an alternative provider. We currently do not have hardware to test this, and there are no recommended providers. We may provide docker as a provider in the future, but there is no timeframe on this (unless we advertise that we support docker, the answer is no, it isn't ready/usable, help wanted!).
+VirtualBox does not support Apple Silicon, you will need to find an alternative provider. We currently do not have hardware to test this, and there are no recommended providers. We may provide docker as a provider in the future, but there is no timeframe on this. When we do, we will announce it, so if you don't see documentation for Docker, then it is not supported or usable. We do however want help with this!
 
 ## VirtualBox Installer/Update Failing on MacOS
 
