@@ -52,7 +52,7 @@ Sometimes the installer can't add the necessary kernel extensions due to a prior
 Restart your Mac into recovery mode, and run this command in the terminal:
 
 ```shell
-/usr/sbin/spctl kext-consent add VB5E2TV963
+sudo /usr/sbin/spctl kext-consent add VB5E2TV963
 ```
 
 This command will only work in recovery mode. If it responds with `spctl: failed to store new configuration.` then you are not in recovery mode.
