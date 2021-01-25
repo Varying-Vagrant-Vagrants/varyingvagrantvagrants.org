@@ -36,7 +36,6 @@ After the installer fails, close the installer and head to the system preference
 
 Turning your Mac off and on again with a hard reboot can solve lots of problems related to VirtualBox installations.
 
-
 ### Clearing staged kernel extensions
 
 Sometimes the installer can't add the necessary kernel extensions due to a prior failed install.
@@ -47,6 +46,47 @@ Sometimes the installer can't add the necessary kernel extensions due to a prior
 4. Clear staging: `sudo kextcache --clear-staging`
 5. Reboot
 6. Install VirtualBox and follow system prompt to allow Oracle
+
+### Accepting Oracle Extensions Manually in Recovery Mode
+
+Restart your Mac into recovery mode, and run this command in the terminal:
+
+```shell
+/usr/sbin/spctl kext-consent add VB5E2TV963
+```
+
+This command will only work in recovery mode. If it responds with `spctl: failed to store new configuration.` then you are not in recovery mode.
+
+After doing this, reboot back into normal mode and re-run the VirtualBox installer.
+
+### Helpful Commands for MacOS
+
+You can run this command on MacOS to confirm if the VirtualBox kernel extensions are loaded:
+
+```shell
+sudo kextstat | grep -i virtualbox
+```
+
+For example, here is what success might look like:
+
+```shell
+❯ sudo kextstat | grep -i virtualbox
+Password:
+Executing: /usr/bin/kmutil showloaded
+No variant specified, falling back to release
+  178    3 0xffffff7fa2326000 0xb2000    0xb2000    org.virtualbox.kext.VBoxDrv (6.1.16) DAF044F0-5043-3B8E-8758-5A462567BDAA <8 6 5 3 1>
+  183    0 0xffffff7fa2403000 0x5000     0x5000     org.virtualbox.kext.VBoxUSB (6.1.16) CA33FA52-5933-3F0E-9B40-8B1ECF4D6A36 <182 178 66 8 6 5 3 1>
+  184    0 0xffffff7fa23fe000 0x4000     0x4000     org.virtualbox.kext.VBoxNetFlt (6.1.16) C93EAF6A-676F-3370-BAE2-BDFD2BF16582 <178 8 6 5 3 1>
+  185    0 0xffffff7fa23f8000 0x2000     0x2000     org.virtualbox.kext.VBoxNetAdp (6.1.16) 76200407-D2F0-3D84-BCCF-7EEA18F16654 <178 6 5 1>
+```
+
+If no Virtualbox kernel extensions are loaded it will look like this:
+
+```shell
+❯ sudo kextstat | grep -i virtualbox
+Executing: /usr/bin/kmutil showloaded
+No variant specified, falling back to release
+```
 
 ## Corrupted Virtual Machines
 
