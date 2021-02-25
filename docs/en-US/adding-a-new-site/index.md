@@ -87,6 +87,6 @@ The site templates officially supported by VVV project are:
 * [https://github.com/Varying-Vagrant-Vagrants/custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template) - For when you just need a simple dev site
 * [https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop](https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop) - For working with WP Core development
 
-These can also be forked for custom provisioners. If you want to fork the site template, be sure to change the `repo` value to point to your knew location.
+These can also be forked for custom provisioners. If you want to fork the site template, be sure to change the `repo` value to point to your new location.
 
 {% include always_reprovision.html %}
