@@ -199,7 +199,7 @@ vagrant destroy
 # Make sure we use the latest version of the base box
 vagrant box update
 # Make sure the recommended vagrant plugins are installed
-vagrant plugin install vagrant-hostsupdater
+vagrant plugin install vagrant-goodhosts
 # And that they're all up to date
 vagrant plugin update
 # Start VVV and create the VM from scratch
