@@ -55,7 +55,7 @@ sites:
 
 ```
 
-This creates a subdirectory based multisite. Changing `wp_type` to `subdomain` will give a subdomain multisite, just remember to add ew subdomains to the hosts section.
+This creates a subdirectory based multisite. Changing `wp_type` to `subdomain` will give a subdomain multisite, just remember to add new subdomains to the hosts section.
 
 ### Additional Options
 
