@@ -6,83 +6,38 @@ description: default-config.yml is the default config file that VVV uses to set 
 permalink: /docs/en-US/config/
 ---
 
-`config/default-config.yml` is the default config file that VVV uses to set itself up. Copy this file to `config/config.yml` to make changes and add your own site.
+VVV uses a config file to identify what sites it has, which software to install, and what kind of virtual machine you prefer. This file is located in at `config/config.yml`, and is created the first time you run a vagrant command by copying `config/default-config.yml`. [This is what the default config file looks like](https://raw.githubusercontent.com/Varying-Vagrant-Vagrants/VVV/stable/config/default-config.yml).
 
-**Before VVV 3.2 the file was `vvv-config.yml` and `vvv-custom.yml` in the VVV root.**
+**Before VVV 3.2 the file was named `vvv-config.yml`/`vvv-custom.yml` and was located in the main folder.**
 
-Here's the full default config file, with every key and option that VVV supports:
-
-```yaml
-sites:
-  wordpress-default:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
-    vm_dir: /srv/www/wordpress-default
-    local_dir: /Users/janesmith/dev/www/vvv/www/wordpress-default
-    branch: master
-    skip_provisioning: false
-    allow_customfile: false
-    nginx_upstream: php
-    hosts:
-      - local.wordpress.test
-
-  wordpress-develop:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop.git
-    local_dir: /Users/janesmith/dev/www/vvv/www/wordpress-develop
-    branch: master
-    skip_provisioning: true
-    allow_customfile: false
-    nginx_upstream: php
-    hosts:
-      - src.wordpress-develop.test
-      - build.wordpress-develop.test
-
-vm_config:
-  memory: 2048
-  cores: 1
-  #box: custom-box # Override the vagrant box with a custom one
-
-utilities:
-  core:
-    - memcached-admin
-    - opcache-status
-    - phpmyadmin
-    - webgrind
-    - trusted-hosts
-    - tls-ca
-utility-sources:
-  core: https://github.com/Varying-Vagrant-Vagrants/vvv-utilities.git
-# General VVV options
-general:
-  db_backup: true
-  db_restore: true
-  db_share_type: false
-  #github_token: xxxxxx # For Composer
-```
-
-## Anatomy of a Site config
-
-Let's break apart the `wordpress-default` site:
-
-```yaml
-sites:
-  wordpress-default:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
-    vm_dir: /srv/www/wordpress-default
-    local_dir: /Users/janesmith/dev/www/vvv/www/wordpress-default
-    branch: master
-    skip_provisioning: false
-    allow_customfile: false
-    nginx_upstream: php
-    hosts:
-      - local.wordpress.test
-```
+## The sites block
 
 When defining a site, the only required item is the name of the site. This single line would be a perfectly valid site definition:
 
 ```yaml
 example-site:
 ```
+
+You could not visit `example-site` however unless you created a `www/example-site` folder and place a `vvv-nginx.conf` file inside it and reprovisioned.
+
 Note that site provisioners may add their own custom values, see the [custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template/blob/master/README.md) documentation on GitHub for information on what is supported.
+
+### skip_provisioning
+
+If there are a lot of sites in `config/config.yml`, you may want to skip several sites that aren't in use. To do this, set the `skip_provisioning` key, for example:
+
+```yaml
+sites:
+  wordpress-one:
+    skip_provisioning: true
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+```
+
+Now VVV will skip that site when running the provisioner. This means that the hosts, nginx config, and `vvv-init.sh` script will not be copied or ran.
+
+### description
+
+The `description` key allows you to provide an optional description which will be displayed in the VVV dashboard.
 
 ### repo
 
@@ -108,43 +63,39 @@ This controls which folder on the host machine VVV uses for this site. By defaul
 
 For example, a site named `test` would be inside the `www/test` folder.
 
-### skip_provisioning
-
-If there are a lot of sites in `config/config.yml`, you may want to skip several sites that aren't in use. To do this, set the `skip_provisioning` key, for example:
-
-```yaml
-sites:
-  wordpress-default:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
-    skip_provisioning: true
-```
-
-Now VVV will skip that site when running the provisioner. This means that the hosts, nginx config, and `vvv-init.sh` script will not be copied or ran.
-
-### allow_customfile
-
-It may be necessary to run a ruby script during provisioning to do more complex things. This might be installing system wide packages inside the virtual machine, etc.
-
-It's recommended that instead, the `utilities` section should be used when possible. Writing your own Vagrant Ruby code is an in-depth topic and could destabilise VVV if done incorrectly. This should only be used by advanced users with knowledge of the subject.
-
-Note that `Customfile` will be looked for in the site's `local_dir`, or in the VVV installation folder.
-
 ### nginx_upstream
 
 This option sets where Nginx passes requests to, and is primarily for setting the PHP version used. [You can read more about it here](adding-a-new-site/changing-php-version.md).
 
 ### hosts
 
-This defines the domains and hosts for VVV to listen on. If the vagrant host plugin is installed, your hosts file will automatically be updated when the machine is turned on and off
+This defines the domains and hosts for VVV to listen on. If a vagrant host plugin is installed, your hosts file will automatically be updated when the machine is turned on and off.
 
 ```yaml
 hosts:
-  - local.wordpress.test
+  - one.wordpress.test
 ```
 
-## vm_config
+### custom
 
-These settings control the Virtual Machine that Vagrant creates. By default this is 2048MB of RAM and 1 core.
+This allows setting various overrides for the site. In the `default-config.yml` file above, you can see how it is being used to set various wordpress constants:
+
+```yaml
+custom:
+  wpconfig_constants:
+    WP_DEBUG: true
+    WP_DEBUG_LOG: true
+```
+
+## The utilities block
+
+[Utilities](https://varyingvagrantvagrants.org/docs/en-US/utilities/) are repositories and packages VVV pulls in to provide additional services, such as PHPMyAdmin, TLS certificate authorities or MemcachedAdmin. You can learn more about the VVV core utilities [here](https://varyingvagrantvagrants.org/docs/en-US/utilities/).
+
+[Additional versions of PHP](adding-a-new-site/changing-php-version.md) may also be added here.
+
+## The vm_config block
+
+The `vm_config` section controls how Vagrant provisions the virtual machine, and can be used to increase the memory given to VVV and the number of CPU cores, along with the provider for the machine. For WP core development, we recommend at least 2GB (`2048`) of memory. If you have 4GB of system memory, lower this to `768` or you may encounter issues.
 
 This configuration would tell VVV to create a virtual machine with 4GB of RAM and a single CPU core:
 
@@ -154,9 +105,11 @@ vm_config:
   cores: 1
 ```
 
-## general
+VVV uses VirtualBox by default, but you can set the `provider` key to specify `hyperv`, `parallels`, or `vmware_desktop`.
 
-This section is used for general options for the suite.
+## The general block
+
+This section defines options which are specific to VVV.
 
 ### db_backup
 
@@ -173,12 +126,6 @@ Set to true to use a synced shared folder for MariaDB database storage, could cr
 ### github_token
 
 Tells composer can use a GitHub token to speed up download and avoid rate limiting issues when downloading packages.
-
-## Utilities
-
-These are repositories and packages VVV pulls in to provide additional services, such as PHPMyAdmin, TLS certificate authorities or MemcachedAdmin.
-
-[Additional versions of PHP](adding-a-new-site/changing-php-version.md) may also be added here.
 
 ## vagrant-plugins
 
