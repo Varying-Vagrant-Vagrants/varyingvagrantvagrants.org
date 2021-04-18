@@ -116,7 +116,7 @@ This creates a collection of sites for working on WordPress.org named `wordpress
 
 Provisioning this site takes a longer time, so be patient. It can be used to work on WordPress TV, WordCamps, and other .org sites.
 
-### WordPress Nightly Multisite
+### WordPress Nightly Site
 
 ```yaml
 sites:
