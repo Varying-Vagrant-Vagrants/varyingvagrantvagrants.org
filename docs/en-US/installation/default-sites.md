@@ -1,6 +1,6 @@
 ---
 category: 2. Getting Started
-order: 3
+order: 4
 title: Default sites in VVV
 description: VVV creates and sets up several WordPress installs for you automatically.
 permalink: /docs/en-US/references/default-sites/
@@ -24,5 +24,5 @@ Or, you can create as many new sites as you want by taking advantage of VVV's au
 
 VVV's `config`, `database`, `log` and `www` directories are shared with the virtualized server.
 
-These shared directories allow you to work, for example, in `vagrant-local/www/wordpress-one` in your local file system and have those changes immediately reflected in the virtualized server's file system and http://one.wordpress.test/. Likewise, if you `vagrant ssh` and make modifications to the files in `/srv/www/`, you'll immediately see those changes in your local file system.
+These shared directories allow you to work, for example, in `vvv-local/www/wordpress-one` in your local file system, and have those changes immediately reflected in the virtualized server's file system and http://one.wordpress.test/. Likewise, if you `vagrant ssh` and make modifications to the files in `/srv/www/`, you'll immediately see those changes in your local file system.
 
