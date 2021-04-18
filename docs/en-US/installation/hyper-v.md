@@ -1,6 +1,6 @@
 ---
 category: 2. Getting Started
-order: 3
+order: 5
 title: Hyper-V
 description: Using VVV with Hyper-V on Windows.
 permalink: /docs/en-US/installation/hyper-v/
@@ -12,13 +12,13 @@ To use HyperV, you must run the command prompt or shell as an administrator. If 
 
 We also recommend using the vb guest vagrant plugin when using `hyperv`, which can sometimes avoid filesystem mounting issues:
 
-```sh
+```powershell
 vagrant plugin install vagrant-vbguest
 ```
 
 When using VVV, add the provider flag to your commands like this:
 
-```
+```powershell
 vagrant up --provider=hyperv
 ```
 
