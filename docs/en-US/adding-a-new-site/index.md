@@ -24,7 +24,7 @@ Here are several examples of sites that can be added to `config/config.yml` in t
 [A site with a wp-content git repo](#a-site-with-a-wp-content-git-repo){: .btn}
 [Drupal](#drupal){: .btn}
 [CraftCMS](#craftcms){: .btn}
-[VIP Go](#vip-go){: .btn}
+[VIP Go](https://docs.wpvip.com/how-tos/set-up-a-vip-go-local-development-site/#h-step-2-add-a-new-site-and-site-settings){: .btn target="_blank"}
 [Adding An Existing Sites](adding-an-existing-site.md){: .btn}
 
 {% include always_reprovision.html %}
@@ -200,33 +200,6 @@ sites:
 This creates a Craft CMS site named `cratt` at `http://craft.test` in the `www/craft/public_html` folder.
 
 After provisioning, you will need to complete setup by following [the official Craft CMS install instructions](https://craftcms.com/docs/3.x/installation.html).
-
-### VIP Go
-
-```yaml
-sites:
-  vip:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
-    hosts:
-      - vip.test
-    folders:
-      # VIP Site repo
-      public_html/wp-content/:
-        git:
-          repo: https://github.com/Automattic/vip-go-skeleton.git
-          overwrite_on_clone: true
-      # VIP Go MU Plugins
-      public_html/wp-content/mu-plugins:
-        git:
-          repo: https://github.com/Automattic/vip-go-mu-plugins.git
-          overwrite_on_clone: true
-          hard_reset: true
-          pull: true
-```
-
-This creates a VIP Go WordPress site using the VIP Go Skeleton git repo. It then clones the VIP Go runtime and updates it when re-provisioning. Swap the `Automattic/vip-go-skeleton` for your client repository and double check the instructions on the VIP website.
-
-The created site will be named `vip`, at `http://vip.test` in the `www/vip/public_html` folder.
 
 ### Additional Options
 
