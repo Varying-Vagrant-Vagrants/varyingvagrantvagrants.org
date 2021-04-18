@@ -228,20 +228,6 @@ This creates a VIP Go WordPress site using the VIP Go Skeleton git repo. It then
 
 The created site will be named `vip`, at `http://vip.test` in the `www/vip/public_html` folder.
 
-### ...
-
-```yaml
-sites:
-  multisite-subdir:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
-    hosts:
-      - multisite.test
-    custom:
-      wp_type: subdirectory
-```
-
-This creates a ... named `...` at `http://...` in the `www/.../public_html` folder.
-
 ### Additional Options
 
 The custom site template supports options such as changing the version of WordPress, database names, site titles, and more. [For a full list of what the official site template supports,  check the readme on Github](https://github.com/Varying-Vagrant-Vagrants/custom-site-template).
