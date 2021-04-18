@@ -6,9 +6,9 @@ description: default-config.yml is the default config file that VVV uses to set 
 permalink: /docs/en-US/config/
 ---
 
-`config/default-config.yml` is the [default config file](https://raw.githubusercontent.com/Varying-Vagrant-Vagrants/VVV/stable/config/default-config.yml) that VVV uses to set itself up. Copy this file to `config/config.yml` to make changes and add your own site. 
+VVV uses a config file to identify what sites it has, which software to install, and what kind of virtual machine you prefer. This file is located in at `config/config.yml`, and is created the first time you run a vagrant command by copying `config/default-config.yml`. [This is what the default config file looks like](https://raw.githubusercontent.com/Varying-Vagrant-Vagrants/VVV/stable/config/default-config.yml).
 
-**Before VVV 3.2 the file was `vvv-config.yml` and `vvv-custom.yml` in the VVV root.**
+**Before VVV 3.2 the file was named `vvv-config.yml`/`vvv-custom.yml` and was located in the main folder.**
 
 ## The sites block
 
@@ -17,6 +17,8 @@ When defining a site, the only required item is the name of the site. This singl
 ```yaml
 example-site:
 ```
+
+You could not visit `example-site` however unless you created a `www/example-site` folder and place a `vvv-nginx.conf` file inside it and reprovisioned.
 
 Note that site provisioners may add their own custom values, see the [custom-site-template](https://github.com/Varying-Vagrant-Vagrants/custom-site-template/blob/master/README.md) documentation on GitHub for information on what is supported.
 
