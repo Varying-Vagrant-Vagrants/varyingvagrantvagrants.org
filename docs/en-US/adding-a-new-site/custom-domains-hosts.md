@@ -14,7 +14,7 @@ There are 3 ways to define hosts
 
 The recommended way is to use the `config/config.yml` file. `vvv-hosts` is supported for backwards compatibility, and `vvv-init.sh` can be used for edge circumstances.
 
-When changing hosts, the Nginx config will need updating so that Nginx knows to listen for requests on those domains. If this isn't done, the VVV dashboard will appear instead of the desired site. If the `vagrant-hostsupdater` plugin is installed ([See the requirements](../installation/software-requirements.md)), this will also add the domain to your machine's HOST file.
+When changing hosts, the Nginx config will need updating so that Nginx knows to listen for requests on those domains. If this isn't done, the VVV dashboard will appear instead of the desired site. If the `vagrant-goodhosts` plugin is installed ([See the requirements](../installation/software-requirements.md)), this will also add the domain to your machine's HOST file.
 
 {% include always_reprovision.html %}
 
@@ -24,21 +24,24 @@ When adding a site in `config/config.yml`, add a hosts section listing the domai
 
 ```yaml
 example:
+  ....
   hosts:
     - example.com
 ```
 
 This will map `example.com` to the `example` site, and update the hosts file on your machine.
 
-## vvv-hosts
+## vvv-hosts files
 
-VVV 1 added hosts using a file named `vvv-hosts`, and VVV 2 continues support for this for backwards compatibility reasons. Place this as a text file with no file extension in a `provision` subfolder, or in the root of the site.
+VVV 1 added hosts using a file named `vvv-hosts`, and VVV 2 continues support for this for backwards compatibility reasons. `config.yml` should always be preferred.
 
-Here's an example that adds 2 domains:
+Place this as a text file with no file extension in a `provision` subfolder, or in the root of the site. Here's an example that adds 2 domains:
 
 ```
 example.com
 example.net
 ```
 
-For fast performance, put `vvv-hosts` in the root of the site, or a `.vvv`/`provision` subfolder. This will avoid a 3 level deep folder search.
+For fast performance, put `vvv-hosts` in the root of the site, or a `.vvv/provision` subfolder. This will avoid a 3 level deep folder search.
+
+Note that VVV will not add these hosts the first time you add the site. This is because the VVV updates the hosts file _before_ sites are set up. The second time you reprovision it will be added.
