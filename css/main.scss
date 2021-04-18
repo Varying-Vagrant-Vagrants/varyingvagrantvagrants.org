@@ -35,7 +35,7 @@ $button-border-highlight-color: lighten( $brand-colour-light, 3% );
 $button-border-highlight-hover-color: lighten( $vvv-highlight, 3% );
 
 $button-border-shadow-color: darken( $vvv-highlight, 6%);
-$button-border-shadow-hover-color: darken( $brand-colour-light, 6% );
+$button-border-shadow-hover-color: darken( $vvv-highlight, 15% );
 
 $button-text-color: lighten( $content-color, 20% );
 $button-text-hover-color: darken( $brand-colour, 50% );
