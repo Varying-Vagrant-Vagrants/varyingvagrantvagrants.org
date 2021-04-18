@@ -15,3 +15,5 @@ vm_config:
   memory: 1024
   cores: 1
 ```
+
+You can also specify the `box` and `provider` used to create the VM.

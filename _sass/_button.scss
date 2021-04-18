@@ -1,0 +1,33 @@
+.btn {
+	background: $button-background;
+	border: 2px solid $button-border-color;
+	border-bottom-color: $button-border-shadow-color;
+	border-radius: 8px;
+	border-top-color: $button-border-highlight-color;
+	color: $button-text-color;
+	display: inline-block;
+	font-weight: bold;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	padding: 8px 20px;
+	text-decoration: none;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:active,
+	&:hover:not(:disabled),
+	&:focus:not(:disabled) {
+		background-color: $button-background-hover;
+		border-color: $button-border-hover-color;
+		border-bottom-color: $button-border-shadow-hover-color;
+		border-top-color: $button-border-highlight-hover-color;
+		color: $button-text-hover-color;
+	}
+
+	&:active {
+		background-color: $brand-colour;
+		color: $button-text-active-color;
+	}
+}

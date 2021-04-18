@@ -6,7 +6,7 @@ description: VVV has come a long way since it was first launched as Varying Vagr
 permalink: /docs/en-US/history/
 ---
 
-VVV is a [10up](http://10up.com) creation and [transitioned](https://10up.com/blog/varying-vagrant-vagrants-future/) to a community organization in 2014.
+VVV was originally a [10up](http://10up.com) creation and [transitioned](https://10up.com/blog/varying-vagrant-vagrants-future/) to a community organization in 2014.
 
 VVV has come a long way since it was first [launched as Varying Vagrant Vagrants](https://jeremyfelt.com/code/2012/12/11/varying-vagrant-vagrants/) in December of 2012. Initially introduced as an exploration of workflow for immediate project needs at [10up](http://10up.com), VVV caught speed quickly as more and more of the team was introduced. During an internal [10up developer summit](https://10up.com/blog/10up-2013-developer-summit/) in March of 2013, Vagrant as a tool was a highlight and more developers made the conversion.
 

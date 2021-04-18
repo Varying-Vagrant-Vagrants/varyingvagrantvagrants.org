@@ -16,14 +16,14 @@ For example, if we put our test sites in a subfolder, we can specify each site l
 test-site-1:
   repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
   vm_dir: /srv/www/test-sites/test-site-1
-  local_dir:  /Users/janesmith/vagrant-local/www/test-sites/test-site-1
+  local_dir:  /Users/janesmith/vvv-local/www/test-sites/test-site-1
   hosts:
     - testsite1.com
 
 test-site-2:
   repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
   vm_dir: /srv/www/test-sites/test-site-2
-  local_dir: /Users/janesmith/vagrant-local/www/test-sites/test-site-2
+  local_dir: /Users/janesmith/vvv-local/www/test-sites/test-site-2
   hosts:
     - testsite2.com
 ```

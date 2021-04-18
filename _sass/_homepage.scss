@@ -1,0 +1,18 @@
+.homepage-top {
+	background-color: $brand-colour;
+	color: #fff;
+	margin-bottom: 3em;
+	padding: 5em 2em 2em 2em;
+	text-align: center;
+
+	> img {
+		max-height: 20vh;
+	}
+
+	.teddybear {
+		font-family: monospace;
+		line-height: 1em;
+		margin-bottom:-2em;
+		white-space: pre;
+	}
+}

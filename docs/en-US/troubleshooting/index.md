@@ -128,8 +128,8 @@ The network configuration picks an IP of `192.168.50.4`. It could cause conflict
 
 VVV relies on the stability of both Vagrant and VirtualBox. These caveats are common to Vagrant environments and are worth noting:
 
- - If the directory VVV is inside of is moved once provisioned (`vagrant-local`), it may break.
-    - If `vagrant destroy` is used before moving, this should be fine.
+ - If the VVV folder is renamed or moved it may break.
+    - But if you destroy VVV with `vagrant destroy` before moving/renaming, then there will be no issues.
  - If VirtualBox is uninstalled, VVV will break.
  - If Vagrant is uninstalled, VVV will break.
 

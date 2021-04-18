@@ -16,7 +16,7 @@ If you have upgraded from older versions you might need to manually add it.
 
 You can find it in your `config/config.yml` file:
 
-```YAML
+```yaml
 utilities:
   core:
     - tls-ca

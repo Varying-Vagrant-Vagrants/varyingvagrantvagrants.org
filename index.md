@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: homepage
 title: VVV
 category: 1. Introduction
 order: 1

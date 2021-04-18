@@ -17,3 +17,15 @@ Pull requests can be opened against this repository for the following:
 Once a pull request is merged to `master`, Travis CI is used to deploy the built site files to an AWS S3 bucket. Nginx is used to direct traffic to the correct branch directory in the bucket.
 
 Issues to discuss changes to the code and documentation should be opened at the main [VVV repository](https://github.com/Varying-Vagrant-Vagrants/vvv).
+
+## Testing and Building
+
+Use this command to run a local instance for writing docs:
+
+```sh
+bundle exec jekyll serve
+```
+
+It will give you a URL to visit in your browser, and rebuilds the docs and stylesheets when files change.
+
+The site is auto-deployed by Travis when the `main` branch is updated.

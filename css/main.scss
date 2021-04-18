@@ -23,10 +23,30 @@ $baseurl: "{{ site.baseurl }}";
 $mobile-break: 700px;
 $full-width-break: $nav-width + ($space * 4) + $content-max-width;
 
+$vvv-highlight: #ebcb8b;
+$button-background: $nav-background-color;
+$button-background-hover: lighten( $vvv-highlight, 20% );
+$button-background-active: $brand-colour;
+
+$button-border-color: $brand-colour-light;
+$button-border-hover-color: $vvv-highlight;
+
+$button-border-highlight-color: lighten( $brand-colour-light, 3% );
+$button-border-highlight-hover-color: lighten( $vvv-highlight, 3% );
+
+$button-border-shadow-color: darken( $vvv-highlight, 6%);
+$button-border-shadow-hover-color: darken( $vvv-highlight, 30% );
+
+$button-text-color: lighten( $content-color, 20% );
+$button-text-hover-color: darken( $brand-colour, 50% );
+$button-text-active-color: #fff;
+
 @import "mixins";
 @import "normalize";
 @import "pygments";
 @import "typography";
+@import "button";
 @import "code";
 @import "tables";
 @import "layout";
+@import "homepage";

@@ -4,16 +4,26 @@ table {
 }
 
 tr {
-	border-bottom: 1px solid #EEE;
+	border-bottom: 1px solid #E0E0E0;
+
+	tbody &:last-of-type {
+		border-bottom: none;
+	}
 }
 
 tr:nth-child(even) {
-	background: #fcfcfc;
+	background: #fbfbfb;
 }
 
 td, th {
+	border-left: 1px solid #f0f0f0;
 	padding: 8px;
 	text-align: left;
+	vertical-align: top;
+
+	&:first-of-type {
+		border-left: none;
+	}
 }
 
 th {

@@ -66,9 +66,18 @@
 		</header>
 
 		<section class="main">
-			<div class="page-header">
-				<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
-				<h3>{{ page.title }}</h3>
+			<div class="homepage-top">
+				<img src="{{ site.baseurl }}/images/vvv-tight.png" alt="{{ site.title }} logo" />
+				<img src="{{ site.baseurl }}/images/vvv-tight.png" alt="{{ site.title }} logo" />
+				<img src="{{ site.baseurl }}/images/vvv-tight.png" alt="{{ site.title }} logo" />
+				<p>A local development environment for WordPress and PHP Applications.</p>
+				<p><a class="btn" href="{{ site.baseurl }}/docs/en-US/installation/">Install VVV</a></p>
+				<div class="teddybear">
+ ✧ ▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄ ✧ 
+  ✧█▒▒░░░░░░░░░▒▒█   
+✧   █░░█░░░░░█░░█ ✧  
+ ▄▄  █░░░▀█▀░░░█  ▄▄✧
+█░░█ ▀▄░░░░░░░▄▀ █░░█</div>
 			</div>
 			<article class="content">
 				{{ content }}

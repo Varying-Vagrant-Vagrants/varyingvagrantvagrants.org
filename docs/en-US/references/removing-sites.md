@@ -20,7 +20,7 @@ This is very useful if you want to disable a site to speed up provisioning, or b
 
 For example:
 
-```YAML
+```yaml
   wordpress-default:
     repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
     skip_provisioning: true
@@ -39,7 +39,7 @@ You can comment out the site in the config file, but this is no different to usi
 E.g.
 
 
-```YAML
+```yaml
 #  wordpress-default:
 #    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
 #    skip_provisioning: false
@@ -55,16 +55,15 @@ There are multiple steps to doing this:
  - Reprovision
  - Delete its folder
  - Delete its database
- 
- Reprovisioning will remove host entries and Nginx config files
- 
- ### Why not Automatically Remove Sites?
- 
- We could auto-remove sites when they're removed from `config/config.yml`, but this leads to several problems:
- 
-  - Any typos or mistakes in `config/config.yml` would lead to bulk site removal, and accidental destruction of data
-  - DB's are created by provisioner scripts, so VVV core has no insight to know which databases it can remove. This also becomes a problem for shared databases
-  - Commenting out a site would delete all of its files and content
- 
- For these reasons, site removal is a manual process, as this ensures it's intentional, and prevents accidental deletion.
- 
+
+Reprovisioning will remove host entries and Nginx config files
+
+### Why not Automatically Remove Sites?
+
+We could auto-remove sites when they're removed from `config/config.yml`, but this leads to several problems:
+
+ - Any typos or mistakes in `config/config.yml` would lead to bulk site removal, and accidental destruction of data
+ - DB's are created by provisioner scripts, so VVV core has no insight to know which databases it can remove. This also becomes a problem for shared databases
+ - Commenting out a site would delete all of its files and content
+
+For these reasons, site removal is a manual process, as this ensures it's intentional, and prevents accidental deletion.
