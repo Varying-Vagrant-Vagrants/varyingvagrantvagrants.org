@@ -23,12 +23,12 @@ Any client you use should be able to use the details listedunder direct connecti
 
 ### Direct Connections
 
-These detaials can be used with any SQL client. To do this, you need to connect to the Virtual Machine, not localhost, using the username and password `external`. This type of connection is useful for PHPStorm.
+These details can be used with any SQL client. To do this, you need to connect to the Virtual Machine, not localhost, using the username and password `external`. This type of connection is useful for PHPStorm.
 
 | Field    	| Value    	  |
 |----------	|------------	|
 | host     	| `vvv.test` 	|
-| port     	| `3006`     	|
+| port     	| `3306`     	|
 | username 	| `external` 	|
 | password 	| `external` 	|
 
