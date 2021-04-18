@@ -1,7 +1,7 @@
 pre, code, tt {
 	font-family: Inconsolata, Consolas, Courier, "Courier New", "Liberation Mono", monospace;
 	font-size: 0.85em;
-	white-space: pre-wrap;
+	white-space: pre;
 	border-radius: 2px;
 	line-height: 1.4;
 	font-weight: 400;
@@ -9,6 +9,7 @@ pre, code, tt {
 	color: #eff1f5;//#FAFAFA;
 	border-radius: 2px;
 }
+
 
 code {
 	padding: 4px 6px;
@@ -22,11 +23,12 @@ pre {
 	font-size: 0.9em;
 	white-space: pre;
 	overflow: auto;
+	overflow-x: scroll;
 	border-radius: 3px;
 
 	code, tt {
 		font-size: inherit;
-		white-space: pre-wrap;
+		white-space: pre;
 		background: transparent;
 		border: none;
 		padding: 0
@@ -38,4 +40,36 @@ li > code,
 p > code {
 	padding: 4px 6px;
 	white-space: nowrap;
+}
+
+.language-yaml,
+.language-powershell {
+	line-height: 1.2em;
+	position: relative;
+
+	&::before {
+		background-color: lighten( #343d46, 10% );
+		color: #eff1f5;
+		border-top-left-radius: 2px;
+		border-top-right-radius: 2px;
+		display: inline-block;
+    	font-size: 70%;
+	    font-family: sans-serif;
+		padding: 0 9px;
+		border:1px solid #343d46;
+		border-bottom: 0;
+	}
+
+	pre {
+		border-top-left-radius: 0;
+	}
+
+}
+
+.language-powershell::before {
+	content: 'Windows';
+}
+
+.language-yaml::before {
+	content: 'YAML';
 }
