@@ -14,7 +14,7 @@ First we need to tell VVV about the site. I'm going to give the site the name `e
 
 To do this, we will update the sites list by editing the file `config/config.yml` in the main VVV folder like this:
 
-```YAML
+```yaml
 sites:
 
   .... other sites...
