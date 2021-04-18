@@ -1,0 +1,32 @@
+.btn {
+	background: $nav-background-color;
+	border: 2px solid $brand-colour-light;
+	border-bottom-color: darken($brand-colour-light, 6%);
+	border-radius: 8px;
+	border-top-color: lighten($brand-colour-light, 3%);
+	color: lighten( $content-color, 20% );
+	display: inline-block;
+	font-weight: bold;
+	margin-right: 1em;
+	padding: 8px 20px;
+	text-decoration: none;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:hover:not(:disabled),
+	&:focus:not(:disabled),
+	&:active {
+		background-color: lighten( #ebcb8b, 20% );
+		border-color: #ebcb8b;
+		border-bottom-color: darken(#ebcb8b, 6%);
+		border-top-color: lighten(#ebcb8b, 3%);
+		color: darken( $brand-colour, 50% );
+	}
+
+	&:active {
+		background-color: $brand-colour;
+		color: #fff;
+	}
+}
