@@ -25,7 +25,7 @@ Here are several examples of sites that can be added to `config/config.yml` in t
 [Drupal](#drupal){: .btn}
 [CraftCMS](#craftcms){: .btn}
 [VIP Go](https://docs.wpvip.com/how-tos/set-up-a-vip-go-local-development-site/#h-step-2-add-a-new-site-and-site-settings){: .btn target="_blank"}
-[Adding An Existing Sites](adding-an-existing-site.md){: .btn}
+[Adding An Existing Site](adding-an-existing-site.md){: .btn}
 
 {% include always_reprovision.html %}
 
