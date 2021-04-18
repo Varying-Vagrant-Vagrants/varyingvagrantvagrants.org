@@ -6,26 +6,40 @@ description: Adding a new site in VVV is as simple as adding it under the sites 
 permalink: /docs/en-US/adding-a-new-site/
 ---
 
-Adding a new site is as simple as adding it under the sites section of `config.yml`. If `config/config.yml` does not exist, you can create it by copying `config/default-config.yml` to `config/config.yml`.
+Adding a new site is as simple as adding it under the sites section of `config.yml` then reprovisioning. If `config/config.yml` does not exist run `vagrant status` and it willl be created for you.
 
 First we need to tell VVV about the site. I'm going to give the site the name `example`, with the URL `example.test`, and we'll tell VVV to use the custom site template. The custom site template will tell VVV how to download and install WordPress, think of it as a recipe or manual for how to install WordPress.
 
-### Adding a Single Site
+## Examples
 
-To do this, we will update the sites list by editing the file `config/config.yml` in the main VVV folder like this:
+Here are several examples of sites that can be added to `config/config.yml` in the `sites:` section:
+
+[WordPress Site](#wordpress-site){: .btn}
+[WordPress Sub-directory Multisite](#wordpress-sub-directory-multisite){: .btn}
+[WordPress Sub-domain Multisite](#wordpress-sub-domain-multisite){: .btn}
+[WordPress Core Dev Environment](#wordpress-core-dev-environment){: .btn}
+[WordPress.org Meta Environment](#wordpressorg-meta-environment){: .btn}
+[WordPress Nightly Site](#wordpress-nightly-site){: .btn}
+[Empty Custom Site](#empty-custom-site){: .btn}
+[A site with a wp-content git repo](#a-site-with-a-wp-content-git-repo){: .btn}
+[Drupal](#drupal){: .btn}
+[CraftCMS](#craftcms){: .btn}
+[VIP Go](#vip-go){: .btn}
+[Adding An Existing Sites](adding-an-existing-site.md){: .btn}
+
+{% include always_reprovision.html %}
+
+### WordPress Site
 
 ```yaml
 sites:
-
-  .... other sites...
-
   example:
     repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
     hosts:
       - example.test
-
-  .... other sites...
 ```
+
+This creates a site named `example` with a WordPress install at `http://example.test` in the `www/example/public_html` folder.
 
 The `repo` parameter tells VVV we want a WordPress site and downloads install instructions. The `hosts` parameter tells VVV the domain to use for the site.
 
@@ -35,27 +49,198 @@ Then, save `config/config.yml` and run `vagrant up --provision` to update VVV wi
 
 Once `vagrant reload --provision` finishes, you will have a brand new WordPress install! We can now visit http://example.test to view the site, or open the `www/example` folder in an editor to start making changes to our site. To log in, use `admin` and `password`.
 
-### Adding a Multisite
-
-To add a multisite we follow the same steps, but with an additional parameter:
+### WordPress Sub-directory Multisite
 
 ```yaml
 sites:
-
-  .... other sites...
-
-  multisite:
-    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template
+  multisite-subdir:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
     hosts:
       - multisite.test
     custom:
       wp_type: subdirectory
-
-  .... other sites...
-
 ```
 
-This creates a subdirectory based multisite. Changing `wp_type` to `subdomain` will give a subdomain multisite, just remember to add new subdomains to the hosts section.
+This creates a subdirectory based multisite named `multisite-subdir` at `http://multisite.test` in the `www/multisite-subdir/public_html` folder.
+
+### WordPress Sub-domain Multisite
+
+```yaml
+sites:
+  multisite-subdomain:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - subdomainmultisite.test
+      - one.subdomainmultisite.test
+      - two.subdomainmultisite.test
+    custom:
+      wp_type: subdomain
+```
+
+This creates a subdmain multisite named `multisite-subdomain` at `http://subdomainmultisite.test` in the `www/multisite-subdomain/public_html` folder. You will need to update the `hosts` section and reprovision when adding new subdomains to the multisite. We recommend doing this in advance.
+
+### WordPress Core Dev Environment
+
+```yaml
+sites:
+  wordpress-trunk:
+    description: "An svn based WP Core trunk dev setup, useful for contributor days, Trac tickets, patches"
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template-develop.git
+    hosts:
+      - trunk.wordpress.test
+```
+
+This creates a WordPress core dev site named `wordpress-trunk` at `http://trunk.wordpress.test` in the `www/wordpress-trunk/public_html` folder.
+
+This is useful for contributing to new WordPress releases, testing patches, or making fixes. This is not optimal for client work on plugins and themes.
+
+### WordPress.org Meta Environment
+
+```yaml
+sites:
+  wordpress-meta-environment:
+    description: "An environment useful for contributions to the WordPress meta team."
+    repo: https://github.com/WordPress/meta-environment.git
+    hosts:
+      - wp-meta.test
+    custom:
+      provision_site:
+        "buddypressorg.test": true
+        "jobs.wordpressnet.test": true
+        "wordcamp.test": true
+        "wordpressorg.test": true
+        "wordpresstv.test": true
+```
+
+This creates a collection of sites for working on WordPress.org named `wordpress-meta-environment` at `http://wp-meta.test` in the `www/wordpress-meta-environment/public_html` folder.
+
+Provisioning this site takes a longer time, so be patient. It can be used to work on WordPress TV, WordCamps, and other .org sites.
+
+### WordPress Nightly Multisite
+
+```yaml
+sites:
+  nightly:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - wpnightly.test
+    custom:
+      wp_type: nightly
+```
+
+This creates a WP Nightly site named `nightly` at `http://wpnightly.test` in the `www/nightly/public_html` folder. This is useful for testing themes and plugins with unreleased versions of WordPress.
+
+### Empty Custom Site
+
+```yaml
+sites:
+  foobar:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - mysite.test
+    custom:
+      wp_type: empty
+```
+
+This creates a site named `foobar` with an empty `public_html` folder to put a PHP application in at `http://mysite.test` in the `www/foobar/public_html` folder.
+
+You might do this if you have an existing site, or want to manually install WordPress or competing software.
+
+### A Site With a wp-content Git Repo
+
+```yaml
+sites:
+  acmecorp:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - acme.test
+    folders:
+      public_html/wp-content/:
+        git:
+          repo: repo to clone...
+          overwrite_on_clone: true
+```
+
+This creates a WP site named `acmecorp` at `http://acme.test` in the `www/acmecorp/public_html` folder. The specified git repo will be cloned to `public_html/wp-content`, and the existing folder will be deleted and replaced with the git repo if cloning has not happened yet.
+
+### Drupal
+
+```yaml
+sites:
+  drupal-site:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - drupal.test
+    folders:
+      public_html:
+        composer:
+          create-project: drupal/recommended-project
+    custom:
+      wp_type: none
+```
+
+This creates a Drupal site named `drupal-site` at `http://drupal.test` in the `www/drupal-site/public_html` folder. You will need to create a database using PHPMyAdmin for this site.
+
+### CraftCMS
+
+```yaml
+sites:
+  craft:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - craft.test
+    folders:
+      public_html:
+        composer:
+          create-project: craftcms/craft
+    custom:
+      wp_type: none
+```
+
+This creates a Craft CMS site named `cratt` at `http://craft.test` in the `www/craft/public_html` folder.
+
+After provisioning, you will need to complete setup by following [the official Craft CMS install instructions](https://craftcms.com/docs/3.x/installation.html).
+
+### VIP Go
+
+```yaml
+sites:
+  vip:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - vip.test
+    folders:
+      # VIP Site repo
+      public_html/wp-content/:
+        git:
+          repo: https://github.com/Automattic/vip-go-skeleton.git
+          overwrite_on_clone: true
+      # VIP Go MU Plugins
+      public_html/wp-content/mu-plugins:
+        git:
+          repo: https://github.com/Automattic/vip-go-mu-plugins.git
+          overwrite_on_clone: true
+          hard_reset: true
+          pull: true
+```
+
+This creates a VIP Go WordPress site using the VIP Go Skeleton git repo. It then clones the VIP Go runtime and updates it when re-provisioning. Swap the `Automattic/vip-go-skeleton` for your client repository and double check the instructions on the VIP website.
+
+The created site will be named `vip`, at `http://vip.test` in the `www/vip/public_html` folder.
+
+### ...
+
+```yaml
+sites:
+  multisite-subdir:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    hosts:
+      - multisite.test
+    custom:
+      wp_type: subdirectory
+```
+
+This creates a ... named `...` at `http://...` in the `www/.../public_html` folder.
 
 ### Additional Options
 
