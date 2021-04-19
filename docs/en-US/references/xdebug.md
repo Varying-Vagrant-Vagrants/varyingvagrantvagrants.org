@@ -30,7 +30,7 @@ Currently when Xdebug is active it will be in the step debugger mode, with profi
 Here are some general guidelines on connecting:
 
  - If your IDE requires a domain to connect to, use `vvv.test` instead of a raw IP.
- - User the default Xdebug port ( `9003` at the time of writing ).
+ - Uses the default Xdebug port ( `9003` at the time of writing ).
  - The PHP Info page will show an Xdebug info section with connection checks, use the PHP Info button in the dashboard tools section.
  - The IDEKEY shouldn't be necessary, but we set it to `VVVDEBUG`.
  - Map the `www` subfolder on to `/srv/www`.
