@@ -8,11 +8,18 @@ permalink: /docs/en-US/installation/
 
 First make sure you have all the necessary software installed for VVV to run:
 
-[VirtualBox*](https://www.virtualbox.org/wiki/Downloads){: .btn target="_blank"}
 [Vagrant](https://www.vagrantup.com/downloads.html){: .btn target="_blank"}
 [Git](https://git-scm.com/downloads){: .btn target="_blank"}{: .btn target="_blank"}
 
-_* On Windows, if you have Docker installed then VirtualBox should be substituted for [Hyper-V](hyper-v.md). Hyper-V provides better performance and reliability._
+You will also need one of the following:
+
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads){: .btn target="_blank"}
+[Parallels Business/Pro*](https://www.parallels.com/){: .btn target="_blank"}
+[Hyper-V](hyper-v.md){ .btn target="_blank"}
+
+Windows users with Docker installed or Hyper-V turned on must use [Hyper-V](hyper-v.md). Microsoft Hyper-V provides better performance and reliability.
+
+_* Parallels support is currently in beta, but is a viable option for Apple Silicon users. A Business or Pro license is required._
 
 Reboot your computer after installing the above software.
 
