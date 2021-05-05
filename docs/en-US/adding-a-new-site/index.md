@@ -77,7 +77,7 @@ sites:
       wp_type: subdomain
 ```
 
-This creates a subdmain multisite named `multisite-subdomain` at `http://subdomainmultisite.test` in the `www/multisite-subdomain/public_html` folder. You will need to update the `hosts` section and reprovision when adding new subdomains to the multisite. We recommend doing this in advance.
+This creates a subdomain multisite named `multisite-subdomain` at `http://subdomainmultisite.test` in the `www/multisite-subdomain/public_html` folder. You will need to update the `hosts` section and reprovision when adding new subdomains to the multisite. We recommend doing this in advance.
 
 ### WordPress Core Dev Environment
 
