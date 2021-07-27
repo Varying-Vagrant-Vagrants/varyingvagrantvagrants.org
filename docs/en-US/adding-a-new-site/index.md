@@ -2,13 +2,13 @@
 category: 3. Adding a New Site
 order: 1
 title: Adding a New Site
-description: Adding a new site in VVV is as simple as adding it under the sites section of vvv-custom.yml. Create it by copying `config/default-config.yml` to `config/config.yml`.
+description: Adding a new site in VVV is as simple as adding it under the sites section of `config.yml`.
 permalink: /docs/en-US/adding-a-new-site/
 ---
 
-Adding a new site is as simple as adding it under the sites section of `config.yml` then reprovisioning. If `config/config.yml` does not exist run `vagrant status` and it willl be created for you.
+Adding a new site is as simple as adding it under the sites section of `config.yml` then reprovisioning. If `config/config.yml` does not exist, run `vagrant status` and it will be created for you.
 
-First we need to tell VVV about the site. I'm going to give the site the name `example`, with the URL `example.test`, and we'll tell VVV to use the custom site template. The custom site template will tell VVV how to download and install WordPress, think of it as a recipe or manual for how to install WordPress.
+A VVV site in `config.yml` will have a name, a provisioner `repo:` that tells VVV how to install software such as WordPress, and `hosts` that tell it the top level domains to serve the site on. We use the `.test` TLD as it's protected by RFCs and designed for local development ( `.local` has more restrictions and is used by Bonjour/Zeroconf ).
 
 ## Examples
 
