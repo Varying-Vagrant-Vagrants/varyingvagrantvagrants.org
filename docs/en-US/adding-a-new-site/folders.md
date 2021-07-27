@@ -35,4 +35,4 @@ Each sub-key is a path relative to the sites location. The `git` parameter takes
  - `pull:` true or false, should VVV run `git pull` on provision?
  - `hard_reset:` true or false, should VVV discard all changes in the git repository on reprovision?
  
-Each subfolder is processed in the order defined in the config file. Currently clones are recursive. Private repositories require that the host machine has configured SSH access to GitHub, and that SSH agent forwarding is available.
+Each subfolder is processed in the order defined in the config file. This happens _after_ the sites provisioner script runs, but before the Nginx config file is installed. Currently clones are recursive. Private repositories require that the host machine has configured SSH access to GitHub, and that SSH agent forwarding is available.
