@@ -163,6 +163,8 @@ sites:
 
 This creates a WP site named `acmecorp` at `http://acme.test` in the `www/acmecorp/public_html` folder. The specified git repo will be cloned to `public_html/wp-content`, and the existing folder will be deleted and replaced with the git repo if cloning has not happened yet.
 
+[Click here for more information about custom git checkouts and folders.](folders.md)
+
 ### Drupal
 
 ```yaml
