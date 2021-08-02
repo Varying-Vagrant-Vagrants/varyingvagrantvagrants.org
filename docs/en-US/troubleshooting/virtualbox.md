@@ -10,9 +10,11 @@ permalink: /docs/en-US/troubleshooting/virtualbox
 
 You need to update to a newer version of VirtualBox. Download the latest version of VirtualBox and install it.
 
-## Apple Silicon
+## Apple Silicon/Arm64 Chips
 
-VirtualBox does not support Apple Silicon, you will need to find an alternative provider. We currently do not have hardware to test this, and there are no recommended providers. We may provide docker as a provider in the future, but there is no timeframe on this. When we do, we will announce it, so if you don't see documentation for Docker, then it is not supported or usable. We do however want help with this!
+VirtualBox does not support Arm/Apple Silicon, to use VVV with Apple Silicon devices such as the M1 Macbooks or newer, you will need to use the Parallels provider with Parallels Pro/Business.
+
+For non-Apple ARM64 chips such as raspberry Pis, these are unsupported. In theory you could run the provisioner scripts directly but this is untested and unsupported. If you do this, open a GitHub issue to indicate success/failure.
 
 ## VirtualBox Installer/Update Failing on MacOS
 
@@ -34,7 +36,7 @@ After the installer fails, close the installer and head to the system preference
 
 ### Restarting your computer
 
-Turning your Mac off and on again with a hard reboot can solve lots of problems related to VirtualBox installations.
+Turning your machine off and on again with a hard reboot can solve lots of problems related to VirtualBox installations.
 
 ### Clearing staged kernel extensions
 
@@ -110,7 +112,7 @@ VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component SessionMachi
 VBoxManage.exe: error: Context: "SaveSettings()" at line 3111 of file VBoxManageModifyVM.cpp
 ```
 
-Then the `vagrant destroy` command didn't manage to clean things up properly.
+Then the `vagrant destroy` command didn't clean things up properly.
 
 The default location for these files is:
 
