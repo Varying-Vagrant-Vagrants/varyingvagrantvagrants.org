@@ -139,7 +139,7 @@ sites:
     hosts:
       - mysite.test
     custom:
-      wp_type: empty
+      wp_type: none
 ```
 
 This creates a site named `foobar` with an empty `public_html` folder to put a PHP application in at `http://mysite.test` in the `www/foobar/public_html` folder.
