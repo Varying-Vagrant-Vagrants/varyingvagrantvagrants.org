@@ -16,15 +16,4 @@ The default VVV config comes with a disabled site that uses this template, just 
 
 ## Contributing to WordPress Meta
 
-There is a meta environment maintained by the WordPress team, it provides a way to work with:
-
- - buddypress.org
- - jobs.wordpress.net
- - wordcamp.org
- - wordpress.org
-   - developer.wordpress.org
-   - global.wordpress.org
-   - translate.wordpress.org.
- - wordpress.tv
-
-It also provides some starting content. To enable it, set `skip_provisioning: false` on `wordpress-meta-environment` in your config file and reprovision. If it isn't present, you can copy it from the default config file. For more information visit [the meta-environment github repository](https://github.com/WordPress/meta-environment).
+There _was_ a meta environment maintained by the WordPress team, but it's unmaintained. For more informatiion as well as its replacements, visit [the meta-environment github repository](https://github.com/WordPress/meta-environment), or ask in the meta channel in the WordPress slack.
