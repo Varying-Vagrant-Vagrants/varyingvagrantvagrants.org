@@ -49,7 +49,10 @@ You can profile a page with tideways by adding `?enable-tideways=1` to the URL.
 
 ## Profiling All Pages On A Site
 
-Create a new parameter `tideways: true` in your `config.yml` and reprovision. Now all pages on that sites domains will be profiled automatically. For example:
+Create a new parameter `tideways: true` in your `config.yml` and reprovision. Now all pages on that sites domains will be profiled automatically if Tideways is turned on the machine with the command `tideways_on`.
+As per xDebug it is required the module to be loaded so you need to execute `tideways_[on/off]` based on your needs. This let you to turn on xDebug and off Tideways (not enable both).
+
+For example:
 
 ```yaml
 sites:
