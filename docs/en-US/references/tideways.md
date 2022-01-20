@@ -43,14 +43,15 @@ utilities:
 
 To enable tideways, SSH into the VM and run `tideways_on`. This will turn off XDebug and turn on Tideways. Turning on XDebug will turn off tideways as the two cannot run at the same time. You can also use `tideways_off` to disable Tideways.
 
-## How To Profile A Page
+## How to profile
 
-You can profile a page with tideways by adding `?enable-tideways=1` to the URL.
+### How To Profile A Page
 
-## Profiling All Pages On A Site
+You can profile a single page with tideways by adding `?enable-tideways=1` to the URL.
 
-Create a new parameter `tideways: true` in your `config.yml` and reprovision. Now all pages on that sites domains will be profiled automatically if Tideways is turned on the machine with the command `tideways_on`.
-As per xDebug it is required the module to be loaded so you need to execute `tideways_[on/off]` based on your needs. This let you to turn on xDebug and off Tideways (not enable both).
+### Profiling All Pages On A Site
+
+Create a new parameter `tideways: true` in your `config.yml` and reprovision. Now all pages on that sites domains will be profiled automatically without adding parameters to the URLs.
 
 For example:
 
