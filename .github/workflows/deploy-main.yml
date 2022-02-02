@@ -1,0 +1,39 @@
+name: VVV Deployment
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Add SSH Key
+      run: |
+        mkdir -p ${HOME}/.ssh
+        echo "${{secrets.FOGGY_DEPLOY_KEY}}" > ${HOME}/.ssh/id_rsa
+        chmod 700 ${HOME}/.ssh
+        chmod 600 ${HOME}/.ssh/*
+        eval `ssh-agent -s`
+        ssh-add ${HOME}/.ssh/id_rsa
+
+    - name: setup ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+        bundler-cache: true
+      run: bundle install
+
+    - name: build jekyll
+      run: |
+      ./inject-repo-documentation.sh
+      bundle exec jekyll build
+
+    - name: Sync _site directory
+      run: |
+        rsync -rcvzh --delete \
+        -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
+        ./_site/ ${{secrets.FOGGY_DEPLOY_USER}}@${{secrets.FOGGY_DEPLOY_HOST}}:${{secrets.FOGGY_DEPLOY_PATH}}
