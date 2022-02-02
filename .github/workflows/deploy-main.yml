@@ -25,10 +25,10 @@ jobs:
       with:
         ruby-version: 2.7
         bundler-cache: true
-      run: bundle install
 
     - name: build jekyll
       run: |
+        bundle install
         ./inject-repo-documentation.sh
         bundle exec jekyll build
 
