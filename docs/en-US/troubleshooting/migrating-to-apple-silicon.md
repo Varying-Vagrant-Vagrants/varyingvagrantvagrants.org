@@ -10,7 +10,6 @@ When using VVV on an Apple Silicon device there are a number of steps to take:
 
  - Install a copy of Parallels Pro/Business
  - Install the `vagrant-parallels` plugin
- - Modify `config.yml` so that `provider: parallels` is set and uncommented.
 
 If you have done this, VVV should turn on ok! In the future Docker may be a viable alternative but this is in the prototype stages.
 
