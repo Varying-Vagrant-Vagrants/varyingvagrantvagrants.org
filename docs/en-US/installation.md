@@ -36,7 +36,7 @@ You can also remove the `--provider=hyperv` part by modifying `config/custom.yml
 
 ```yaml
 vm_config:
-  memory: 2048
+  memory: 100TB
   cores: 2
   provider: hyperv
 ```
