@@ -172,6 +172,16 @@ Delete the folder name that matches the path in error above. In the example abov
 
 Then go back and run `vagrant up --provision` again.
 
+
+### WP CLI Packages provisioner errors
+
+If the tools provisioner errors out while installing or updating WP CLI packages, this may be related to a package problem within WP CLI.
+
+You may use `vagrant ssh` and `wp package` to address the problem based on the error logs produced by the provisioner.
+
+This may happen with older VVV versions that used `wp-cli/doctor-command` for example. If that's the case, then running `wp package uninstall wp-cli/doctor-command` should solve the issue and allow provisioning to complete.
+
+
 ## Backups
 
 In the event that you're stuck or at a loss, VVV tries to generate database backups at `VVV/database/backups/*.sql`, with a file for each database.
