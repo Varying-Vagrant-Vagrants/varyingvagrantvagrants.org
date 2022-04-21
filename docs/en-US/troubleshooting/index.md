@@ -177,7 +177,7 @@ Then go back and run `vagrant up --provision` again.
 
 If the tools provisioner errors out while installing or updating WP CLI packages, this may be related to a package problem within WP CLI.
 
-You may use `vagrant ssh` and `wp package` to address the problem based on the error logs produced by the provisioner.
+You may use `vagrant ssh` from VVV root folder and then `wp package` from inside the VM to address the problem based on the error logs produced by the provisioner (the provisioner will point you to the path inside the VM where to find the logs).
 
 This may happen with older VVV versions that used `wp-cli/doctor-command` for example. If that's the case, then running `wp package uninstall wp-cli/doctor-command` should solve the issue and allow provisioning to complete.
 
