@@ -14,6 +14,28 @@ Need help? **Let us know on GitHub! Don't hesitate to open a [new issue on GitHu
 
 If you're having trouble reaching VVV hosts in the browser, [take a look at the hosts troubleshooting article](hosts.md)
 
+### Already Fixed Problems
+
+If provisioning fails, there's a high chance it has already been fixed. Update your VVV to the newest version.
+
+If updating to the latest version does not help, try the `develop` branch:
+
+Switch to `develop`:
+```sh
+git checkout develop
+```
+
+Then make sure it's the _latest_ `develop`:
+```sh
+git pull
+```
+
+And reprovision:
+```sh
+vagrant up --provision
+```
+
+
 ### SSL/TLS Issues
 
 For your browser to accept `https://` addresses on VVV sites, it needs to trust the VVV root certificate. [This article will explain how to add the VVV root certificate on your computer.](../https/index.md).
