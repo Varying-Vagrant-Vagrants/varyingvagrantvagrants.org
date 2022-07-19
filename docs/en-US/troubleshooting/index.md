@@ -35,6 +35,21 @@ And reprovision:
 vagrant up --provision
 ```
 
+### I Installed Docker On Windows
+
+Docker uses a Hyper-V virtual machine as a Linux container host, but VirtualBox and Hyper-V do not work together. You may be lucky and find that VirtualBox pretends it works but uses Hyper-V behind the scenes, but if you had already set up VVV then you may have issues.
+
+To work around Hyper-V though you have two options
+
+#### Switch VVV to Hyper-V
+
+You will need to recreate your VM, so `vagrant destroy`, then change the `provider` in `config/config.yml` to `hyperv` ( `provider: hyperv` ) and reprovision.
+
+#### Use WSL for Docker ( best )
+
+WSL does not use Hyper-V and can provide faster performance when used with Docker.
+
+[Microsoft have a tutorial on how to do this with docker desktop here](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers), once done do not forget to turn off Hyper-V in windows features and restart. You may need to back up any data in docker containers before doing this.
 
 ### SSL/TLS Issues
 
