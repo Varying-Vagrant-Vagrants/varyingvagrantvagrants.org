@@ -8,16 +8,19 @@ permalink: /docs/en-US/adding-a-new-site/changing-php-version/
 
 You can set the PHP version in `config/config.yml` when defining a site. To do this, use the `nginx_upstream` option to specify the PHP version in Nginx or `php` for the provisioner. VVV also needs to be told to install that version of PHP using the `utilities` section.
 
-Here’s an example that uses PHP v7.1 for Nginx:
+Here’s an example that uses PHP v8.0:
 
 ```yaml
 sites:
-  example:
-    nginx_upstream: php71
+  phpeight:
+    repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
+    nginx_upstream: php80
+    hosts:
+      - phpeight.test
 
-utilities:
+extensions:
   core:
-    - php71
+    - php80
 ```
 
 **Tip:** If you add the `php` utility, it will install all available versions of PHP, skipping this step.
@@ -41,7 +44,7 @@ sites:
       - src.wordpress-develop.test
       - build.wordpress-develop.test
 
-utilities:
+extensions:
   core:
     - memcached-admin
     - opcache-status
@@ -86,3 +89,8 @@ utilities:
 ```
 
 That site is now using PHP 7.1, remember to reprovision using `vagrant reload --provision` for changes to take effect.
+
+## Troubleshooting
+
+- If your VVV install is old, you may have a `utilities` section, this was renamed to `extensions`. Do not have both at the same time.
+- If you ask VVV to use a version of PHP that isn't installed, provisioning may fail, and your site will not use the requested version. Add the extension for that PHP as shown in the examples and reprovision.
