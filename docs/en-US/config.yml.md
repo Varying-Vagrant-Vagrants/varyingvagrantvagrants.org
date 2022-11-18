@@ -78,7 +78,7 @@ hosts:
 
 ### php
 
-This option is similar to the previous one, the difference is that let you to set the PHP vverson to use during the provisiong of that site.
+This option is similar to the previous one, the difference is that it lets you to set the PHP version to use during the provisioning of that site.
 
 ### custom
 
