@@ -6,7 +6,7 @@ description: VVV supports the nginx_upstream option in the sites section of conf
 permalink: /docs/en-US/adding-a-new-site/changing-php-version/
 ---
 
-You can set the PHP version in `config/config.yml` when defining a site. To do this, use the `nginx_upstream` option to specify the PHP version in Nginx or `php` for the provisioner. VVV also needs to be told to install that version of PHP using the `utilities` section.
+You can set the PHP version in `config/config.yml` when defining a site. To do this, use the `php` option to specify the PHP version in Nginx and the provisioner. VVV also needs to be told to install that version of PHP using the `utilities` section.
 
 Here’s an example that uses PHP v8.0:
 
@@ -56,27 +56,11 @@ extensions:
     - php74
 ```
 
-## Forcing a Version of PHP for Nginx
+## Forcing a Version of PHP
 
 It may be desirable to force a site to use a particular version of PHP, even if `config/config.yml` disagrees.
 
-This is done by overriding the `nginx_upstream` value inside `vvv-nginx.conf`. To do this change this:
-
-```nginx
- set $upstream {upstream};
-```
-
-To this:
-
-```nginx
- set $upstream php73;
-```
-
-That site is now using PHP 7.1, remember to reprovision using `vagrant reload --provision` for changes to take effect.
-
-## Forcing a Version of PHP for the provision
-
-In case do you need a specific PHP version used during the provision like for composer or wp cli you can do it using this parameter in the `config.yml`, as example:
+This is done by overriding the `php` value inside `vvv-nginx.conf`. To do this change this:
 
 ```yaml
 sites:
