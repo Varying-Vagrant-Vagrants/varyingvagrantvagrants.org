@@ -12,9 +12,9 @@ The fix is simple, switch to `.test`, here, you'll find instructions on converti
 
 ## Why not about `.local` or `.localhost`?
 
-`.test`, `.local`, and `.localhost` are all protected by RFCs (Request for Comments) and can't be bought as `.dev` was by Google. However, they have strings attached.
+The `.test`, `.local`, and `.localhost` domains are all protected by standards documented in RFCs (Request for Comments) and cannot be bought as `.dev` was by Google. However, they have specific purposes and strings attached.
 
-`.local` is used by zeroconf and bonjour to make computers on a local network easier to use. For example, if I name my machine `vvv`, other computers can reach it at `vvv.local`. This would break VVV's dashboard however.
+ - `.local` is used by zeroconf and bonjour to make computers on a local network easier to use. For example, if I name my machine `vvv`, other computers can reach it at `vvv.local`. This might stop you reaching VVV's dashboard however. You can use `.local` for VVV sites but it is not recommended.
 
 `.localhost` does not have this issue, but the RFC forces it to the local loopback. This means you could never share the site with other computers on the same network for testing.
 
