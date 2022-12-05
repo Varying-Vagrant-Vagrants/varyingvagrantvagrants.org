@@ -6,13 +6,13 @@ description: Issues with .dev sites
 permalink: /docs/en-US/troubleshooting/dev-tld/
 ---
 
-A lot of people use the `.dev` domain for local development, but this TLD is actually owned by Google, and isn't free for development. They've begun enforcing special rules on sites using this domain when using Chrome. You also run the risk of clashes with Google owned domains.
+A lot of people use the `.dev` domain for local development, but this top-level domain (TLD) is actually owned by Google, and isn't free for development. They've begun enforcing special rules on sites using this domain when using Chrome. You also run the risk of clashes with Google owned domains.
 
 The fix is simple, switch to `.test`, here, you'll find instructions on converting existing sites over. For this reason, the dashboard supports `http://vvv.test`
 
 ## Why not about `.local` or `.localhost`?
 
-`.test`, `.local`, and `.localhost` are all protected by RFCs and can't be bought as `.dev` was by Google. However, they have strings attached.
+`.test`, `.local`, and `.localhost` are all protected by RFCs (Request for Comments) and can't be bought as `.dev` was by Google. However, they have strings attached.
 
 `.local` is used by zeroconf and bonjour to make computers on a local network easier to use. For example, if I name my machine `vvv`, other computers can reach it at `vvv.local`. This would break VVV's dashboard however.
 
