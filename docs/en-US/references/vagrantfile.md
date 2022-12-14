@@ -9,7 +9,7 @@ The `Vagrantfile` is how VVV configures Vagrant, but it can be extended with a `
 
 ## How VVV uses the `Vagrantfile`
 
-The [Vagrantfile][https://www.vagrantup.com/docs/vagrantfile/] is a Ruby file that tells Vagrant how to set up the Virtual machine.
+The [Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) is a Ruby file that tells Vagrant how to set up the Virtual machine.
 
 This file also does some housekeeping, such as copying `config/default-config.yml` to `config/config.yml`, migrating from the old config locations, and printing out the VVV splash logo with debugging info.
 
