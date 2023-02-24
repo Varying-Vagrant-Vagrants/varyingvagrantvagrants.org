@@ -23,4 +23,4 @@ git branch --set-upstream-to=origin/stable stable
 git pull
 ```
 
-Once this is done, run `vagrant reload --provision` to update.
+Once this is done, run `vagrant up --provision` to update.
