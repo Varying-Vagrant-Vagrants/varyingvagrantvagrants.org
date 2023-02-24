@@ -10,7 +10,7 @@ permalink: /docs/en-US/references/basic-usage/
 
 [Change into the VVV folder](#changing-into-the-vvv-folder) and run:
 
-```shell
+```sh
 vagrant up
 ```
 
@@ -22,7 +22,7 @@ You may be asked for an admin password at the beginning. This will be your compu
 
 [Change into the VVV folder](#changing-into-the-vvv-folder) and run:
 
-```shell
+```sh
 vagrant halt
 ```
 
@@ -34,7 +34,7 @@ You may be asked for an admin password to remove hosts.
 
 [Change into the VVV folder](#changing-into-the-vvv-folder) and run:
 
-```shell
+```sh
 vagrant reload
 ```
 
