@@ -1,14 +1,16 @@
 ---
 category: 7. Extensions
 order: 1
-title: Utilities
+title: Extensions
 description: Extensions are packages for VVV that install system level functionality. The core extensions package installs phpMyAdmin, webgrind, and other versions of PHP.
 permalink: /docs/en-US/utilities/
 ---
 
-Utilities are packages for VVV that install system level functionality. For example, a core utilities package is provided by default. This default utility can install phpMyAdmin, webgrind, and other versions of PHP.
+Extensions are packages for VVV that install system level functionality. For example, a core extensions package is provided by default. This default extension can install phpMyAdmin, webgrind, and other versions of PHP.
 
-Here are the default utilities as they would be defined in `config/config.yml` in full:
+Extensions used to be called utilities, but were renamed to avoid confusion.
+
+Here are the default extensions as they would be defined in `config/config.yml` in full:
 
 ```yaml
 extensions:
@@ -21,7 +23,7 @@ extensions:
     - mongodb # needed for Tideways/XHGui
     - tideways # PHP profiling tool, also installs xhgui
     - wpcli-dev # Install a dev environment to use and contribute to WP-CLI
-    - php # Install all the php utilities available automatically
+    - php # Install all the php extensions available automatically
     #- php74
     #- php80
     #- php81
@@ -33,7 +35,7 @@ extension-sources:
     branch: master
 ```
 
-UtilExtensions are defined at the end of the file, outside of the sites section. The `extension-sources` section defines the name of an extension and where it can be found.
+Extensions are defined at the end of the file, outside of the sites section. The `extension-sources` section defines the name of an extension and where it can be found.
 
 ## Adding Extensions
 
@@ -71,23 +73,23 @@ The name of the subfolder maps directly on to what is put in `config/config.yml`
 
 ## Extension Provisioning
 
-It's possible to provision a single extension on its own, without provisioning the whole of VVV using the `--provision-with` parameter of vagrant.  
+It's possible to provision a single extension on its own, without provisioning the whole of VVV using the `--provision-with` parameter of vagrant.
 As an example from the `config/config.yml` above, we can run `vagrant provision --provision-with="extension-core-php81"` to provision only the PHP 8.1 extension.
 
 Important: To work this command requires that the extension is also enabled in the `config/config.yml` file, it won't add it automatically.
 
-## Community Extension
+## Community Extensions
 
 Community extensions are independently developed and contributed by interested members of the community, provided on an 'as is' basis.
 
 
-* **VVV Wordmove Extension**: Installs Wordmove (and Ruby).  
+* **VVV Wordmove Extension**: Installs Wordmove (and Ruby).
   [https://github.com/welaika/vvv-wordmove/](https://github.com/welaika/vvv-wordmove/)
-* **VVV Solr Extensions**: Installs Solr and Java.  
+* **VVV Solr Extensions**: Installs Solr and Java.
   [https://github.com/ocean90/vvv-solr-utilities](https://github.com/ocean90/vvv-solr-utilities)
 * **VVV GMP Extension**: Installs GMP.
   [https://github.com/denisyilmaz/vvv-gmp-utility](https://github.com/denisyilmaz/vvv-gmp-utility)
-* **VVV Browscap Extension**: Installs browscap module for PHP.  
+* **VVV Browscap Extension**: Installs browscap module for PHP.
   [https://github.com/dingo-d/browscap-vvv-utility](https://github.com/dingo-d/browscap-vvv-utility)
 * **VVV Redis Extension**: Installs Redis.
   [https://github.com/dingo-d/redis-vvv-utility](https://github.com/dingo-d/redis-vvv-utility)

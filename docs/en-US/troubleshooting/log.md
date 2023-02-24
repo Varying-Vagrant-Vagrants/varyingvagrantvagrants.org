@@ -37,11 +37,11 @@ We do not log emails to a file, instead VVV provides MailHog which intercepts al
 
 ## Provisioner Output
 
-By default, site and utility provisioners only show errors in the terminal when provisioning. The full output is logged to a file. For example:
+By default, site and extension provisioners only show errors in the terminal when provisioning. The full output is logged to a file. For example:
 
  - `log/provisioners/2020.04.07_15-48-16/provisioner-main.log`
  - `log/provisioners/2020.04.07_15-48-16/provisioner-site-wordpress-one.log`
- - `log/provisioners/2020.04.07_15-48-16/provisioner-utility-core-tls-ca.log`
+ - `log/provisioners/2020.04.07_15-48-16/provisioner-extension-core-tls-ca.log`
 
 ## Other Logs
 

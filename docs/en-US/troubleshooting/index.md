@@ -134,7 +134,7 @@ If there's a typo or syntax error in `config/config.yml` the provisioner will fa
 
 VVV is an active project, but if it isn't up to date you might suffer from bugs that have already been fixed.
 
-Updating is often as simple as doing a `git pull` and restarting/reprovisioning VVV with `vagrant reload --provision`. However, occasionally a new version of VVV may require the underlying software to be updated first, so it is wise to check the [News &amp; Changelog](/blog/) before doing this.
+Updating is often as simple as doing a `git pull` and restarting/reprovisioning VVV with `vagrant up --provision`. However, occasionally a new version of VVV may require the underlying software to be updated first, so it is wise to check the [News &amp; Changelog](/blog/) before doing this.
 
 If you downloaded a zip originally, you can [convert your install to use git](../installation/converting-zip-install-to-git.md) and then perform the update process above.
 

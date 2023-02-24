@@ -18,7 +18,7 @@ If, for example, you have a site at `www/my-test-site`, you can migrate it to VV
 my-test-site:
 ```
 
-Turn your VVV instance off and on to reload the config, and VVV will now look inside `www/my-test-site` for provisioning files the same way VVV 1 does.
+Reprovision VVV with `vagrant up --provision` to reload the config, and VVV will now look inside `www/my-test-site` for provisioning files the same way VVV 1 does.
 
 ### Git Repositories
 
