@@ -8,4 +8,5 @@ group :jekyll_plugins do
   gem 'jekyll-feed'#, '0.7.2'
   gem 'jekyll-paginate'
   gem 'jekyll-relative-links'
+  gem "jekyll-tabs"
 end

@@ -45,6 +45,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-relative-links
+  - jekyll-tabs
 
 collections:
   docs:
