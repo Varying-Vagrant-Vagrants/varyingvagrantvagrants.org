@@ -11,15 +11,50 @@ First make sure you have all the necessary software installed for VVV to run:
 [Vagrant](https://www.vagrantup.com/downloads.html){: .btn target="_blank"}
 [Git](https://git-scm.com/downloads){: .btn target="_blank"}{: .btn target="_blank"}
 
-You will also need one of the following:
+You will also need to install/use a vagrant provider:
 
+{% tabs platform %}
+
+{% tab platform Windows %}
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads){: .btn target="_blank"}
-[Parallels Business/Pro*](https://www.parallels.com/){: .btn target="_blank"}
 [Hyper-V](hyper-v.md){: .btn target="_blank"}
 
-Windows users with Docker installed or Hyper-V turned on must use [Hyper-V](hyper-v.md). Microsoft Hyper-V provides better performance and reliability.
+Windows users with Docker installed or Hyper-V turned on should use [Hyper-V](hyper-v.md). VirtualBox can be unreliable when Hyper-V is turned on.
 
-_* Parallels support is currently in beta, but is a viable option for Apple Silicon users. A Business or Pro license is required._
+{% endtab %}
+
+{% tab platform MacOS (Intel) %}
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads){: .btn target="_blank"}
+[Parallels Business/Pro*](https://www.parallels.com/){: .btn target="_blank"}
+
+For Parallels you will also need to install the `vagrant-parallels` plugin.
+
+{% endtab %}
+
+{% tab platform MacOS (Arm/M1/M2) %}
+[Parallels Business/Pro*](https://www.parallels.com/){: .btn target="_blank"}
+[❕ VirtualBox](#){: .btn.disabled}
+
+For Parallels you will also need to install the `vagrant-parallels` plugin.
+
+### Can I Use VirtualBox on Apple Silicon?
+
+No. VirtualBox does not support Apple Silicon, and the technical preview for Arm is years away from being usable. We do not recommend attempting to use the technical preview and we guarantee failure. This may change in the mid to far future ( eta 2025/2026 ).
+
+Note that installing it inside Windows is unlikely to work, and would require a Parallels installation to install Windows anyway.
+
+### Can I Use Docker?
+
+Officially no, there have been efforts to get Docker working but they have been years in the making and are highly experimental with caveats. The only reliable solution on Apple Silicon is Parallels Pro/Business. For more information check the pull requests on GitHub.
+
+{% endtab %}
+
+{% tab platform Linux %}
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads){: .btn target="_blank"}
+{% endtab %}
+
+{% endtabs %}
+
 
 Reboot your computer after installing the above software.
 
