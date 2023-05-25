@@ -11,7 +11,7 @@ First make sure you have all the necessary software installed for VVV to run:
 [Vagrant](https://www.vagrantup.com/downloads.html){: .btn target="_blank"}
 [Git](https://git-scm.com/downloads){: .btn target="_blank"}{: .btn target="_blank"}
 
-You will also need to install/use a vagrant provider:
+You will also need to install/use one of these vagrant providers:
 
 {% tabs platform %}
 
@@ -62,14 +62,23 @@ Reboot your computer after installing the above software.
 
 We're going to install VVV to a `vvv-local` folder in your home directory. First, grab a copy of VVV using `git`. Open a terminal or a command prompt, and enter the following command:
 
-Mac/Linux:
+{% tabs installcommand %}
+
+{% tab installcommand MacOS/Linux %}
+
+In a terminal:
+
 ```sh
 git clone -b stable https://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vvv-local
 cd ~/vvv-local
 vagrant plugin install --local
 ```
 
-Windows elevated/admin command prompt:
+{% endtab %}
+
+{% tab installcommand Windows %}
+
+In an elevated/admin command prompt:
 
 ```powershell
 git clone -b stable https://github.com/Varying-Vagrant-Vagrants/VVV.git %systemdrive%%homepath%/vvv-local
@@ -77,7 +86,12 @@ cd %systemdrive%%homepath%/vvv-local
 vagrant plugin install --local
 ```
 
-Alternatively you can download a zip file from github but we strongly recommend against this, as it makes updating VVV much harder. If you did this, skip the first commmand.
+This should have created a `vvv-local` folder in your users main folder, e.g. `C:\Users\myusername\` alongside the documents/pictures/videos/etc folders.
+
+{% endtab %}
+{% endtabs %}
+
+Alternatively you can download a zip file from github but we strongly recommend against this though, as it makes updating VVV _much_ harder. If you did this, skip the first commmand.
 
 At this point you might want to adjust the `config/config.yml` file before VVV creates the local developer environment. This is your opportunity to do so. You might do this in order to change the provider vagrant uses to Hyper-V instead of VirtualBox, or to provision additional sites the first time the VM is created to save time.
 
@@ -85,19 +99,24 @@ At this point you might want to adjust the `config/config.yml` file before VVV c
 
 Start VVV by opening a terminal, changing to the VVV folder, and running `vagrant up`. For example:
 
-Mac/Linux:
+{% tabs startcommand %}
+{% tab startcommand MacOS/Linux %}
 
 ```sh
 cd ~/vvv-local
 vagrant up
 ```
 
-Windows elevated/admin command prompt:
+{% endtab %}
+{% tab startcommand Windows %}
 
 ```powershell
 cd %systemdrive%%homepath%/vvv-local
 vagrant up
 ```
+
+{% endtab %}
+{% endtabs %}
 
 The first time you run `vagrant up` may take longer while it installs PHP and other tools. When finished it will show a teddy bear and a VVV logo that look like this:
 
