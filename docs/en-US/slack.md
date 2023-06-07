@@ -1,12 +1,14 @@
 ---
-category: 9. Slack
+category: 9. VVV Slack
 order: 9
 title: VVV Slack Workspace
 description: Join the VVV Slack Workspace
 permalink: /docs/en-US/slack/
 ---
 
-We have a slack workspace available at [https://vvv-local.slack.com](https://vvv-local.slack.com). This is where VVV contributors can organise and work on VVV. We also have a support channel for asking questions!
+We have a slack workspace available at [https://vvv-local.slack.com](https://vvv-local.slack.com). This is where VVV contributors can organise and work on VVV. We also have a support channel for asking VVV related questions!
+
+_Note this is not a general vagrant help resource._
 
 All users of the slack workspace agree to abide by our [code of conduct](code-of-conduct.md).
 

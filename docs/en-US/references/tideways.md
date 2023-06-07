@@ -5,7 +5,7 @@ title: Tideways and XHGui
 permalink: /docs/en-US/references/tideways-xhgui/
 ---
 
-VVV has different utilities available for developers, one of them is [Tideways](https://github.com/tideways/php-xhprof-extension) (open source version) and is an optional tool described on their website as:
+VVV has different extensions available for developers, one of them is [Tideways](https://github.com/tideways/php-xhprof-extension) (open source version) and is an optional tool described on their website as:
 
 > Tideways saves you time by taking the guesswork out of your app's backend performance. Gain detailed insights, spot performance bottlenecks, and get real-time error detection alerts.
 
@@ -33,11 +33,11 @@ Then Tideways will be installed when you reprovision using `vagrant up --provisi
 
 ## How To Enable Tideways
 
-To make Tideways and XHGui work, you need to make sure `tideways` is added to the utilities in your `config.yml` for example:
+To make Tideways and XHGui work, you need to make sure `tideways` is added to the extensions in your `config.yml` for example:
 
 ```yaml
-utilities:
-  core: # The core VVV utility
+extensions:
+  core: # The core VVV extension
     - tideways # PHP profiling tool, also installs XHGui
 ```
 

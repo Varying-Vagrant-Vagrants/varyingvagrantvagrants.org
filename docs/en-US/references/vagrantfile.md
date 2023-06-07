@@ -9,7 +9,7 @@ The `Vagrantfile` is how VVV configures Vagrant, but it can be extended with a `
 
 ## How VVV uses the `Vagrantfile`
 
-The [Vagrantfile][https://www.vagrantup.com/docs/vagrantfile/] is a Ruby file that tells Vagrant how to set up the Virtual machine.
+The [Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/) is a Ruby file that tells Vagrant how to set up the Virtual machine.
 
 This file also does some housekeeping, such as copying `config/default-config.yml` to `config/config.yml`, migrating from the old config locations, and printing out the VVV splash logo with debugging info.
 
@@ -19,7 +19,7 @@ On loading the first step is to read the `config.yml` and load the settings, app
 
 The next step is to mount the various VVV folders inside the VM machine with the dedicated settings for the various VM providers.
 
-The final steps are to define the provision scripts, settings for the various plugins and provisions for some utilities and tools like the VVV dashboard.
+The final steps are to define the provision scripts, settings for the various plugins and provisions for some extensions and tools like the VVV dashboard.
 
 ## Customization
 
@@ -37,7 +37,7 @@ Community resources:
 
 If a `provision/provision-post.sh` is found, this file will be ran at the end of the main provisioner. This provides an opportunity to add additional packages.
 
-Note that we recommend using custom utilities instead to install extra packages.
+Note that we recommend using custom extensions instead to install extra packages.
 
 #### provision-custom.sh
 

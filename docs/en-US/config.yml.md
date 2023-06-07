@@ -55,17 +55,21 @@ If the `repo` key is being used, and the `branch` key is set, VVV will checkout 
 
 ### vm_dir
 
-This controls the folder inside the virtual machine the sites folder is mapped on to.
+This controls the folder inside the virtual machine the sites main folder is mapped on to. Note that this only works for the primary site folder, it can't be used for map arbitrary/multiple subfolders.
 
 ### local_dir
 
-This controls which folder on the host machine VVV uses for this site. By default, it uses a folder with the sites name inside the `www` subfolder.
+This controls which folder on the host machine VVV uses for this sites main folder. By default, it uses a folder with the sites name inside the `www` subfolder.
 
-For example, a site named `test` would be inside the `www/test` folder.
+For example, a site named `test` would be inside the `www/test` folder. Note this only works for an entire site, it cannot be used to selectively map subfolders or sub-sections of a sites.
+
+### php
+
+This option sets the version of PHP used to provision and serve the site. [You can read more about it here](adding-a-new-site/changing-php-version.md).
 
 ### nginx_upstream
 
-This option sets where Nginx passes requests to, and is primarily for setting the PHP version used. [You can read more about it here](adding-a-new-site/changing-php-version.md).
+This option sets where Nginx passes requests to, and is primarily for setting the PHP version used. Most people should use the `php:` parameter instead to do this. [You can read more about it here](adding-a-new-site/changing-php-version.md).
 
 ### hosts
 
@@ -91,9 +95,11 @@ custom:
     WP_DEBUG_LOG: true
 ```
 
-## The utilities block
+## The extensions block
 
-[Utilities](https://varyingvagrantvagrants.org/docs/en-US/utilities/) are repositories and packages VVV pulls in to provide additional services, such as PHPMyAdmin, TLS certificate authorities or MemcachedAdmin. You can learn more about the VVV core utilities [here](https://varyingvagrantvagrants.org/docs/en-US/utilities/).
+[Extensions](https://varyingvagrantvagrants.org/docs/en-US/utilities/) are repositories and packages VVV pulls in to provide additional services, such as PHPMyAdmin, TLS certificate authorities or MemcachedAdmin. You can learn more about the VVV core utilities [here](https://varyingvagrantvagrants.org/docs/en-US/utilities/).
+
+Extensions used to be called utilities, but we renamed it after people kept creating feature requests to avoid confusion.
 
 [Additional versions of PHP](adding-a-new-site/changing-php-version.md) may also be added here.
 

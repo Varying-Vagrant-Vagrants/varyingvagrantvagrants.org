@@ -35,6 +35,21 @@ And reprovision:
 vagrant up --provision
 ```
 
+### I Installed Docker On Windows
+
+Docker uses a Hyper-V virtual machine as a Linux container host, but VirtualBox and Hyper-V do not work together. You may be lucky and find that VirtualBox pretends it works but uses Hyper-V behind the scenes, but if you had already set up VVV then you may have issues.
+
+To work around Hyper-V though you have two options
+
+#### Switch VVV to Hyper-V
+
+You will need to recreate your VM, so `vagrant destroy`, then change the `provider` in `config/config.yml` to `hyperv` ( `provider: hyperv` ) and reprovision.
+
+#### Use WSL for Docker ( best )
+
+WSL does not use Hyper-V and can provide faster performance when used with Docker.
+
+[Microsoft have a tutorial on how to do this with docker desktop here](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers), once done do not forget to turn off Hyper-V in windows features and restart. You may need to back up any data in docker containers before doing this.
 
 ### SSL/TLS Issues
 
@@ -134,7 +149,7 @@ If there's a typo or syntax error in `config/config.yml` the provisioner will fa
 
 VVV is an active project, but if it isn't up to date you might suffer from bugs that have already been fixed.
 
-Updating is often as simple as doing a `git pull` and restarting/reprovisioning VVV with `vagrant reload --provision`. However, occasionally a new version of VVV may require the underlying software to be updated first, so it is wise to check the [News &amp; Changelog](/blog/) before doing this.
+Updating is often as simple as doing a `git pull` and restarting/reprovisioning VVV with `vagrant up --provision`. However, occasionally a new version of VVV may require the underlying software to be updated first, so it is wise to check the [News &amp; Changelog](/blog/) before doing this.
 
 If you downloaded a zip originally, you can [convert your install to use git](../installation/converting-zip-install-to-git.md) and then perform the update process above.
 
@@ -193,6 +208,16 @@ Delete the folder name that matches the path in error above. In the example abov
     ....VirtualBox VMs\localdev_306449ed646\
 
 Then go back and run `vagrant up --provision` again.
+
+
+### WP CLI Packages provisioner errors
+
+If the tools provisioner errors out while installing or updating WP CLI packages, this may be related to a package problem within WP CLI.
+
+You may use `vagrant ssh` from VVV root folder and then `wp package` from inside the VM to address the problem based on the error logs produced by the provisioner (the provisioner will point you to the path inside the VM where to find the logs).
+
+For example, older versions of VVV installed the `wp-cli/doctor-command` package, but this was removed because it was unreliable and caused issues. If it's causing you issues, you can run `vagrant ssh` to enter the virtual machine, then `wp package uninstall wp-cli/doctor-command` to remove the package and fix the problem.
+
 
 ## Backups
 

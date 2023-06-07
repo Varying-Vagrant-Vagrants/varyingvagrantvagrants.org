@@ -47,7 +47,7 @@ Then, save `config/config.yml` and run `vagrant up --provision` to update VVV wi
 
 {% include always_reprovision.html %}
 
-Once `vagrant reload --provision` finishes, you will have a brand new WordPress install! We can now visit http://example.test to view the site, or open the `www/example` folder in an editor to start making changes to our site. To log in, use `admin` and `password`.
+Once `vagrant up --provision` finishes, you will have a brand new WordPress install! We can now visit http://example.test to view the site, or open the `www/example` folder in an editor to start making changes to our site. To log in, use `admin` and `password`.
 
 ### WordPress Sub-directory Multisite
 
