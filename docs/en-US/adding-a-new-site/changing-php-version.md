@@ -6,7 +6,7 @@ description: VVV supports the php option in the sites section of config/config.y
 permalink: /docs/en-US/adding-a-new-site/changing-php-version/
 ---
 
-You can set the PHP version in `config/config.yml` when defining a site. To do this, use the `php` option to specify the PHP version. VVV also needs to be told to install that version of PHP using the `extensions` section.
+You can set the PHP version in `config/config.yml` when defining a site. To do this, use the `php` option to specify the PHP version in Nginx and the provisioner. VVV also needs to be told to install that version of PHP using the `extensions` section.
 
 Here’s an example that uses PHP v8.0:
 
@@ -60,13 +60,7 @@ extensions:
 
 It may be desirable to force a site to use a particular version of PHP, even if `config/config.yml` disagrees.
 
-This is done by overriding the nginx upstream value inside `vvv-nginx.conf`. To do this change this:
-
-```nginx
- set $upstream {upstream};
-```
-
-To this:
+This is done by overriding the `php` value inside `vvv-nginx.conf`. To do this change this:
 
 ```nginx
  set $upstream php81;

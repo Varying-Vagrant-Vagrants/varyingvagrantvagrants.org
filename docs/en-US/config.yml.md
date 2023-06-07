@@ -80,6 +80,10 @@ hosts:
   - one.wordpress.test
 ```
 
+### php
+
+This option is similar to the previous one, the difference is that it lets you to set the PHP version to use during the provisioning of that site.
+
 ### custom
 
 This allows setting various overrides for the site. In the `default-config.yml` file above, you can see how it is being used to set various wordpress constants:
