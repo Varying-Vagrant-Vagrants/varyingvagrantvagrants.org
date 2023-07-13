@@ -27,7 +27,7 @@ extensions:
 
 **Warning:** This will not work if `set $upstream {upstream};` is removed from the nginx config.
 
-In this example, we have changed the `wordpress-default` site to use PHP 7.1, and the `wordpress-develop` site to use PHP 5.6:
+In this example, we have changed the `phpeightone` site to use PHP 8.1, and the `phpeighttwo-develop` site to use PHP 8.2:
 
 ```yaml
 sites:
