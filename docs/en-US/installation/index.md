@@ -33,7 +33,7 @@ For Parallels you will also need to install the `vagrant-parallels` plugin.
 
 {% endtab %}
 
-{% tab platform MacOS (Arm/M1/M2) %}
+{% tab platform MacOS (Arm/M1) %}
 [Parallels Business/Pro*](https://www.parallels.com/){: .btn target="_blank"}
 [Docker (see docker tab)](#){: .btn.disabled}
 [❕ VirtualBox](#){: .btn.disabled}
@@ -51,9 +51,9 @@ While there is a technical preview it does not work with vagrant, and cannot run
 [Docker (see docker tab)](#){: .btn.disabled}
 {% endtab %}
 
-{% tab platform Docker %}
+{% tab platform Docker (v3.13+) %}
 
-We have experimental docker support, you'll need docker desktop if your platform doesn't have docker already installed:
+We have _experimental_ docker support on the `develop` branch/v3.13+. You will need docker desktop if your platform doesn't have docker already installed:
 
 [Docker Desktop](https://www.docker.com/products/docker-desktop/){: .btn target="_blank"}
 
