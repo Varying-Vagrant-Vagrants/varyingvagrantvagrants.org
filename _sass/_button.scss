@@ -55,20 +55,21 @@
     padding: 0;
     list-style: none;
     position: relative;
-	margin-bottom: 0.5em;
+	margin-bottom: 0;
 }
 
 .tab > * {
     flex: none;
-    padding-right: 20px;
     position: relative;
+	margin-bottom: 0;
 }
 
 .tab > * > a {
     display: block;
     text-align: center;
     padding: 9px 20px;
-    border-bottom: 2px solid $button-border-color;
+	border: 1px solid #fafafa;
+    border-bottom: 4px solid $button-border-color;
     transition: color .1s ease-in-out;
     line-height: 20px;
 
@@ -79,18 +80,18 @@
 	&:hover:not(:disabled),
 	&:focus:not(:disabled) {
 		color: $button-border-shadow-hover-color;
-		border-color: $button-border-shadow-color;
+		border-bottom-color: $button-border-shadow-color;
 	}
 
 	&:active {
 		color: $button-border-shadow-hover-color;
-		border-color: $button-border-shadow-color;
+		border-bottom-color: $button-border-shadow-color;
 	}
 }
 
 .tab > .active > a {
 	color: $button-border-shadow-hover-color;
-	border-color: $button-border-shadow-color;
+	border-bottom-color: $button-border-shadow-color;
 }
 
 .tab > li > a {
@@ -100,6 +101,8 @@
 
 .tab-content {
     padding: 0.75em;
+	border: 1px solid $button-border-color;
+	border-radius: 0 0 8px 8px
 }
 
 .tab-content > li {
