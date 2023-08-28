@@ -6,12 +6,18 @@ description: Common issues and mistakes migrating to Apple Silicon.
 permalink: /docs/en-US/troubleshooting/migrating-to-apple-silicon/
 ---
 
-When using VVV on an Apple Silicon device there are a number of steps to take:
+When using VVV on an Apple Silicon device there are a number of options:
 
- - Install a copy of Parallels Pro/Business
- - Install the `vagrant-parallels` plugin
+ - Use the Parallels Pro/Business provider
+   - Install a copy of Parallels Pro/Business
+   - Install the `vagrant-parallels` plugin
+ - Use the Docker provider
+   - Requires VVV v3.13 or above, or the latest `develop` branch
+   - Install Docker Desktop
 
-If you have done this, VVV should turn on ok! In the future Docker may be a viable alternative but this is in the prototype stages.
+**VirtualBox is not an option** and will not work on Apple Silicon, _especially when using the technical preview_.
+
+If you have done this, VVV should turn on ok! Note that Docker support is experimental and may not fully match other providers.
 
 If you copy your VVV install from an Intel Mac, there are some common mistakes you may not be aware of that will prevent VVV from running. Below is a list of known mistakes and their fixes.
 
@@ -23,15 +29,21 @@ Vagrant makes a subfolder named `.vagrant` with metadata about the Virtual Mmach
 
 To fix this, delete the `.vagrant` subfolder of your VVV install.
 
+### Using VirtualBox Technical Preview
+
+Oracle released a technical preview for VirtualBox on Apple Silicon, leading some to believe that VirtualBox could be used again. This release is a proof of concept and struggles to run 32bit Linux from the year 2000. It is years away from being usable in the modern Ubuntu distributions VVV depends upon.
+
+Uninstall the technical preview and switch to Parallels/Docker.
+
 ### VirtualBox Vagrant plugins
 
-If you have plugins such as `vagrant-disksize`, they will try to use VirtualBox. Uninstall these plugins and try again.
+If you have plugins such as `vagrant-disksize`, they will try to use VirtualBox even if it isn't present, leading to crashes. Uninstall these plugins and try again.
 
 ### Out of Date VVV
 
 Only newer versions of VVV support Apple Silicon/Arm machines, upgrade to at least v3.7 or above.
 
-### Customfiles and Shared Mounts
+### Customfiles and Shared Mounts Not Working on Parallels
 
 You may encounter errors such as this if you use a customfile to add additional shared folders:
 
@@ -55,4 +67,4 @@ config.vm.provider :parallels do |_v, override|
 end
 ```
 
-Remember, we do not provide support for customfiles, use them at your own risk!
+**Remember, we do not provide support for customfiles, use them at your own risk!**
