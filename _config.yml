@@ -11,7 +11,7 @@ email: jeremy.felt@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://varyingvagrantvagrants.org" # the base hostname & protocol for your site
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title.html
+permalink: /blog/:year/:month/:day/:title:output_ext
 paginate: 10
 paginate_path: /blog/page:num
 exclude:
@@ -39,7 +39,7 @@ twitter:
 
 #permalink: pretty
 
-plugins:
+plugins_dir:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
@@ -49,8 +49,7 @@ plugins:
 
 collections:
   docs:
-    title: Documentation
-    permalink: /:path/
+    permalink: /:path
     output: true
 
 defaults:

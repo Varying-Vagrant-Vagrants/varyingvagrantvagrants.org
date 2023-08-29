@@ -12,9 +12,10 @@ VVV requires recent versions of Vagrant, git and VirtualBox to be installed, alo
 
 First make sure you have all the necessary software installed for VVV to run:
 
-[VirtualBox*](https://www.virtualbox.org/wiki/Downloads){: .btn target="_blank"}
 [Vagrant](https://www.vagrantup.com/downloads.html){: .btn target="_blank"}
 [Git](https://git-scm.com/downloads){: .btn target="_blank"}{: .btn target="_blank"}
+
+You will also need a virtual machine provider, such as VirtualBox/Parallels Pro/Hyper-V/Docker.
 
 _* On Windows, if you have Docker installed then VirtualBox should be substituted for [Hyper-V](hyper-v.md). Hyper-V provides better performance and reliability._
 
@@ -29,5 +30,7 @@ Reboot your computer after installing the above software.
 | BIOS Virtualisation* | on      |             | On Intel machines this is called Intel VT-x, and AMD calls it AMD-V. For some reason, some Laptop makers turn this off by default. Macs have it turned on out of the box.              |
 | Free Disk Space      | 2GB     | 4GB+        | All those sites take up space, make sure you have enough room                                                                                                                          |
 | Disk Type            | HD      | SSD         | Mechanical spinning drives will be _very_ slow, we strongly recommend faster solid state drives for VMs.                                                                            |
+
+Note that running VVV on network shares or on a USB flash drive will be extremely unreliable, and is not supported.
 
 _* Refer to your machines manufacturer for how to access your BIOS. [This article may be helpful for enabling Intel VT-x](https://www.howtogeek.com/213795/how-to-enable-intel-vt-x-in-your-computers-bios-or-uefi-firmware/)_

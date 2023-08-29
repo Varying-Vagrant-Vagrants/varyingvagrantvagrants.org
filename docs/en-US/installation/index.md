@@ -18,39 +18,61 @@ You will also need to install/use one of these vagrant providers:
 {% tab platform Windows %}
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads){: .btn target="_blank"}
 [Hyper-V](hyper-v.md){: .btn target="_blank"}
+[Docker (see docker tab)](#){: .btn.disabled}
 
-Windows users with Docker installed or Hyper-V turned on should use [Hyper-V](hyper-v.md). VirtualBox can be unreliable when Hyper-V is turned on.
+Windows users with Docker installed or Hyper-V turned on should avoid VirtualBox. VirtualBox can be unreliable when Hyper-V is turned on.
 
 {% endtab %}
 
 {% tab platform MacOS (Intel) %}
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads){: .btn target="_blank"}
 [Parallels Business/Pro*](https://www.parallels.com/){: .btn target="_blank"}
+[Docker (see docker tab)](#){: .btn.disabled}
 
 For Parallels you will also need to install the `vagrant-parallels` plugin.
 
 {% endtab %}
 
-{% tab platform MacOS (Arm/M1/M2) %}
+{% tab platform MacOS (Arm/M1) %}
 [Parallels Business/Pro*](https://www.parallels.com/){: .btn target="_blank"}
+[Docker (see docker tab)](#){: .btn.disabled}
 [❕ VirtualBox](#){: .btn.disabled}
 
-For Parallels you will also need to install the `vagrant-parallels` plugin.
+For Parallels you will also need to install the `vagrant-parallels` plugin. For docker see the docker tab.
 
-### Can I Use VirtualBox on Apple Silicon?
+### Why Can't I Use VirtualBox on Apple Silicon?
 
-No. VirtualBox does not support Apple Silicon, and the technical preview for Arm is years away from being usable. We do not recommend attempting to use the technical preview and we guarantee failure. This may change in the mid to far future ( eta 2025/2026 ).
-
-Note that installing it inside Windows is unlikely to work, and would require a Parallels installation to install Windows anyway.
-
-### Can I Use Docker?
-
-Officially no, there have been efforts to get Docker working but they have been years in the making and are highly experimental with caveats. The only reliable solution on Apple Silicon is Parallels Pro/Business. For more information check the pull requests on GitHub.
+While there is a technical preview it does not work with vagrant, and cannot run modern operating systems. Please check back in 5 years ( eta 2028/2032, total guess ).
 
 {% endtab %}
 
 {% tab platform Linux %}
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads){: .btn target="_blank"}
+[Docker (see docker tab)](#){: .btn.disabled}
+{% endtab %}
+
+{% tab platform Docker (v3.13+) %}
+
+We have _experimental_ docker support on the `develop` branch/v3.13+. You will need docker desktop if your platform doesn't have docker already installed:
+
+[Docker Desktop](https://www.docker.com/products/docker-desktop/){: .btn target="_blank"}
+
+Note that Docker support is work in progress, and there is still a lot of work to do, but it does provide options for those on Arm devices and can be useful.
+
+To use the docker provider, pass `--provider="docker"` when provisioning VVV, and set docker as the provider in `config/config.yml`. Note that there is no migration path from non-docker to docker, so if you plan to switch you will need to export your database, destroy the VM, then recreate it with the docker provider.
+
+### Important Notes For Docker Users
+
+There are some caveats to using docker with VVV:
+
+ - You may see additional warnings in the provisioner output, such as not being able to synchronise clocks. While we'd like help resolving these, they should only concern you if VVV does not work after provisioning completes.
+ - You cannot use VVV at the same time as competing docker based local dev servers due to how port mapping works.
+   - This is a docker limitation not a VVV limitation and affects other docker dev environments too.
+   - If this happens, halt the other dev environment then start VVV. Importantly make sure to stop the proxy container that has the ports mapped, some dev environments shutdown the other containers but keep the Traefik based proxy alive with the ports mapped.
+ - VVV is currently a monolithic container solution. While it would be great to give each site its own container this is planned for a future major version of VVV e.g. VVV 4 or 5 as it would be a major breaking change.
+ - We're actively seeking assistance in improving our docker setup, it is by no means final.
+
+
 {% endtab %}
 
 {% endtabs %}
