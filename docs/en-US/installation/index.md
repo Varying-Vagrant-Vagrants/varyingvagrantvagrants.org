@@ -6,12 +6,20 @@ description: VVV can be installed with git by cloning the main VVV repo into a l
 permalink: /docs/en-US/installation/
 ---
 
-First make sure you have all the necessary software installed for VVV to run:
+There are 3 steps to getting VVV running:
+
+1. Install pre-requisite tools/software
+2. Install VVV
+3. Start VVV from the command line/terminal then visit the dashboard
+
+## 1. Install Pre-requisite software
+
+Before you can install VVV you need to **install these two tools** if they aren't already installed:
 
 [Vagrant](https://www.vagrantup.com/downloads.html){: .btn target="_blank"}
 [Git](https://git-scm.com/downloads){: .btn target="_blank"}{: .btn target="_blank"}
 
-You will also need to install/use one of these vagrant providers:
+**You also need to choose a provider to host the server**, this could be VirtualBox/Docker/Parallels/etc, use the tabs below to choose a provider. _Most of the time VirtualBox is best unless you use a Mac._
 
 {% tabs platform %}
 
@@ -80,7 +88,7 @@ There are some caveats to using docker with VVV:
 
 Reboot your computer after installing the above software.
 
-## Installing VVV
+## 2. Installing VVV
 
 We're going to install VVV to a `vvv-local` folder in your home directory. First, grab a copy of VVV using `git`. Open a terminal or a command prompt, and enter the following command:
 
@@ -117,7 +125,7 @@ Alternatively you can download a zip file from github but we strongly recommend 
 
 At this point you might want to adjust the `config/config.yml` file before VVV creates the local developer environment. This is your opportunity to do so. You might do this in order to change the provider vagrant uses to Hyper-V instead of VirtualBox, or to provision additional sites the first time the VM is created to save time.
 
-## Starting VVV
+## 3. Starting VVV
 
 Start VVV by opening a terminal, changing to the VVV folder, and running `vagrant up`. For example:
 
