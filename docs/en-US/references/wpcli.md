@@ -13,14 +13,37 @@ VVV includes the nightly version of WP-CLI, but if you want to contribute to WP 
 
 ## Examples
 
+For example, these commands ran inside of VVV in a site folder could be used to import a database from a `db-export.sql` file:
 ```sh
 wp db import ~/db-export.sql # VVV automatically generated database backups on halt
 wp search-replace http://olddomain.com https://newdomain.com --export=newdb.sql --all-tables # Generate a dump with the url replaced
+```
+
+Or to regenerate intermediate images in the uploads folder:
+
+```sh
 wp media regenerate # Regenerate all the thumbnails and the various images
+```
+
+Or generate random dummy content:
+
+```sh
 wp post generate --count=10 # Create posts with dummy content
 ```
 
-## Contribute to WP-CLI
+
+## Using WP-CLI inside VVV
+
+To run WP CLI inside VVV, first use `vagrant ssh`. This will put you inside the Ubuntu container/virtual machine. WP CLI should now be available, but you'll need to switch to the folder that contains the site you want to run commands on.
+
+To run WP-CLI commands on a specific site, change directory to that site, e.g. for the `wordpress-one` site:
+
+ ```sh
+ cd /srv/www/wordpress-one/public_html
+ ```
+Now you can use `wp`.
+
+## Contributing to WP-CLI
 
 VVV includes a extension to install the official dev environment with all the various repositories from [https://github.com/wp-cli/wp-cli-dev/](https://github.com/wp-cli/wp-cli-dev/). To use this new instance replace `wp` with `wp-dev`.
 
@@ -39,17 +62,7 @@ WP-CLI has exhaustive [documentation](https://make.wordpress.org/cli/handbook/) 
 
 We recommend adding a new git remote to the repository, so that you can push changes to GitHub for pull requests.
 
-## Using WP-CLI from the Virtual Machine
-
-SSH into the virtual machine with `vagrant ssh`.
-
-To run WP-CLI commands on a specific site, change directory to that site, e.g. for the `wordpress-one` site:
-
- ```sh
- cd /srv/www/wordpress-one/public_html
- ```
-
-## Resources
+## Further Reading
 
 There are already a lot of guides about WP CLI:
 
