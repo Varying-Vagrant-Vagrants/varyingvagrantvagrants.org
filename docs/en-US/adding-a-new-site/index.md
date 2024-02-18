@@ -205,7 +205,7 @@ sites:
       public_dir: public_html/web
 ```
 
-This creates a Craft CMS site named `craft` at `http://craft.test` in the `www/craft/public_html` folder.
+This creates a Craft CMS site named `craft` at `http://craft.test` in the `www/craft/public_html` folder. Set up a database/user for Craft to use then head to `https://craft.test/index.php?p=admin/install` to continue the installation.
 
 After provisioning, you will need to complete setup by following [the official Craft CMS install instructions](https://craftcms.com/docs/3.x/installation.html).
 
