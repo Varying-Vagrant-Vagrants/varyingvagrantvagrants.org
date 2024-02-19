@@ -157,7 +157,7 @@ sites:
     folders:
       public_html/wp-content/:
         git:
-          repo: repo to clone...
+          repo: "repo to clone..."
           overwrite_on_clone: true
 ```
 
@@ -166,6 +166,8 @@ This creates a WP site named `acmecorp` at `http://acme.test` in the `www/acmeco
 [Click here for more information about custom git checkouts and folders.](folders.md)
 
 ### Drupal
+
+This creates a Drupal site named `drupal-site` at `http://drupal.test` in the `www/drupal-site/public_html` folder.
 
 ```yaml
 sites:
@@ -179,11 +181,14 @@ sites:
           create-project: drupal/recommended-project
     custom:
       wp_type: none
+      public_dir: public_html/web
 ```
 
-This creates a Drupal site named `drupal-site` at `http://drupal.test` in the `www/drupal-site/public_html` folder. You will need to create a database using PHPMyAdmin for this site.
+You will need to create a database using PHPMyAdmin for this site, and you might need to create custom Nginx rules. The example also assumes a `public_html/web` subfolder is the webroot based on Drupal recommendations at the time of writing.
 
 ### CraftCMS
+
+This should set up a copy of Craft CMS in the `public_html` folder, and tells VVV to serve the `public_html/web` subfolder as the root, you may need to adjust the Nginx configuration of this site, or decide to change the folder configuration: 
 
 ```yaml
 sites:
@@ -197,13 +202,16 @@ sites:
           create-project: craftcms/craft
     custom:
       wp_type: none
+      public_dir: public_html/web
 ```
 
-This creates a Craft CMS site named `cratt` at `http://craft.test` in the `www/craft/public_html` folder.
+This creates a Craft CMS site named `craft` at `http://craft.test` in the `www/craft/public_html` folder. Set up a database/user for Craft to use then head to `https://craft.test/index.php?p=admin/install` to continue the installation.
 
 After provisioning, you will need to complete setup by following [the official Craft CMS install instructions](https://craftcms.com/docs/3.x/installation.html).
 
-### Additional Options
+Note that while this will install Craft for you via composer, nothing prevents setting `wp_type: none;` and manually installing Craft by hand.
+
+### Additional Configuration Options
 
 The custom site template supports options such as changing the version of WordPress, database names, site titles, and more. [For a full list of what the official site template supports,  check the readme on Github](https://github.com/Varying-Vagrant-Vagrants/custom-site-template).
 
