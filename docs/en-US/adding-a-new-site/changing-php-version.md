@@ -76,6 +76,8 @@ That site is now using PHP v8.1, even if `php:` or `nginx_upstream:` are set in 
 
 - If your VVV install is old, you may have a `utilities` section, this was renamed to `extensions`. Update VVV and replace `utilities:` with `extensions:`, do not have both at the same time.
 - If you ask VVV to use a version of PHP that isn't installed, provisioning may fail, and your site will not use the requested version. Add the extension for that PHP as shown in the examples and reprovision.
+    - If the version you're trying to add is very new we might not have added an extension for it yet! Usually we're quick to add these in advance but we're still only human.
+    - If the version is old and no longer under general PHP support it may no longer be available and provisioning will fail. This is because we get PHP from the Ondrej PPA and Ondrej removes PHP versions once they become officially unsupported. This is why you can't ask for PHP v5.2 for example. See this page for details of the support lifecycles of PHP versions [https://www.php.net/supported-versions.php](https://www.php.net/supported-versions.php)
 - If VVV tells you `Chosen PHP version doesn't exist in this environment` when provisioning then you did not install the needed PHP version, see the previous bullet point.
 - Older versions of PHP used the `nginx_upstream` option to override the PHP version. The new `php:` parameter does this and fixes the PHP version during provisioning and in the dashboard.
 - The default PHP version is used in CLI, if you need to use different versions of PHP in CLI for a site you can either call that PHP version directly by swapping `php ...` for `php80 ...` or `php81 ...`, or by using `update-alternatives`. See `config/homebin/vvv_restore_php_default` for an example.
