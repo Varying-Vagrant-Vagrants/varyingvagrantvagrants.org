@@ -14,14 +14,16 @@ Here’s an example that uses PHP v8.0:
 sites:
   phpeight:
     repo: https://github.com/Varying-Vagrant-Vagrants/custom-site-template.git
-    php: 8.0
+    php: 8.0 # Don't forget to add php80 to the extensions
     hosts:
       - phpeight.test
 
 extensions:
   core:
-    - php80
+    - php80 # Not optional
 ```
+
+**Important:*** If you do not update the `extensions` section to add the PHP version then this will not work. VVV will not auto-install PHP versions for you.
 
 **Tip:** If you add the `php` utility, it will install all available versions of PHP, skipping this step.
 
@@ -72,5 +74,6 @@ That site is now using PHP v8.1, even if `php:` or `nginx_upstream:` are set in 
 
 - If your VVV install is old, you may have a `utilities` section, this was renamed to `extensions`. Do not have both at the same time.
 - If you ask VVV to use a version of PHP that isn't installed, provisioning may fail, and your site will not use the requested version. Add the extension for that PHP as shown in the examples and reprovision.
+- If VVV tells you `Chosen PHP version doesn't exist in this environment` when provisioning then you did not install the needed PHP version, see the previous bullet point.
 - Older versions of PHP used the `nginx_upstream` option to override the PHP version. The new `php:` parameter does this and fixes the PHP version during provisioning and in the dashboard.
 - The default PHP version is used in CLI, if you need to use different versions of PHP in CLI for a site you can either call that PHP version directly by swapping `php ...` for `php80 ...` or `php81 ...`, or by using `update-alternatives`. See `config/homebin/vvv_restore_php_default` for an example.
