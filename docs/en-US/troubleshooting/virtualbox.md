@@ -3,7 +3,7 @@ category: 5. Troubleshooting
 order: 9
 title: VirtualBox
 description: VirtualBox installation issues.
-permalink: /docs/en-US/troubleshooting/virtualbox
+permalink: /docs/en-US/troubleshooting/virtualbox/
 ---
 
 ## Updating to MacOS Big Sur or Newer
