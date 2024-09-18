@@ -39,9 +39,7 @@ To fix this, we recommend that:
  - If using VirtualBox, use at least VirtualBox 7 or higher
  - Ensure the SSH Agent is running by using the command `eval "$(ssh-agent -s)"`
 
-It's also strongly recommended you read this GitHub troubleshooting article:
-
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases
+[It's also strongly recommended you read this GitHub troubleshooting article for more information and solutions.](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases)
 
 #### Can I Use The OpenSSH Windows Service?
 
