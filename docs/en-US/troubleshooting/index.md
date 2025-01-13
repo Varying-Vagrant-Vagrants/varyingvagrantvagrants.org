@@ -21,6 +21,7 @@ If provisioning fails, there's a high chance it has already been fixed. Update y
 If updating to the latest version does not help, try the `develop` branch:
 
 Switch to `develop`:
+
 ```sh
 git checkout develop
 ```
@@ -39,13 +40,17 @@ vagrant up --provision
 
 Docker uses a Hyper-V virtual machine as a Linux container host, but VirtualBox and Hyper-V do not work together. You may be lucky and find that VirtualBox pretends it works but uses Hyper-V behind the scenes, but if you had already set up VVV then you may have issues.
 
-To work around Hyper-V though you have two options
+To work around Hyper-V though you have three options
+
+#### Switch VVV to Docker ( best )
+
+You will need to recreate your VM, so `vagrant destroy`, then change the `provider` in `config/config.yml` to `docker` ( `provider: docker` ) and reprovision.
 
 #### Switch VVV to Hyper-V
 
 You will need to recreate your VM, so `vagrant destroy`, then change the `provider` in `config/config.yml` to `hyperv` ( `provider: hyperv` ) and reprovision.
 
-#### Use WSL for Docker ( best )
+#### Use WSL for Docker
 
 WSL does not use Hyper-V and can provide faster performance when used with Docker.
 
@@ -252,3 +257,12 @@ vagrant plugin update
 # Start VVV and create the VM from scratch
 vagrant up --provision
 ```
+
+## Connection Resets in Browsers on MacOS Sequoia
+
+Newer versions of MacOS ask if you want to give an application access to the local network, and if you do not allow this then VVV can't be reached. This can show up if you press Deny in Chrome then try to load vvv.test. To fix this:
+
+ - open system preferences
+ - open the privacy and security section in the sidebar
+ - Select Local Network in the list
+ - Enable access for those applications that need to use/interact with VVV
