@@ -5,6 +5,11 @@
 	padding: 5em 2em 2em 2em;
 	text-align: center;
 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
 	> img {
 		max-height: 20vh;
 	}
@@ -14,5 +19,8 @@
 		line-height: 1em;
 		margin-bottom:-2em;
 		white-space: pre;
+	}
+	.logo {
+		font-size: 42px;
 	}
 }
