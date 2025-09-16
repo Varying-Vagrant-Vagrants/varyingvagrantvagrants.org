@@ -118,6 +118,10 @@ header {
 		@include align-items(center);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
 
+		.logo {
+			margin-top: -10px;
+		}
+
 		img {
 			/*height: $emblem-size;*/
 			width: $emblem-size;
@@ -165,10 +169,6 @@ header {
 
 		.open-nav {
 			display: none;
-		}
-
-		h1 {
-			box-shadow: inset -10px 0 10px -10px rgba(0, 0, 0, 0.1);
 		}
 	}
 }
@@ -491,4 +491,32 @@ img {
 
 .github-edit-link {
 	text-align: right;
+}
+
+.logo {
+	white-space: pre;
+	line-height: 1.266em;
+	font-size: 12px;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.rainbow {
+	background: linear-gradient(90deg, #11ff00 0%, #0090ff 45%, #ff0000 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+	transition: background 2s;
+
+	&:hover {
+		background-image: linear-gradient(90deg, #ffaacc 0%, #91cfff 40%, #82f369 100%);
+	}
+
+	&:active,
+	&:focus {
+		background-color: #f4d525;
+		background-image: none;
+	}
 }
