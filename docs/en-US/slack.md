@@ -6,12 +6,12 @@ description: Join the VVV Slack Workspace
 permalink: /docs/en-US/slack/
 ---
 
-We have a slack workspace available at [https://vvv-local.slack.com](https://vvv-local.slack.com). This is where VVV contributors can organise and work on VVV. We also have a support channel for asking VVV related questions!
+We have a free slack workspace available at [https://vvv-local.slack.com](https://vvv-local.slack.com). This is where VVV contributors can organise and work on VVV. We also have a support channel for asking VVV related questions!
 
 _Note this is not a general vagrant help resource._
 
 All users of the slack workspace agree to abide by our [code of conduct](code-of-conduct.md).
 
-[Use the invite page here to gain access to the VVV slack workspace](https://vvv-baymax-bot.herokuapp.com/), or use the embed below:
+[Join the VVV slack workspace](https://join.slack.com/t/vvv-local/shared_invite/zt-3k7ma97xw-3emggaVp4tZhKpa2NznUQQ).
 
-<iframe src="https://vvv-baymax-bot.herokuapp.com/" style="min-width: 400px; border: 2px solid lightgray; border-radius:5px;min-height:600px; width:100%;" />
+If the invite link does not work, another person on the slack workspace can invite you, or you can raise an issue if the invite link above has expired. Note that as this is an unpaid Slack workspace there is limited message history available.
