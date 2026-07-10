@@ -31,8 +31,9 @@ sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keyc
 
 Firefox uses its own root certificate list, to access it:
 
- - go to options, and under Privacy & Security.
- - go to the certificates section and click "View Certificates".
+ - Go to Settings, and select "Privacy & Security.
+ - Scroll down to "Connection and software security" and click "Advanced settings".
+ - Scroll down to "Certificates" and click "Manage certificates" to open the Certificate Manager.
  - In the Certificate Manager window, switch to the Authorities tab and click the "Import..." button.
  - In the file open dialogue that pops up, select the VVV root certificate in your VVV folder at `certificates/ca/ca.crt`.
  - When Firefox asks you what you want to use the certificate for, check the box marked "Trust this CA to identify websites" and click Ok.
